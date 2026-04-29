@@ -48,13 +48,23 @@ lines.forEach(line => {
       formId: ingredientFormId,
       weight: Number(weight),
       value: Number(value),
-      effects: []
+      effects: [],
+      effectDetails: []
     };
   }
 
   if (!ingredientsMap[ingredientId].effects.includes(effectId)) {
     ingredientsMap[ingredientId].effects.push(effectId);
   }
+
+  ingredientsMap[ingredientId].effectDetails.push({
+    effectId: effectId,
+    effectName: effectName,
+    effectType: effectType,
+    magnitude: Number(magnitude),
+    duration: Number(duration),
+    order: Number(effectOrder)
+  });
 
   if (!effectsMap[effectId]) {
     effectsMap[effectId] = {
@@ -72,6 +82,8 @@ const ingredients = Object.values(ingredientsMap).sort((a, b) =>
 
 ingredients.forEach(ingredient => {
   ingredient.effects.sort((a, b) => a.localeCompare(b));
+
+  ingredient.effectDetails.sort((a, b) => a.order - b.order);
 });
 
 const effects = Object.values(effectsMap).sort((a, b) =>

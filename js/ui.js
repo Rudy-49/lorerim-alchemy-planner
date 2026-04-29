@@ -8,6 +8,9 @@ const results = document.getElementById("results");
 const effectSearchInput = document.getElementById("effectSearch");
 const effectList = document.getElementById("effectList");
 const effectResults = document.getElementById("effectResults");
+const ingredientLookupInput = document.getElementById("ingredientLookup");
+const ingredientLookupList = document.getElementById("ingredientLookupList");
+const ingredientLookupResults = document.getElementById("ingredientLookupResults");
 
 function getEffectByName(name) {
   return effects.find(effect => effect.name === name);
@@ -142,6 +145,16 @@ function populateIngredient3() {
   populateDatalist(ing3List, matches);
 }
 
+function populateIngredientLookupList() {
+  ingredientLookupList.innerHTML = "";
+
+  ingredients.forEach(ingredient => {
+    const option = document.createElement("option");
+    option.value = ingredient.name;
+    ingredientLookupList.appendChild(option);
+  });
+}
+
 function getSharedEffectsAcrossSelected() {
   const selectedIngredients = [
     getIngredientByName(ing1Input.value),
@@ -201,6 +214,33 @@ function updateEffectResults() {
     `</ul>`;
 }
 
+function updateIngredientLookupResults() {
+  const selectedIngredient = ingredients.find(
+    ingredient => ingredient.name === ingredientLookupInput.value
+  );
+
+  if (!selectedIngredient) {
+    ingredientLookupResults.innerText = "Select an ingredient to view details.";
+    return;
+  }
+
+  const effectList = selectedIngredient.effectDetails
+    .sort((a, b) => a.order - b.order)
+    .map(effect =>
+      `${effect.effectName} (Mag: ${effect.magnitude}, Dur: ${effect.duration})`
+    )
+    .join("<br>");
+
+  ingredientLookupResults.innerHTML = `
+    <h3>${selectedIngredient.name}</h3>
+    <p>Weight: ${selectedIngredient.weight}</p>
+    <p>Value: ${selectedIngredient.value}</p>
+
+    <p><strong>Effects:</strong></p>
+    <p>${effectList}</p>
+  `;
+}
+
 function handleIngredient1Change() {
   removePlaceholder(ing1Select);
   populateIngredient2();
@@ -237,9 +277,13 @@ ing3Input.addEventListener("input", updateResults);
 
 effectSearchInput.addEventListener("input", updateEffectResults);
 
+ingredientLookupInput.addEventListener("input", updateIngredientLookupResults);
+
 populateIngredient1();
 populateIngredient2();
 populateIngredient3();
 updateResults();
 populateEffectList();
 updateEffectResults();
+populateIngredientLookupList();
+updateIngredientLookupResults();

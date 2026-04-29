@@ -11,6 +11,40 @@ const ingredients = [
       "fortify_sneak",
       "weakness_to_frost",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -25,6 +59,40 @@ const ingredients = [
       "fortify_conjuration",
       "resist_magic",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -39,6 +107,40 @@ const ingredients = [
       "fortify_alteration",
       "fortify_illusion",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -53,6 +155,40 @@ const ingredients = [
       "fortify_destruction",
       "fortify_restoration",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -67,6 +203,40 @@ const ingredients = [
       "fortify_carry_weight",
       "resist_frost",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 600,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -81,6 +251,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_stamina_regeneration",
       "light"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 24,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "light",
+        "effectName": "Light",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 10,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 24,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -95,6 +299,40 @@ const ingredients = [
       "invisibility",
       "restore_health",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 4
+      }
     ]
   },
   {
@@ -109,6 +347,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "frenzy",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -123,6 +395,40 @@ const ingredients = [
       "fortify_health",
       "fortify_health_regeneration",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -137,6 +443,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_conjuration",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -151,6 +491,40 @@ const ingredients = [
       "reflect_damage",
       "restore_stamina",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 24,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -165,6 +539,40 @@ const ingredients = [
       "resist_fire",
       "restore_magicka",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -179,6 +587,40 @@ const ingredients = [
       "resist_frost",
       "restore_magicka",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -193,6 +635,40 @@ const ingredients = [
       "fortify_magicka",
       "resist_magic",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -207,6 +683,40 @@ const ingredients = [
       "fortify_marksman",
       "resist_fire",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 4
+      }
     ]
   },
   {
@@ -221,6 +731,40 @@ const ingredients = [
       "fortify_two_handed",
       "lingering_damage_health",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -235,6 +779,40 @@ const ingredients = [
       "damage_magicka_regeneration",
       "lingering_damage_magicka",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 1
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -249,6 +827,40 @@ const ingredients = [
       "fortify_health",
       "fortify_restoration",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -263,6 +875,40 @@ const ingredients = [
       "fortify_destruction",
       "invisibility",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -277,6 +923,40 @@ const ingredients = [
       "lesser_corpus",
       "light",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lesser_corpus",
+        "effectName": "Lesser Corpus",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 1,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 2
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "light",
+        "effectName": "Light",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -291,6 +971,40 @@ const ingredients = [
       "resist_shock",
       "restore_health",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -305,6 +1019,40 @@ const ingredients = [
       "resist_magic",
       "slow",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 1
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -319,6 +1067,40 @@ const ingredients = [
       "resist_magic",
       "slow",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 1
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -333,6 +1115,40 @@ const ingredients = [
       "fortify_sneak",
       "resist_fire",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -347,6 +1163,40 @@ const ingredients = [
       "fortify_speed",
       "paralysis",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 4
+      }
     ]
   },
   {
@@ -361,6 +1211,40 @@ const ingredients = [
       "damage_magicka",
       "resist_fire",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -375,6 +1259,40 @@ const ingredients = [
       "fortify_destruction",
       "fortify_magicka",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -389,6 +1307,40 @@ const ingredients = [
       "fortify_one_handed",
       "restore_health",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -403,6 +1355,40 @@ const ingredients = [
       "fortify_health",
       "fortify_one_handed",
       "fortify_unarmed"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -417,6 +1403,40 @@ const ingredients = [
       "fortify_destruction",
       "fortify_health",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -431,6 +1451,40 @@ const ingredients = [
       "fortify_stamina_regeneration",
       "restore_stamina",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -445,6 +1499,40 @@ const ingredients = [
       "fortify_sneak",
       "fortify_speed",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 3,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -459,6 +1547,40 @@ const ingredients = [
       "fortify_speech",
       "resist_magic",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speech",
+        "effectName": "Fortify Speech",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -473,6 +1595,40 @@ const ingredients = [
       "fortify_speech",
       "resist_fire",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speech",
+        "effectName": "Fortify Speech",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -487,6 +1643,40 @@ const ingredients = [
       "fortify_speech",
       "resist_frost",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speech",
+        "effectName": "Fortify Speech",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -501,6 +1691,40 @@ const ingredients = [
       "fortify_speech",
       "resist_shock",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speech",
+        "effectName": "Fortify Speech",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -515,6 +1739,40 @@ const ingredients = [
       "damage_stamina",
       "damage_stamina_regeneration",
       "lingering_damage_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -529,6 +1787,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_conjuration",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -543,6 +1835,40 @@ const ingredients = [
       "damage_magicka",
       "invisibility",
       "lingering_damage_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 5,
+        "order": 2
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -557,6 +1883,40 @@ const ingredients = [
       "resist_magic",
       "weakness_to_fire",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -571,6 +1931,40 @@ const ingredients = [
       "fortify_magicka",
       "light",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "light",
+        "effectName": "Light",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -585,6 +1979,40 @@ const ingredients = [
       "fortify_speed",
       "resist_fire",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -599,6 +2027,40 @@ const ingredients = [
       "invisibility",
       "night_eye",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 6,
+        "order": 4
+      }
     ]
   },
   {
@@ -613,6 +2075,40 @@ const ingredients = [
       "frenzy",
       "reflect_damage",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -627,6 +2123,40 @@ const ingredients = [
       "damage_maximum_health",
       "fortify_destruction",
       "invisibility"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -641,6 +2171,40 @@ const ingredients = [
       "invisibility",
       "restore_health",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -655,6 +2219,40 @@ const ingredients = [
       "invisibility",
       "restore_health",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -669,6 +2267,40 @@ const ingredients = [
       "invisibility",
       "resist_poison",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 6,
+        "order": 1
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 6,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -683,6 +2315,40 @@ const ingredients = [
       "damage_stamina",
       "invisibility",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -697,6 +2363,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_conjuration",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 4
+      }
     ]
   },
   {
@@ -711,6 +2411,40 @@ const ingredients = [
       "fortify_pickpocket",
       "resist_shock",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -725,6 +2459,40 @@ const ingredients = [
       "damage_stamina",
       "dispel",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "dispel",
+        "effectName": "Dispel",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 9,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -739,6 +2507,40 @@ const ingredients = [
       "fortify_health",
       "fortify_stamina",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -753,6 +2555,40 @@ const ingredients = [
       "fortify_barter",
       "resist_magic",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -767,6 +2603,40 @@ const ingredients = [
       "fear",
       "fortify_speed",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -781,6 +2651,40 @@ const ingredients = [
       "fortify_block",
       "fortify_stamina",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -795,6 +2699,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_conjuration",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -809,6 +2747,40 @@ const ingredients = [
       "fortify_magicka",
       "paralysis",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -823,6 +2795,40 @@ const ingredients = [
       "damage_stamina_regeneration",
       "resist_magic",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 5,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -837,6 +2843,40 @@ const ingredients = [
       "silence",
       "slow",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "silence",
+        "effectName": "Silence",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -851,6 +2891,40 @@ const ingredients = [
       "fortify_barter",
       "lingering_damage_stamina",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -865,6 +2939,40 @@ const ingredients = [
       "fortify_marksman",
       "fortify_one_handed",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -879,6 +2987,40 @@ const ingredients = [
       "fortify_stamina",
       "lingering_damage_health",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -893,6 +3035,40 @@ const ingredients = [
       "damage_stamina_regeneration",
       "frenzy",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -907,6 +3083,40 @@ const ingredients = [
       "resist_poison",
       "restore_health",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 2.5,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -921,6 +3131,40 @@ const ingredients = [
       "fortify_stamina",
       "invisibility",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -935,6 +3179,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_conjuration",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -949,6 +3227,40 @@ const ingredients = [
       "lingering_damage_stamina",
       "resist_magic",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 3
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -963,6 +3275,40 @@ const ingredients = [
       "damage_maximum_health",
       "lingering_damage_health",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -977,6 +3323,40 @@ const ingredients = [
       "damage_magicka",
       "restore_stamina",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -991,6 +3371,40 @@ const ingredients = [
       "damage_health",
       "paralysis",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -1005,6 +3419,40 @@ const ingredients = [
       "fortify_speed",
       "fortify_stamina_regeneration",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 16,
+        "order": 4
+      }
     ]
   },
   {
@@ -1019,6 +3467,40 @@ const ingredients = [
       "fortify_conjuration",
       "frenzy",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -1033,6 +3515,40 @@ const ingredients = [
       "fortify_jump",
       "lingering_damage_health",
       "lingering_damage_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_jump",
+        "effectName": "Fortify Jump",
+        "effectType": "positive",
+        "magnitude": 20,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1047,6 +3563,40 @@ const ingredients = [
       "damage_maximum_magicka",
       "fortify_carry_weight",
       "lingering_damage_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -1061,6 +3611,40 @@ const ingredients = [
       "fortify_destruction",
       "restore_magicka",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1075,6 +3659,40 @@ const ingredients = [
       "fortify_conjuration",
       "restore_magicka",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1089,6 +3707,40 @@ const ingredients = [
       "paralysis",
       "resist_shock",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 1
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1103,6 +3755,40 @@ const ingredients = [
       "damage_magicka",
       "damage_stamina",
       "fortify_armor_rating"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 24,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1117,6 +3803,40 @@ const ingredients = [
       "damage_stamina_regeneration",
       "fortify_lockpicking",
       "reflect_damage"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -1131,6 +3851,40 @@ const ingredients = [
       "damage_magicka",
       "damage_magicka_regeneration",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -1145,6 +3899,40 @@ const ingredients = [
       "fortify_carry_weight",
       "restore_magicka",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -1159,6 +3947,40 @@ const ingredients = [
       "damage_stamina",
       "invisibility",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1173,6 +3995,40 @@ const ingredients = [
       "damage_stamina",
       "fear",
       "fortify_restoration"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -1187,6 +4043,40 @@ const ingredients = [
       "restore_health",
       "restore_magicka",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1201,6 +4091,40 @@ const ingredients = [
       "lingering_damage_stamina",
       "night_eye",
       "paralysis"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 8,
+        "order": 4
+      }
     ]
   },
   {
@@ -1215,6 +4139,40 @@ const ingredients = [
       "fortify_destruction",
       "paralysis",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1229,6 +4187,40 @@ const ingredients = [
       "fortify_stamina_regeneration",
       "light",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "light",
+        "effectName": "Light",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 64,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 32,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1243,6 +4235,40 @@ const ingredients = [
       "fortify_carry_weight",
       "light",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "light",
+        "effectName": "Light",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -1257,6 +4283,40 @@ const ingredients = [
       "lingering_damage_health",
       "night_eye",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 10,
+        "order": 3
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -1271,6 +4331,40 @@ const ingredients = [
       "fortify_restoration",
       "slow",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1285,6 +4379,40 @@ const ingredients = [
       "fortify_restoration",
       "slow",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1299,6 +4427,40 @@ const ingredients = [
       "damage_maximum_stamina",
       "tardiness",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 12,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "tardiness",
+        "effectName": "Tardiness",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -1313,6 +4475,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "fortify_speed",
       "invisibility"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -1327,6 +4523,40 @@ const ingredients = [
       "regenerate_stamina",
       "resist_shock",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "regenerate_stamina",
+        "effectName": "Regenerate Stamina",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 3,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 5,
+        "order": 4
+      }
     ]
   },
   {
@@ -1341,6 +4571,40 @@ const ingredients = [
       "damage_magicka_regeneration",
       "fortify_destruction",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1355,6 +4619,40 @@ const ingredients = [
       "weakness_to_frost",
       "weakness_to_poison",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 12,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -1369,6 +4667,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "fortify_stamina_regeneration",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 32,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 32,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 32,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1383,6 +4715,40 @@ const ingredients = [
       "fortify_marksman",
       "fortify_one_handed",
       "fortify_two_handed"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1397,6 +4763,40 @@ const ingredients = [
       "resist_frost",
       "resist_poison",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1411,6 +4811,40 @@ const ingredients = [
       "fortify_health",
       "fortify_magicka",
       "fortify_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 48,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1425,6 +4859,40 @@ const ingredients = [
       "restore_health",
       "restore_magicka",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1439,6 +4907,40 @@ const ingredients = [
       "fortify_illusion",
       "fortify_two_handed",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1453,6 +4955,40 @@ const ingredients = [
       "resist_poison",
       "waterbreathing",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 36,
+        "order": 3
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 9,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1467,6 +5003,40 @@ const ingredients = [
       "fortify_stamina",
       "invisibility",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -1481,6 +5051,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "restore_magicka",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1495,6 +5099,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "restore_magicka",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1509,6 +5147,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "restore_magicka",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1523,6 +5195,40 @@ const ingredients = [
       "paralysis",
       "resist_shock",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 3,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 4
+      }
     ]
   },
   {
@@ -1537,6 +5243,40 @@ const ingredients = [
       "resist_frost",
       "resist_shock",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1551,6 +5291,40 @@ const ingredients = [
       "fortify_one_handed",
       "fortify_sneak",
       "fortify_speed"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1565,6 +5339,40 @@ const ingredients = [
       "fortify_destruction",
       "fortify_magicka",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -1579,6 +5387,40 @@ const ingredients = [
       "resist_magic",
       "weakness_to_fire",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1593,6 +5435,40 @@ const ingredients = [
       "frenzy",
       "reflect_damage",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1607,6 +5483,40 @@ const ingredients = [
       "fortify_two_handed",
       "frenzy",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1621,6 +5531,40 @@ const ingredients = [
       "lingering_damage_health",
       "restore_health",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 0.5,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1635,6 +5579,40 @@ const ingredients = [
       "fear",
       "fortify_health_regeneration",
       "fortify_lockpicking"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1649,6 +5627,40 @@ const ingredients = [
       "fortify_armor_rating",
       "restore_magicka",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -1663,6 +5675,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_illusion",
       "lingering_damage_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1677,6 +5723,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_illusion",
       "lingering_damage_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1691,6 +5771,40 @@ const ingredients = [
       "resist_fire",
       "restore_magicka",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1705,6 +5819,40 @@ const ingredients = [
       "invisibility",
       "restore_magicka",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 8,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 8,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -1719,6 +5867,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_magicka",
       "fortify_two_handed"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 12,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1733,6 +5915,40 @@ const ingredients = [
       "damage_maximum_health",
       "restore_health",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1747,6 +5963,40 @@ const ingredients = [
       "fortify_lockpicking",
       "frenzy",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1761,6 +6011,40 @@ const ingredients = [
       "damage_magicka_regeneration",
       "weakness_to_fire",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -1775,6 +6059,40 @@ const ingredients = [
       "fortify_speed",
       "resist_magic",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1789,6 +6107,40 @@ const ingredients = [
       "paralysis",
       "resist_fire",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -1803,6 +6155,40 @@ const ingredients = [
       "resist_fire",
       "restore_magicka",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1817,6 +6203,40 @@ const ingredients = [
       "fortify_magicka",
       "fortify_magicka_regeneration",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -1831,6 +6251,40 @@ const ingredients = [
       "resist_frost",
       "restore_health",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 6,
+        "order": 4
+      }
     ]
   },
   {
@@ -1845,6 +6299,40 @@ const ingredients = [
       "resist_frost",
       "restore_health",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 6,
+        "order": 4
+      }
     ]
   },
   {
@@ -1859,6 +6347,40 @@ const ingredients = [
       "fortify_two_handed",
       "frenzy",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1873,6 +6395,40 @@ const ingredients = [
       "damage_stamina_regeneration",
       "fortify_sneak",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -1887,6 +6443,40 @@ const ingredients = [
       "resist_frost",
       "restore_magicka",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1901,6 +6491,40 @@ const ingredients = [
       "restore_magicka",
       "restore_stamina",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1915,6 +6539,40 @@ const ingredients = [
       "restore_magicka",
       "restore_stamina",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1929,6 +6587,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "fortify_stamina",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -1943,6 +6635,40 @@ const ingredients = [
       "restore_magicka",
       "weakness_to_poison",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -1957,6 +6683,40 @@ const ingredients = [
       "damage_strength",
       "fortify_carry_weight",
       "fortify_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "damage_strength",
+        "effectName": "Damage Strength",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -1971,6 +6731,40 @@ const ingredients = [
       "fortify_speech",
       "invisibility",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_speech",
+        "effectName": "Fortify Speech",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -1985,6 +6779,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "paralysis",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 4
+      }
     ]
   },
   {
@@ -1999,6 +6827,40 @@ const ingredients = [
       "fortify_destruction",
       "resist_shock",
       "silence"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "silence",
+        "effectName": "Silence",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2013,6 +6875,40 @@ const ingredients = [
       "fortify_health",
       "reflect_damage",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2027,6 +6923,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_speed",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2041,6 +6971,40 @@ const ingredients = [
       "damage_maximum_health",
       "fortify_stamina_regeneration",
       "lingering_damage_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2055,6 +7019,40 @@ const ingredients = [
       "fortify_two_handed",
       "paralysis",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2069,6 +7067,40 @@ const ingredients = [
       "invisibility",
       "resist_fall_damage",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fall_damage",
+        "effectName": "Resist Fall Damage",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -2083,6 +7115,40 @@ const ingredients = [
       "resist_frost",
       "restore_stamina",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 3
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2097,6 +7163,40 @@ const ingredients = [
       "fortify_block",
       "reflect_damage",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 10,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2111,6 +7211,40 @@ const ingredients = [
       "fortify_carry_weight",
       "night_eye",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 5,
+        "order": 4
+      }
     ]
   },
   {
@@ -2125,6 +7259,40 @@ const ingredients = [
       "fortify_one_handed",
       "frenzy",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -2139,6 +7307,40 @@ const ingredients = [
       "fortify_alteration",
       "resist_poison",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -2153,6 +7355,40 @@ const ingredients = [
       "fortify_stamina",
       "resist_frost",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -2167,6 +7403,40 @@ const ingredients = [
       "invisibility",
       "restore_magicka",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -2181,6 +7451,40 @@ const ingredients = [
       "paralysis",
       "restore_stamina",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2195,6 +7499,40 @@ const ingredients = [
       "lingering_damage_magicka",
       "resist_magic",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2209,6 +7547,40 @@ const ingredients = [
       "fortify_conjuration",
       "frenzy",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -2223,6 +7595,40 @@ const ingredients = [
       "damage_magicka_regeneration",
       "fortify_health",
       "fortify_one_handed"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2237,6 +7643,40 @@ const ingredients = [
       "damage_magicka",
       "damage_magicka_regeneration",
       "paralysis"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2251,6 +7691,40 @@ const ingredients = [
       "fortify_unarmed",
       "resist_frost",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2265,6 +7739,40 @@ const ingredients = [
       "fortify_one_handed",
       "fortify_sneak",
       "fortify_speed"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2279,6 +7787,40 @@ const ingredients = [
       "lingering_damage_stamina",
       "resist_magic",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 3
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -2293,6 +7835,40 @@ const ingredients = [
       "regenerate_magicka",
       "slow",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 5,
+        "order": 3
+      },
+      {
+        "effectId": "regenerate_magicka",
+        "effectName": "Regenerate Magicka",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2307,6 +7883,40 @@ const ingredients = [
       "damage_magicka",
       "frenzy",
       "silence"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "silence",
+        "effectName": "Silence",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -2321,6 +7931,40 @@ const ingredients = [
       "fortify_one_handed",
       "fortify_two_handed",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2335,6 +7979,40 @@ const ingredients = [
       "damage_stamina_regeneration",
       "fear",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -2349,6 +8027,40 @@ const ingredients = [
       "fortify_magicka",
       "restore_stamina",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_strength",
+        "effectName": "Damage Strength",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 4
+      }
     ]
   },
   {
@@ -2363,6 +8075,40 @@ const ingredients = [
       "fortify_block",
       "fortify_speed",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2377,6 +8123,40 @@ const ingredients = [
       "fortify_two_handed",
       "frenzy",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -2391,6 +8171,40 @@ const ingredients = [
       "fortify_sneak",
       "paralysis",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2405,6 +8219,40 @@ const ingredients = [
       "cure_poison",
       "fortify_magicka",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2419,6 +8267,40 @@ const ingredients = [
       "cure_poison",
       "fortify_magicka",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2433,6 +8315,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "light",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "light",
+        "effectName": "Light",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2447,6 +8363,40 @@ const ingredients = [
       "frenzy",
       "resist_magic",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2461,6 +8411,40 @@ const ingredients = [
       "invisibility",
       "weakness_to_fire",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -2475,6 +8459,40 @@ const ingredients = [
       "fortify_restoration",
       "slow",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2489,6 +8507,40 @@ const ingredients = [
       "damage_health",
       "fortify_barter",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 1,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -2503,6 +8555,40 @@ const ingredients = [
       "lingering_damage_health",
       "restore_health",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -2517,6 +8603,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_lockpicking",
       "fortify_marksman"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2531,6 +8651,40 @@ const ingredients = [
       "resist_fire",
       "restore_health",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -2545,6 +8699,40 @@ const ingredients = [
       "damage_magicka",
       "damage_magicka_regeneration",
       "damage_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 200,
+        "duration": 1,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2559,6 +8747,40 @@ const ingredients = [
       "damage_magicka",
       "damage_magicka_regeneration",
       "damage_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 200,
+        "duration": 1,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2573,6 +8795,40 @@ const ingredients = [
       "fortify_illusion",
       "fortify_two_handed",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2587,6 +8843,40 @@ const ingredients = [
       "fortify_magicka",
       "fortify_magicka_regeneration",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2601,6 +8891,40 @@ const ingredients = [
       "fortify_sneak",
       "weakness_to_frost",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2615,6 +8939,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_marksman",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2629,6 +8987,40 @@ const ingredients = [
       "fortify_carry_weight",
       "fortify_stamina_regeneration",
       "fortify_two_handed"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 2
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2643,6 +9035,40 @@ const ingredients = [
       "lingering_damage_stamina",
       "night_eye",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2657,6 +9083,40 @@ const ingredients = [
       "fortify_sneak",
       "slow",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 5,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2671,6 +9131,40 @@ const ingredients = [
       "fortify_destruction",
       "fortify_magicka",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -2685,6 +9179,40 @@ const ingredients = [
       "invisibility",
       "paralysis",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -2699,6 +9227,40 @@ const ingredients = [
       "lingering_damage_magicka",
       "resist_frost",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2713,6 +9275,40 @@ const ingredients = [
       "fortify_stamina",
       "fortify_unarmed",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 6,
+        "order": 3
+      },
+      {
+        "effectId": "damage_strength",
+        "effectName": "Damage Strength",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -2727,6 +9323,40 @@ const ingredients = [
       "fortify_stamina",
       "fortify_unarmed",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 6,
+        "order": 3
+      },
+      {
+        "effectId": "damage_strength",
+        "effectName": "Damage Strength",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -2741,6 +9371,40 @@ const ingredients = [
       "fortify_stamina",
       "fortify_unarmed",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 6,
+        "order": 3
+      },
+      {
+        "effectId": "damage_strength",
+        "effectName": "Damage Strength",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -2755,6 +9419,40 @@ const ingredients = [
       "fortify_conjuration",
       "fortify_stamina",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2769,6 +9467,40 @@ const ingredients = [
       "fortify_magicka",
       "spell_absorption",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -2783,6 +9515,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "restore_magicka",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2797,6 +9563,40 @@ const ingredients = [
       "lingering_damage_health",
       "lingering_damage_stamina",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1.5,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -2811,6 +9611,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_speed",
       "invisibility"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -2825,6 +9659,40 @@ const ingredients = [
       "resist_poison",
       "spell_absorption",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 48,
+        "order": 4
+      }
     ]
   },
   {
@@ -2839,6 +9707,40 @@ const ingredients = [
       "fortify_carry_weight",
       "fortify_conjuration",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -2853,6 +9755,40 @@ const ingredients = [
       "fortify_carry_weight",
       "fortify_health",
       "fortify_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 600,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 18,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2863,10 +9799,44 @@ const ingredients = [
     "weight": 0.5,
     "value": 35,
     "effects": [
-      "damage_stamina_regeneration",
+      "damage_stamina_regen",
       "ravage_magicka",
       "waterbreathing",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 5,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "ravage_magicka",
+        "effectName": "Ravage Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 10,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina_regen",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 100,
+        "duration": 5,
+        "order": 4
+      }
     ]
   },
   {
@@ -2881,6 +9851,40 @@ const ingredients = [
       "fortify_carry_weight",
       "slow",
       "waterwalking"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "waterwalking",
+        "effectName": "Waterwalking",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 5,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 5,
+        "order": 4
+      }
     ]
   },
   {
@@ -2895,6 +9899,40 @@ const ingredients = [
       "damage_magicka",
       "damage_stamina",
       "lingering_damage_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -2909,6 +9947,40 @@ const ingredients = [
       "fortify_conjuration",
       "fortify_health",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -2923,6 +9995,40 @@ const ingredients = [
       "fortify_carry_weight",
       "restore_health",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -2937,6 +10043,40 @@ const ingredients = [
       "damage_maximum_stamina",
       "damage_stamina",
       "damage_stamina_regeneration"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -2951,6 +10091,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_magicka_regeneration",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2965,6 +10139,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_magicka_regeneration",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -2979,6 +10187,40 @@ const ingredients = [
       "fortify_two_handed",
       "frenzy",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -2993,6 +10235,40 @@ const ingredients = [
       "moon_sugar",
       "resist_frost",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "moon_sugar",
+        "effectName": "Moon Sugar",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 5,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -3007,6 +10283,40 @@ const ingredients = [
       "resist_frost",
       "restore_magicka",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -3021,6 +10331,40 @@ const ingredients = [
       "fortify_stamina_regeneration",
       "lingering_damage_health",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3035,6 +10379,40 @@ const ingredients = [
       "damage_magicka",
       "damage_magicka_regeneration",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -3049,6 +10427,40 @@ const ingredients = [
       "fortify_speed",
       "fortify_two_handed",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3063,6 +10475,40 @@ const ingredients = [
       "fortify_unarmed",
       "resist_fire",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3077,6 +10523,40 @@ const ingredients = [
       "fortify_sneak",
       "resist_fire",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3091,6 +10571,40 @@ const ingredients = [
       "drugged",
       "fortify_illusion",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "drugged",
+        "effectName": "Drugged",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3105,6 +10619,40 @@ const ingredients = [
       "drugged",
       "fortify_alteration",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "drugged",
+        "effectName": "Drugged",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3119,6 +10667,40 @@ const ingredients = [
       "drugged",
       "fortify_alteration",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "drugged",
+        "effectName": "Drugged",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3133,6 +10715,40 @@ const ingredients = [
       "drugged",
       "fortify_alteration",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "drugged",
+        "effectName": "Drugged",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3147,6 +10763,40 @@ const ingredients = [
       "fortify_one_handed",
       "restore_health",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -3161,6 +10811,40 @@ const ingredients = [
       "fear",
       "fortify_health_regeneration",
       "fortify_lockpicking"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -3175,6 +10859,40 @@ const ingredients = [
       "fortify_carry_weight",
       "paralysis",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 2
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -3189,6 +10907,40 @@ const ingredients = [
       "damage_magicka_regeneration",
       "fortify_destruction",
       "lingering_damage_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3200,9 +10952,43 @@ const ingredients = [
     "value": 8,
     "effects": [
       "damage_health",
-      "damage_magicka_regen",
+      "damage_magicka_regeneration",
       "fortify_destruction",
       "lingering_damage_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 1,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regenerate",
+        "effectType": "negative",
+        "magnitude": 100,
+        "duration": 5,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 10,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -3217,6 +11003,40 @@ const ingredients = [
       "damage_stamina",
       "invisibility",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3231,6 +11051,40 @@ const ingredients = [
       "night_eye",
       "resist_magic",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -3245,6 +11099,40 @@ const ingredients = [
       "fortify_stamina",
       "frenzy",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -3259,6 +11147,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_pickpocket",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3273,6 +11195,40 @@ const ingredients = [
       "lingering_damage_magicka",
       "resist_poison",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -3287,6 +11243,40 @@ const ingredients = [
       "fortify_restoration",
       "resist_poison",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -3301,6 +11291,40 @@ const ingredients = [
       "fortify_health",
       "fortify_one_handed",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -3315,6 +11339,40 @@ const ingredients = [
       "fortify_pickpocket",
       "lingering_damage_health",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -3329,6 +11387,40 @@ const ingredients = [
       "lingering_damage_stamina",
       "resist_magic",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 3
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -3343,6 +11435,40 @@ const ingredients = [
       "resist_shock",
       "restore_magicka",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3357,6 +11483,40 @@ const ingredients = [
       "reflect_damage",
       "resist_frost",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3371,6 +11531,40 @@ const ingredients = [
       "fortify_stamina",
       "invisibility",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -3385,6 +11579,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_pickpocket",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3399,6 +11627,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_lockpicking",
       "fortify_marksman"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3413,6 +11675,40 @@ const ingredients = [
       "resist_shock",
       "restore_stamina",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3427,6 +11723,40 @@ const ingredients = [
       "fortify_enchanting",
       "lingering_damage_magicka",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_enchanting",
+        "effectName": "Fortify Enchanting",
+        "effectType": "positive",
+        "magnitude": 20,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3441,6 +11771,40 @@ const ingredients = [
       "fortify_conjuration",
       "frenzy",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -3455,6 +11819,40 @@ const ingredients = [
       "damage_magicka",
       "damage_magicka_regeneration",
       "damage_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 200,
+        "duration": 1,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -3469,6 +11867,40 @@ const ingredients = [
       "fear",
       "fortify_carry_weight",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 12,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -3483,6 +11915,40 @@ const ingredients = [
       "invisibility",
       "paralysis",
       "waterwalking"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 10,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "waterwalking",
+        "effectName": "Waterwalking",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 8,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -3497,6 +11963,40 @@ const ingredients = [
       "lingering_damage_magicka",
       "resist_magic",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3511,6 +12011,40 @@ const ingredients = [
       "fortify_unarmed",
       "resist_frost",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3525,6 +12059,40 @@ const ingredients = [
       "fortify_smithing",
       "fortify_unarmed",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_smithing",
+        "effectName": "Fortify Smithing",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -3539,6 +12107,40 @@ const ingredients = [
       "fortify_sneak",
       "fortify_unarmed",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -3553,6 +12155,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_conjuration",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -3567,6 +12203,40 @@ const ingredients = [
       "restore_health",
       "restore_magicka",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "profane_divinity",
+        "effectName": "Profane Divinity",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -3581,6 +12251,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "fortify_stamina_regeneration",
       "paralysis"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 4
+      }
     ]
   },
   {
@@ -3595,6 +12299,40 @@ const ingredients = [
       "fortify_restoration",
       "lingering_damage_magicka",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3609,6 +12347,40 @@ const ingredients = [
       "fortify_pickpocket",
       "fortify_sneak",
       "night_eye"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3623,6 +12395,40 @@ const ingredients = [
       "dispel",
       "fortify_carry_weight",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 600,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "dispel",
+        "effectName": "Dispel",
+        "effectType": "positive",
+        "magnitude": 7.5,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -3637,6 +12443,40 @@ const ingredients = [
       "fortify_magicka",
       "fortify_stamina_regeneration",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 2
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -3651,6 +12491,40 @@ const ingredients = [
       "damage_health",
       "invisibility",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 6,
+        "order": 4
+      }
     ]
   },
   {
@@ -3665,6 +12539,40 @@ const ingredients = [
       "fortify_stamina_regeneration",
       "lingering_damage_magicka",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3679,6 +12587,40 @@ const ingredients = [
       "fortify_alteration",
       "fortify_carry_weight",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 12,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 5,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -3693,6 +12635,40 @@ const ingredients = [
       "fortify_one_handed",
       "restore_health",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -3707,6 +12683,40 @@ const ingredients = [
       "fortify_sneak",
       "lingering_damage_health",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1.5,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -3721,6 +12731,40 @@ const ingredients = [
       "lingering_damage_health",
       "paralysis",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 4
+      }
     ]
   },
   {
@@ -3735,6 +12779,40 @@ const ingredients = [
       "damage_maximum_health",
       "restore_health",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -3749,6 +12827,40 @@ const ingredients = [
       "damage_maximum_health",
       "restore_health",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -3763,6 +12875,40 @@ const ingredients = [
       "damage_magicka",
       "damage_stamina",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -3777,6 +12923,40 @@ const ingredients = [
       "fortify_unarmed",
       "reflect_damage",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_unarmed",
+        "effectName": "Fortify Unarmed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -3791,6 +12971,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "restore_stamina",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 36,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -3805,6 +13019,40 @@ const ingredients = [
       "fortify_magicka",
       "restore_health",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -3819,6 +13067,40 @@ const ingredients = [
       "damage_magicka",
       "fortify_stamina",
       "invisibility"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -3833,6 +13115,40 @@ const ingredients = [
       "damage_magicka_regeneration",
       "lingering_damage_magicka",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 36,
+        "order": 1
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -3847,6 +13163,40 @@ const ingredients = [
       "fortify_illusion",
       "fortify_stamina_regeneration",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -3861,6 +13211,40 @@ const ingredients = [
       "damage_maximum_health",
       "damage_stamina_regeneration",
       "fortify_armor_rating"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3875,6 +13259,40 @@ const ingredients = [
       "damage_magicka_regeneration",
       "damage_maximum_magicka",
       "fortify_armor_rating"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3889,6 +13307,40 @@ const ingredients = [
       "damage_magicka",
       "resist_fire",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -3903,6 +13355,40 @@ const ingredients = [
       "fortify_restoration",
       "lingering_damage_health",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -3917,6 +13403,40 @@ const ingredients = [
       "damage_maximum_magicka",
       "damage_maximum_stamina",
       "lingering_damage_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -3931,6 +13451,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_magicka_regeneration",
       "invisibility"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -3945,6 +13499,40 @@ const ingredients = [
       "cure_poison",
       "fortify_magicka_regeneration",
       "fortify_stamina_regeneration"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -3959,6 +13547,40 @@ const ingredients = [
       "paralysis",
       "restore_stamina",
       "waterbreathing"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 3
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 4
+      }
     ]
   },
   {
@@ -3973,6 +13595,40 @@ const ingredients = [
       "damage_stamina_regeneration",
       "fortify_health",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -3987,6 +13643,40 @@ const ingredients = [
       "fortify_sneak",
       "fortify_stamina_regeneration",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_jump",
+        "effectName": "Fortify Jump",
+        "effectType": "positive",
+        "magnitude": 20,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4001,6 +13691,40 @@ const ingredients = [
       "fortify_conjuration",
       "fortify_health",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -4015,6 +13739,40 @@ const ingredients = [
       "fortify_health",
       "fortify_stamina_regeneration",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4029,6 +13787,40 @@ const ingredients = [
       "light",
       "night_eye",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "cure_poison",
+        "effectName": "Cure Poison",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "light",
+        "effectName": "Light",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4043,6 +13835,40 @@ const ingredients = [
       "damage_strength",
       "resist_frost",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_strength",
+        "effectName": "Damage Strength",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4057,6 +13883,40 @@ const ingredients = [
       "damage_magicka",
       "damage_magicka_regeneration",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -4071,6 +13931,40 @@ const ingredients = [
       "damage_maximum_health",
       "damage_strength",
       "fortify_speed"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_strength",
+        "effectName": "Damage Strength",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_health",
+        "effectName": "Damage Maximum Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4085,6 +13979,40 @@ const ingredients = [
       "fortify_stamina",
       "lingering_damage_health",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4099,6 +14027,40 @@ const ingredients = [
       "fortify_block",
       "lingering_damage_health",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4113,6 +14075,40 @@ const ingredients = [
       "fortify_alteration",
       "fortify_conjuration",
       "resist_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4127,6 +14123,40 @@ const ingredients = [
       "fortify_restoration",
       "lingering_damage_stamina",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -4141,6 +14171,40 @@ const ingredients = [
       "fortify_restoration",
       "resist_frost",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_restoration",
+        "effectName": "Fortify Restoration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4155,6 +14219,40 @@ const ingredients = [
       "fortify_lockpicking",
       "resist_frost",
       "resist_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.8,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -4169,6 +14267,40 @@ const ingredients = [
       "resist_frost",
       "resist_shock",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 2
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4183,6 +14315,40 @@ const ingredients = [
       "fortify_lockpicking",
       "fortify_pickpocket",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_pickpocket",
+        "effectName": "Fortify Pickpocket",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -4197,6 +14363,40 @@ const ingredients = [
       "damage_maximum_stamina",
       "resist_fire",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "resist_fire",
+        "effectName": "Resist Fire",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -4211,6 +14411,40 @@ const ingredients = [
       "damage_magicka",
       "restore_stamina",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -4225,6 +14459,40 @@ const ingredients = [
       "damage_magicka",
       "restore_stamina",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -4239,6 +14507,40 @@ const ingredients = [
       "damage_magicka",
       "restore_stamina",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -4253,6 +14555,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_lockpicking",
       "fortify_marksman"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4267,6 +14603,40 @@ const ingredients = [
       "reflect_damage",
       "silence",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "silence",
+        "effectName": "Silence",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 1
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4281,6 +14651,40 @@ const ingredients = [
       "resist_magic",
       "waterwalking",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "waterwalking",
+        "effectName": "Waterwalking",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4295,6 +14699,40 @@ const ingredients = [
       "restore_health",
       "waterwalking",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_jump",
+        "effectName": "Fortify Jump",
+        "effectType": "positive",
+        "magnitude": 20,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "waterwalking",
+        "effectName": "Waterwalking",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4309,6 +14747,40 @@ const ingredients = [
       "waterbreathing",
       "waterwalking",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "waterbreathing",
+        "effectName": "Waterbreathing",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 24,
+        "order": 3
+      },
+      {
+        "effectId": "waterwalking",
+        "effectName": "Waterwalking",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4323,6 +14795,40 @@ const ingredients = [
       "damage_stamina",
       "invisibility",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4337,6 +14843,40 @@ const ingredients = [
       "fortify_destruction",
       "fortify_magicka",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -4351,6 +14891,40 @@ const ingredients = [
       "fortify_lockpicking",
       "frenzy",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4365,6 +14939,40 @@ const ingredients = [
       "damage_stamina_regeneration",
       "fortify_sneak",
       "resist_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_sneak",
+        "effectName": "Fortify Sneak",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -4379,6 +14987,40 @@ const ingredients = [
       "resist_frost",
       "restore_magicka",
       "weakness_to_fire"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_fire",
+        "effectName": "Weakness to Fire",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4393,6 +15035,40 @@ const ingredients = [
       "reflect_damage",
       "silence",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "silence",
+        "effectName": "Silence",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 1
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 2
+      },
+      {
+        "effectId": "reflect_damage",
+        "effectName": "Reflect Damage",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4407,6 +15083,40 @@ const ingredients = [
       "fortify_destruction",
       "resist_frost",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 4
+      }
     ]
   },
   {
@@ -4421,6 +15131,40 @@ const ingredients = [
       "fortify_magicka",
       "fortify_one_handed",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_one_handed",
+        "effectName": "Fortify One-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4435,6 +15179,40 @@ const ingredients = [
       "invisibility",
       "resist_shock",
       "soul_trap"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 16,
+        "order": 1
+      },
+      {
+        "effectId": "soul_trap",
+        "effectName": "Soul Trap",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 16,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4449,6 +15227,40 @@ const ingredients = [
       "fear",
       "fortify_carry_weight",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 5,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -4463,6 +15275,40 @@ const ingredients = [
       "resist_shock",
       "restore_health",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_shock",
+        "effectName": "Resist Shock",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 3
+      },
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -4477,6 +15323,40 @@ const ingredients = [
       "damage_stamina",
       "fortify_lockpicking",
       "fortify_marksman"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.6,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_marksman",
+        "effectName": "Fortify Marksman",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4491,6 +15371,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "restore_magicka",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -4505,6 +15419,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "restore_magicka",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -4519,6 +15467,40 @@ const ingredients = [
       "fortify_armor_rating",
       "resist_frost",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_frost",
+        "effectName": "Resist Frost",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_stamina",
+        "effectName": "Damage Maximum Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 3,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4533,6 +15515,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "lingering_damage_health",
       "paralysis"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4547,6 +15563,40 @@ const ingredients = [
       "lingering_damage_magicka",
       "restore_stamina",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 2
+      },
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4561,6 +15611,40 @@ const ingredients = [
       "fortify_carry_weight",
       "slow",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -4575,6 +15659,40 @@ const ingredients = [
       "fortify_two_handed",
       "frenzy",
       "resist_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_two_handed",
+        "effectName": "Fortify Two-Handed",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -4589,6 +15707,40 @@ const ingredients = [
       "fortify_block",
       "fortify_magicka",
       "resist_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_block",
+        "effectName": "Fortify Block",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4603,6 +15755,40 @@ const ingredients = [
       "invisibility",
       "restore_magicka",
       "sanguinare_vampiris"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "sanguinare_vampiris",
+        "effectName": "Sanguinare Vampiris",
+        "effectType": "positive",
+        "magnitude": 20,
+        "duration": 4,
+        "order": 1
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 2
+      },
+      {
+        "effectId": "invisibility",
+        "effectName": "Invisibility",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 8,
+        "order": 3
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -4617,6 +15803,40 @@ const ingredients = [
       "damage_stamina_regeneration",
       "fear",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 64,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 32,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fear",
+        "effectName": "Fear",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -4631,6 +15851,40 @@ const ingredients = [
       "lingering_damage_health",
       "lingering_damage_stamina",
       "paralysis"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "lingering_damage_health",
+        "effectName": "Lingering Damage Health",
+        "effectType": "negative",
+        "magnitude": 1.5,
+        "duration": 15,
+        "order": 1
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 12,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "lingering_damage_stamina",
+        "effectName": "Lingering Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 2,
+        "order": 4
+      }
     ]
   },
   {
@@ -4645,6 +15899,40 @@ const ingredients = [
       "fortify_magicka_regeneration",
       "restore_magicka",
       "weakness_to_magic"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_magic",
+        "effectName": "Weakness to Magic",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka_regeneration",
+        "effectName": "Fortify Magicka Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -4659,6 +15947,40 @@ const ingredients = [
       "fortify_health_regeneration",
       "fortify_stamina",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_stamina",
+        "effectName": "Fortify Stamina",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4673,6 +15995,40 @@ const ingredients = [
       "fortify_magicka",
       "resist_magic",
       "weakness_to_shock"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_shock",
+        "effectName": "Weakness to Shock",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4687,6 +16043,40 @@ const ingredients = [
       "fortify_magicka",
       "night_eye",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_illusion",
+        "effectName": "Fortify Illusion",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4701,6 +16091,40 @@ const ingredients = [
       "fortify_health",
       "fortify_health_regeneration",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "beast_form",
+        "effectName": "Beast Form",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 10,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 3,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_health_regeneration",
+        "effectName": "Fortify Health Regeneration",
+        "effectType": "positive",
+        "magnitude": 24,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4715,6 +16139,40 @@ const ingredients = [
       "fortify_health",
       "lingering_damage_magicka",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -4729,6 +16187,40 @@ const ingredients = [
       "fortify_armor_rating",
       "restore_magicka",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_armor_rating",
+        "effectName": "Fortify Armor Rating",
+        "effectType": "positive",
+        "magnitude": 12,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 3
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -4743,6 +16235,40 @@ const ingredients = [
       "fortify_conjuration",
       "fortify_health",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_conjuration",
+        "effectName": "Fortify Conjuration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_magicka_regeneration",
+        "effectName": "Damage Magicka Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 4
+      }
     ]
   },
   {
@@ -4757,6 +16283,40 @@ const ingredients = [
       "fortify_health",
       "lingering_damage_magicka",
       "restore_health"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_health",
+        "effectName": "Restore Health",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_health",
+        "effectName": "Fortify Health",
+        "effectType": "positive",
+        "magnitude": 8,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina_regeneration",
+        "effectName": "Damage Stamina Regeneration",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 3
+      },
+      {
+        "effectId": "lingering_damage_magicka",
+        "effectName": "Lingering Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 1,
+        "duration": 30,
+        "order": 4
+      }
     ]
   },
   {
@@ -4771,6 +16331,40 @@ const ingredients = [
       "fortify_alteration",
       "resist_poison",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "resist_poison",
+        "effectName": "Resist Poison",
+        "effectType": "positive",
+        "magnitude": 6,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_alteration",
+        "effectName": "Fortify Alteration",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 4
+      }
     ]
   },
   {
@@ -4785,6 +16379,40 @@ const ingredients = [
       "fortify_barter",
       "paralysis",
       "weakness_to_frost"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_barter",
+        "effectName": "Fortify Barter",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 60,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_frost",
+        "effectName": "Weakness to Frost",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "paralysis",
+        "effectName": "Paralysis",
+        "effectType": "negative",
+        "magnitude": 0,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -4799,6 +16427,40 @@ const ingredients = [
       "fortify_stamina_regeneration",
       "frenzy",
       "weakness_to_poison"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "weakness_to_poison",
+        "effectName": "Weakness to Poison",
+        "effectType": "negative",
+        "magnitude": 6,
+        "duration": 30,
+        "order": 2
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 3
+      },
+      {
+        "effectId": "fortify_stamina_regeneration",
+        "effectName": "Fortify Stamina Regeneration",
+        "effectType": "positive",
+        "magnitude": 16,
+        "duration": 300,
+        "order": 4
+      }
     ]
   },
   {
@@ -4813,6 +16475,40 @@ const ingredients = [
       "fortify_destruction",
       "resist_magic",
       "restore_stamina"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_stamina",
+        "effectName": "Restore Stamina",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "fortify_destruction",
+        "effectName": "Fortify Destruction",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "resist_magic",
+        "effectName": "Resist Magic",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 120,
+        "order": 4
+      }
     ]
   },
   {
@@ -4827,6 +16523,40 @@ const ingredients = [
       "fortify_speed",
       "restore_magicka",
       "spell_absorption"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 2,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "spell_absorption",
+        "effectName": "Spell Absorption",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_speed",
+        "effectName": "Fortify Speed",
+        "effectType": "positive",
+        "magnitude": 1,
+        "duration": 120,
+        "order": 3
+      },
+      {
+        "effectId": "cure_disease",
+        "effectName": "Cure Disease",
+        "effectType": "positive",
+        "magnitude": 5,
+        "duration": 0,
+        "order": 4
+      }
     ]
   },
   {
@@ -4841,6 +16571,40 @@ const ingredients = [
       "damage_magicka",
       "damage_stamina",
       "frenzy"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 0,
+        "order": 1
+      },
+      {
+        "effectId": "damage_magicka",
+        "effectName": "Damage Magicka",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 2
+      },
+      {
+        "effectId": "damage_stamina",
+        "effectName": "Damage Stamina",
+        "effectType": "negative",
+        "magnitude": 16,
+        "duration": 0,
+        "order": 3
+      },
+      {
+        "effectId": "frenzy",
+        "effectName": "Frenzy",
+        "effectType": "negative",
+        "magnitude": 2,
+        "duration": 15,
+        "order": 4
+      }
     ]
   },
   {
@@ -4855,6 +16619,40 @@ const ingredients = [
       "fortify_lockpicking",
       "night_eye",
       "slow"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "fortify_lockpicking",
+        "effectName": "Fortify Lockpicking",
+        "effectType": "positive",
+        "magnitude": 0.4,
+        "duration": 120,
+        "order": 1
+      },
+      {
+        "effectId": "night_eye",
+        "effectName": "Night Eye",
+        "effectType": "positive",
+        "magnitude": 0,
+        "duration": 300,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_carry_weight",
+        "effectName": "Fortify Carry Weight",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 600,
+        "order": 3
+      },
+      {
+        "effectId": "slow",
+        "effectName": "Slow",
+        "effectType": "negative",
+        "magnitude": 50,
+        "duration": 4,
+        "order": 4
+      }
     ]
   },
   {
@@ -4869,6 +16667,40 @@ const ingredients = [
       "damage_maximum_magicka",
       "fortify_magicka",
       "restore_magicka"
+    ],
+    "effectDetails": [
+      {
+        "effectId": "restore_magicka",
+        "effectName": "Restore Magicka",
+        "effectType": "positive",
+        "magnitude": 0.5,
+        "duration": 20,
+        "order": 1
+      },
+      {
+        "effectId": "damage_maximum_magicka",
+        "effectName": "Damage Maximum Magicka",
+        "effectType": "negative",
+        "magnitude": 8,
+        "duration": 60,
+        "order": 2
+      },
+      {
+        "effectId": "fortify_magicka",
+        "effectName": "Fortify Magicka",
+        "effectType": "positive",
+        "magnitude": 4,
+        "duration": 300,
+        "order": 3
+      },
+      {
+        "effectId": "damage_health",
+        "effectName": "Damage Health",
+        "effectType": "negative",
+        "magnitude": 4,
+        "duration": 0,
+        "order": 4
+      }
     ]
   }
 ];

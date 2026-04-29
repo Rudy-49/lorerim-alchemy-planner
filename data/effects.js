@@ -66,6 +66,12 @@ const effects = [
     "type": "negative"
   },
   {
+    "id": "damage_stamina_regen",
+    "name": "Damage Stamina Regeneration",
+    "formId": "00073F2C",
+    "type": "negative"
+  },
+  {
     "id": "damage_strength",
     "name": "Damage Strength",
     "formId": "FE6B4816",
