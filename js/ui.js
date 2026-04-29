@@ -257,6 +257,21 @@ function savePotionsToStorage(potions) {
   localStorage.setItem("potionDatabase", JSON.stringify(potions));
 }
 
+function getPotionIngredientKey(potion) {
+  return [...potion.ingredients]
+    .map(name => name.toLowerCase().trim())
+    .sort()
+    .join("|");
+}
+
+function updateExportButtonText() {
+  const selectedCount = document.querySelectorAll(".export-checkbox:checked").length;
+
+  exportPotionsBtn.innerText = selectedCount > 0
+    ? `Export Selected (${selectedCount})`
+    : "Export All";
+}
+
 function savePotion() {
   const potion = getCurrentPotionData();
 
@@ -305,19 +320,41 @@ function toggleFavorite(potionId) {
   renderPotionDatabase();
 }
 
-function exportPotionsJSON() {
-  const potions = getSavedPotions();
+function getSelectedPotionIds() {
+  return Array.from(document.querySelectorAll(".export-checkbox:checked"))
+    .map(cb => Number(cb.dataset.id));
+}
 
-  if (potions.length === 0) {
+function exportPotionsJSON() {
+  const allPotions = getSavedPotions();
+
+  if (allPotions.length === 0) {
     alert("No saved potions to export.");
     return;
   }
+
+  const selectedIds = getSelectedPotionIds();
+
+  // If none selected → export all (safe fallback)
+  const potionsToExport = selectedIds.length > 0
+    ? allPotions.filter(p => selectedIds.includes(p.id))
+    : allPotions;
+
+  if (potionsToExport.length === 0) {
+    alert("No potions selected for export.");
+    return;
+  }
+
+  const fileNameInput = prompt("Enter a name for your export file:", "rudys-alchemy-ledger");
+
+  if (!fileNameInput) return;
 
   const exportData = {
     app: "Rudy's Alchemy Ledger",
     version: 1,
     exportedAt: new Date().toISOString(),
-    potions: potions
+    count: potionsToExport.length,
+    potions: potionsToExport
   };
 
   const json = JSON.stringify(exportData, null, 2);
@@ -326,7 +363,7 @@ function exportPotionsJSON() {
 
   const link = document.createElement("a");
   link.href = url;
-  link.download = "rudys-alchemy-ledger-potions.json";
+  link.download = `${fileNameInput}.json`;
   link.click();
 
   URL.revokeObjectURL(url);
@@ -361,13 +398,24 @@ function importPotionsJSON(event) {
       }
 
       const currentPotions = getSavedPotions();
-      const importedPotions = importedData.potions.map(normalizeImportedPotion);
+
+      const existingIngredientKeys = currentPotions.map(getPotionIngredientKey);
+
+      const importedPotions = importedData.potions
+        .map(normalizeImportedPotion)
+        .filter(potion => {
+          const ingredientKey = getPotionIngredientKey(potion);
+          return !existingIngredientKeys.includes(ingredientKey);
+        });
+
+      const skippedCount = importedData.potions.length - importedPotions.length;
       const updatedPotions = [...importedPotions, ...currentPotions];
 
       savePotionsToStorage(updatedPotions);
       renderPotionDatabase();
+      updateExportButtonText();
 
-      alert(`${importedPotions.length} potions imported successfully.`);
+      alert(`${importedPotions.length} potions imported successfully. ${skippedCount} duplicate(s) skipped.`);
     } catch (error) {
       alert("Could not import this JSON file.");
       console.error(error);
@@ -409,16 +457,27 @@ function renderPotionDatabase() {
     <div class="database-potion ${potion.type.toLowerCase()} ${potion.favorite ? "favorited" : ""}">
 
       <div class="database-header">
-        <button class="favorite-btn ${potion.favorite ? "favorited" : ""}" onclick="toggleFavorite(${potion.id})">
-          ${potion.favorite ? "★" : "☆"}
-        </button>
+
+        <input 
+          type="checkbox" 
+          class="export-checkbox" 
+          data-id="${potion.id}"
+          title="Select for export"
+        >
 
         <h3>${potion.name}</h3>
 
-        <button onclick="deletePotion(${potion.id})">Delete</button>
+        <button 
+          class="favorite-btn ${potion.favorite ? "favorited" : ""}" 
+          onclick="toggleFavorite(${potion.id})"
+        >
+          ${potion.favorite ? "★" : "☆"}
+        </button>
+
       </div>
 
       <div class="database-body">
+
         <p class="database-ingredients">
           <strong>Ingredients:</strong> ${potion.ingredients.join(", ")}
         </p>
@@ -428,10 +487,24 @@ function renderPotionDatabase() {
             <strong>Notes:</strong> ${potion.notes}
           </p>
         ` : ""}
+
+        <button 
+          class="delete-btn" 
+          onclick="deletePotion(${potion.id})"
+        >
+          Delete
+        </button>
+
       </div>
 
     </div>
   `).join("");
+
+    document.querySelectorAll(".export-checkbox").forEach(checkbox => {
+      checkbox.addEventListener("change", updateExportButtonText);
+    });
+
+    updateExportButtonText();
 }
 
 function getIngredientsWithEffect(effectId) {
@@ -709,3 +782,4 @@ updateResults();
 updateEffectResults();
 updateIngredientLookupResults();
 renderPotionDatabase();
+updateExportButtonText();
