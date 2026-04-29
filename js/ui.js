@@ -1,7 +1,26 @@
-const ing1Select = document.getElementById("ingredient1");
-const ing2Select = document.getElementById("ingredient2");
-const ing3Select = document.getElementById("ingredient3");
+const ing1Input = document.getElementById("ingredient1");
+const ing2Input = document.getElementById("ingredient2");
+const ing3Input = document.getElementById("ingredient3");
+
+const ing1List = document.getElementById("ingredient1List");
+const ing2List = document.getElementById("ingredient2List");
+const ing3List = document.getElementById("ingredient3List");
+
 const results = document.getElementById("results");
+
+function getIngredientByName(name) {
+  return ingredients.find(ingredient => ingredient.name === name);
+}
+
+function populateDatalist(listElement, ingredientOptions) {
+  listElement.innerHTML = "";
+
+  ingredientOptions.forEach(ingredient => {
+    const option = document.createElement("option");
+    option.value = ingredient.name;
+    listElement.appendChild(option);
+  });
+}
 
 function getPotionName(sharedEffects) {
   if (sharedEffects.length === 0) return "";
@@ -62,42 +81,33 @@ function getIngredientById(id) {
 }
 
 function populateIngredient1() {
-  ing1Select.innerHTML = "";
-
-  addPlaceholder(ing1Select, "Ingredient 1");
-
-  ingredients.forEach(ingredient => {
-    ing1Select.add(new Option(ingredient.name, ingredient.id));
-  });
+  populateDatalist(ing1List, ingredients);
 }
 
 function populateIngredient2() {
-  ing2Select.innerHTML = "";
+  const ing1 = getIngredientByName(ing1Input.value);
 
-  addPlaceholder(ing2Select, "Ingredient 2");
-
-  const ing1 = getIngredientById(ing1Select.value);
-  if (!ing1) return;
+  if (!ing1) {
+    populateDatalist(ing2List, []);
+    return;
+  }
 
   const matches = ingredients.filter(ingredient => {
     if (ingredient.id === ing1.id) return false;
     return getSharedEffects(ing1, ingredient).length > 0;
   });
 
-  matches.forEach(ingredient => {
-    ing2Select.add(new Option(ingredient.name, ingredient.id));
-  });
+  populateDatalist(ing2List, matches);
 }
 
 function populateIngredient3() {
-  ing3Select.innerHTML = "";
+  const ing1 = getIngredientByName(ing1Input.value);
+  const ing2 = getIngredientByName(ing2Input.value);
 
-  addPlaceholder(ing3Select, "Ingredient 3");
-
-  const ing1 = getIngredientById(ing1Select.value);
-  const ing2 = getIngredientById(ing2Select.value);
-
-  if (!ing1 && !ing2) return;
+  if (!ing1 && !ing2) {
+    populateDatalist(ing3List, []);
+    return;
+  }
 
   const matches = ingredients.filter(ingredient => {
     if (ingredient.id === ing1?.id || ingredient.id === ing2?.id) return false;
@@ -108,16 +118,14 @@ function populateIngredient3() {
     return sharesWith1 || sharesWith2;
   });
 
-  matches.forEach(ingredient => {
-    ing3Select.add(new Option(ingredient.name, ingredient.id));
-  });
+  populateDatalist(ing3List, matches);
 }
 
 function getSharedEffectsAcrossSelected() {
   const selectedIngredients = [
-    getIngredientById(ing1Select.value),
-    getIngredientById(ing2Select.value),
-    getIngredientById(ing3Select.value)
+    getIngredientByName(ing1Input.value),
+    getIngredientByName(ing2Input.value),
+    getIngredientByName(ing3Input.value)
   ].filter(Boolean);
 
   if (selectedIngredients.length < 2) return [];
@@ -167,9 +175,21 @@ function handleIngredient3Change() {
   updateResults();
 }
 
-ing1Select.addEventListener("change", handleIngredient1Change);
-ing2Select.addEventListener("change", handleIngredient2Change);
-ing3Select.addEventListener("change", handleIngredient3Change);
+ing1Input.addEventListener("input", () => {
+  ing2Input.value = "";
+  ing3Input.value = "";
+  populateIngredient2();
+  populateIngredient3();
+  updateResults();
+});
+
+ing2Input.addEventListener("input", () => {
+  ing3Input.value = "";
+  populateIngredient3();
+  updateResults();
+});
+
+ing3Input.addEventListener("input", updateResults);
 
 populateIngredient1();
 populateIngredient2();
