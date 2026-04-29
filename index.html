@@ -1,58 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Alchemy Planner</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Alchemy Planner</h1>
+<div class="app-shell">
 
-  <h2>Potion Builder</h2>
+  <!-- LEFT: Tips Placeholder -->
+  <aside class="left-ledger">
+    <section class="panel dark-panel">
 
-  <div class="custom-dropdown">
-    <input id="ingredient1" placeholder="Ingredient 1" autocomplete="off">
-    <div id="ingredient1Dropdown" class="dropdown-list"></div>
-  </div>
+      <h2>Alchemy Notes</h2>
+      <p class="muted">Tips, tricks, and discoveries will live here later.</p>
 
-  <div class="custom-dropdown">
-    <input id="ingredient2" placeholder="Ingredient 2" autocomplete="off">
-    <div id="ingredient2Dropdown" class="dropdown-list"></div>
-  </div>
+      <div class="placeholder-entry">
+        <strong>Coming Soon</strong>
+        <span>Alchemy tips and useful notes.</span>
+      </div>
 
-  <div class="custom-dropdown">
-    <input id="ingredient3" placeholder="Ingredient 3" autocomplete="off">
-    <div id="ingredient3Dropdown" class="dropdown-list"></div>
-  </div>
+    </section>
+  </aside>
 
-  <div id="results"></div>
+  <!-- CENTER: Book Spread -->
+  <main class="book-page book-spread">
 
-  <hr>
+    <!-- LEFT PAGE -->
+    <section class="inner-page left-page">
 
-  <h2>Search by Effect</h2>
+      <header class="ledger-title">
+        <h1>Rudy's Alchemy Ledger</h1>
+        <p>Experiments in tinctures, tonics, and toxins</p>
+      </header>
 
-  <div class="custom-dropdown">
-    <input id="effectSearch" placeholder="Search effect" autocomplete="off">
-    <div id="effectDropdown" class="dropdown-list"></div>
-  </div>
+      <div class="left-page-content">
 
-  <div id="effectResults"></div>
+        <div class="result-card">
+          <h3 id="potionNameDisplay">No Potion Discovered</h3>
+          <div id="results"></div>
+          <button id="savePotionBtn">Save Experiment</button>
+        </div>
 
-  <hr>
+        <div class="stacked-ingredients">
 
-  <h2>Ingredient Lookup</h2>
+          <div class="ingredient-card">
+            <label>Ingredient 1</label>
+            <div class="custom-dropdown">
+              <input id="ingredient1" placeholder="Ingredient 1" autocomplete="off">
+              <div id="ingredient1Dropdown" class="dropdown-list"></div>
+            </div>
+          </div>
 
-  <div class="custom-dropdown">
-    <input id="ingredientLookup" placeholder="Search ingredient" autocomplete="off">
-    <div id="ingredientLookupDropdown" class="dropdown-list"></div>
-  </div>
+          <div class="ingredient-card">
+            <label>Ingredient 2</label>
+            <div class="custom-dropdown">
+              <input id="ingredient2" placeholder="Ingredient 2" autocomplete="off">
+              <div id="ingredient2Dropdown" class="dropdown-list"></div>
+            </div>
+          </div>
 
-  <div id="ingredientLookupResults"></div>
+          <div class="ingredient-card">
+            <label>Ingredient 3</label>
+            <div class="custom-dropdown">
+              <input id="ingredient3" placeholder="Ingredient 3" autocomplete="off">
+              <div id="ingredient3Dropdown" class="dropdown-list"></div>
+            </div>
+          </div>
 
-  <script src="data/effects.js"></script>
-  <script src="data/ingredients.js"></script>
-  <script src="js/alchemyLogic.js"></script>
-  <script src="js/ui.js"></script>
+        </div>
+
+        <div class="notes-section">
+          <label>Alchemist Notes</label>
+          <textarea id="potionNotes" placeholder="Record observations, effects, or variations..."></textarea>
+        </div>
+
+        <p class="muted book-note">
+          Select ingredients to reveal shared effects.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT PAGE -->
+    <section class="inner-page right-page">
+
+      <header class="ledger-title">
+        <h1>Rudy's Alchemical Record</h1>
+        <p>Catalog of discovered potions and recorded experiments</p>
+      </header>
+
+      <!-- DATABASE CONTROLS -->
+      <div class="database-controls">
+        <input id="potionDatabaseSearch" placeholder="Search saved potions..." autocomplete="off">
+
+        <select id="potionDatabaseFilter">
+          <option value="all">All</option>
+          <option value="favorites">Favorites</option>
+          <option value="Potion">Potions</option>
+          <option value="Poison">Poisons</option>
+        </select>
+      </div>
+
+      <div id="potionDatabaseList" class="potion-database-list">
+        No potions saved yet.
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- RIGHT: Tools -->
+  <aside class="right-tools">
+
+    <section class="panel parchment-panel">
+      <h2>Ingredient Lookup</h2>
+
+      <div class="custom-dropdown">
+        <input id="ingredientLookup" placeholder="Search ingredients..." autocomplete="off">
+        <div id="ingredientLookupDropdown" class="dropdown-list"></div>
+      </div>
+
+      <div id="ingredientLookupResults"></div>
+    </section>
+
+    <section class="panel parchment-panel">
+      <h2>Effect Lookup</h2>
+
+      <div class="custom-dropdown">
+        <input id="effectSearch" placeholder="Search effects..." autocomplete="off">
+        <div id="effectDropdown" class="dropdown-list"></div>
+      </div>
+
+      <div id="effectResults"></div>
+    </section>
+
+  </aside>
+
+</div>
+
+<script src="data/effects.js"></script>
+<script src="data/ingredients.js"></script>
+<script src="js/alchemyLogic.js"></script>
+<script src="js/ui.js"></script>
 
 </body>
 </html>

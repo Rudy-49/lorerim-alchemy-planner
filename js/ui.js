@@ -15,6 +15,13 @@ const effectResults = document.getElementById("effectResults");
 const ingredientLookupInput = document.getElementById("ingredientLookup");
 const ingredientLookupDropdown = document.getElementById("ingredientLookupDropdown");
 const ingredientLookupResults = document.getElementById("ingredientLookupResults");
+const potionNameDisplay = document.getElementById("potionNameDisplay");
+
+const potionNotesInput = document.getElementById("potionNotes");
+const potionDatabaseList = document.getElementById("potionDatabaseList");
+
+const potionDatabaseSearch = document.getElementById("potionDatabaseSearch");
+const potionDatabaseFilter = document.getElementById("potionDatabaseFilter");
 
 let activeDropdownIndex = -1;
 
@@ -202,6 +209,7 @@ function updateResults() {
   const sharedEffects = getSharedEffectsAcrossSelected();
 
   if (sharedEffects.length === 0) {
+    potionNameDisplay.innerText = "No Potion Discovered";
     results.innerText = "Select at least 2 ingredients with shared effects";
     return;
   }
@@ -209,9 +217,142 @@ function updateResults() {
   const effectNames = sharedEffects.map(effectId => getEffectName(effectId));
   const potionName = getPotionName(sharedEffects);
 
-  results.innerText =
-    potionName + "\n" +
-    "Shared Effects: " + effectNames.join(", ");
+  potionNameDisplay.innerText = potionName;
+  results.innerText = "Shared Effects: " + effectNames.join(", ");
+}
+
+function getCurrentPotionData() {
+  const selectedIngredients = [
+    getIngredientByName(ing1Input.value),
+    getIngredientByName(ing2Input.value),
+    getIngredientByName(ing3Input.value)
+  ].filter(Boolean);
+
+  const sharedEffects = getSharedEffectsAcrossSelected();
+
+  if (selectedIngredients.length < 2 || sharedEffects.length === 0) {
+    return null;
+  }
+
+  return {
+    id: Date.now(),
+    name: getPotionName(sharedEffects),
+    type: getPotionLabel(sharedEffects),
+    ingredients: selectedIngredients.map(ingredient => ingredient.name.replace(/\s*\(.*?\)\s*/g, "")),
+    effects: sharedEffects.map(effectId => getEffectName(effectId)),
+    notes: potionNotesInput.value.trim(),
+    favorite: false,
+  };
+}
+
+function toggleFavorite(potionId) {
+  const potions = getSavedPotions();
+
+  const updatedPotions = potions.map(potion => {
+    if (potion.id === potionId) {
+      return {
+        ...potion,
+        favorite: !potion.favorite
+      };
+    }
+
+    return potion;
+  });
+
+  localStorage.setItem("potionDatabase", JSON.stringify(updatedPotions));
+  renderPotionDatabase();
+}
+
+function getSavedPotions() {
+  return JSON.parse(localStorage.getItem("potionDatabase")) || [];
+}
+
+function savePotion() {
+  const potion = getCurrentPotionData();
+
+  if (!potion) {
+    alert("Select at least 2 ingredients with shared effects before saving.");
+    return;
+  }
+
+  const potions = getSavedPotions();
+  potions.unshift(potion);
+
+  localStorage.setItem("potionDatabase", JSON.stringify(potions));
+  ing1Input.value = "";
+  ing2Input.value = "";
+  ing3Input.value = "";
+  potionNotesInput.value = "";
+
+  hideAllDropdowns();
+  updateResults();
+
+  potionNotesInput.value = "";
+
+  renderPotionDatabase();
+}
+
+function deletePotion(potionId) {
+  const potions = getSavedPotions().filter(potion => potion.id !== potionId);
+
+  localStorage.setItem("potionDatabase", JSON.stringify(potions));
+
+  renderPotionDatabase();
+}
+
+function renderPotionDatabase() {
+  let potions = getSavedPotions();
+
+  const searchText = potionDatabaseSearch.value.toLowerCase();
+  const filterType = potionDatabaseFilter.value;
+
+  if (filterType === "favorites") {
+    potions = potions.filter(potion => potion.favorite);
+  } else if (filterType !== "all") {
+    potions = potions.filter(potion => potion.type === filterType);
+  }
+
+  if (searchText) {
+    potions = potions.filter(potion =>
+      potion.name.toLowerCase().includes(searchText) ||
+      potion.ingredients.join(" ").toLowerCase().includes(searchText) ||
+      potion.effects.join(" ").toLowerCase().includes(searchText) ||
+      potion.notes.toLowerCase().includes(searchText)
+    );
+  }
+
+  if (potions.length === 0) {
+    potionDatabaseList.innerText = "No matching potions found.";
+    return;
+  }
+
+  potionDatabaseList.innerHTML = potions.map(potion => `
+    <div class="database-potion ${potion.type.toLowerCase()} ${potion.favorite ? "favorited" : ""}">
+
+      <div class="database-header">
+        <button class="favorite-btn ${potion.favorite ? "favorited" : ""}" onclick="toggleFavorite(${potion.id})">
+          ${potion.favorite ? "★" : "☆"}
+        </button>
+
+        <h3>${potion.name}</h3>
+
+        <button onclick="deletePotion(${potion.id})">Delete</button>
+      </div>
+
+      <div class="database-body">
+        <p class="database-ingredients">
+          <strong>Ingredients:</strong> ${potion.ingredients.join(", ")}
+        </p>
+
+        ${potion.notes ? `
+          <p class="database-notes">
+            <strong>Notes:</strong> ${potion.notes}
+          </p>
+        ` : ""}
+      </div>
+
+    </div>
+  `).join("");
 }
 
 function getIngredientsWithEffect(effectId) {
@@ -235,36 +376,82 @@ function updateEffectResults() {
     return;
   }
 
-  effectResults.innerHTML =
-    `<h3>${selectedEffect.name}</h3>` +
-    `<p>${matches.length} ingredients found</p>` +
-    `<ul>` +
-    matches.map(ingredient => `<li>${ingredient.name}</li>`).join("") +
-    `</ul>`;
+  const ingredientList = matches
+    .map(ingredient => {
+      const cleanName = ingredient.name.replace(/\s*\(.*?\)\s*/g, "");
+      const cleanId = ingredient.id.split("_").pop().toUpperCase();
+
+      return `
+        <div class="effect-ingredient-item">
+          <div class="effect-ingredient-name">${cleanName}</div>
+          <div class="effect-ingredient-meta">ID: ${cleanId}</div>
+        </div>
+      `;
+    })
+    .join("");
+
+  effectResults.innerHTML = `
+    <p class="result-count">${matches.length} ingredients found</p>
+    <div class="effect-ingredient-list">
+      ${ingredientList}
+    </div>
+  `;
 }
 
 function updateIngredientLookupResults() {
   const selectedIngredient = getIngredientByName(ingredientLookupInput.value);
 
   if (!selectedIngredient) {
-    ingredientLookupResults.innerText = "Select an ingredient to view details.";
+    ingredientLookupResults.innerHTML = `
+      <div class="ingredient-stats">
+        <span><strong>Weight:</strong> —</span>
+        <span><strong>Value:</strong> —</span>
+      </div>
+
+      <div class="ingredient-effects">
+        <div class="effect-item">
+          <div class="effect-name">Effect 1</div>
+          <div class="effect-meta">Mag: — | Dur: —</div>
+        </div>
+
+        <div class="effect-item">
+          <div class="effect-name">Effect 2</div>
+          <div class="effect-meta">Mag: — | Dur: —</div>
+        </div>
+
+        <div class="effect-item">
+          <div class="effect-name">Effect 3</div>
+          <div class="effect-meta">Mag: — | Dur: —</div>
+        </div>
+
+        <div class="effect-item">
+          <div class="effect-name">Effect 4</div>
+          <div class="effect-meta">Mag: — | Dur: —</div>
+        </div>
+      </div>
+    `;
     return;
   }
 
   const effectList = selectedIngredient.effectDetails
     .sort((a, b) => a.order - b.order)
-    .map(effect =>
-      `${effect.effectName} (Mag: ${effect.magnitude}, Dur: ${effect.duration})`
-    )
-    .join("<br>");
+    .map(effect => `
+      <div class="effect-item">
+        <div class="effect-name">${effect.effectName}</div>
+        <div class="effect-meta">Mag: ${effect.magnitude} | Dur: ${effect.duration}</div>
+      </div>
+    `)
+    .join("");
 
   ingredientLookupResults.innerHTML = `
-    <h3>${selectedIngredient.name}</h3>
-    <p>Weight: ${selectedIngredient.weight}</p>
-    <p>Value: ${selectedIngredient.value}</p>
+    <div class="ingredient-stats">
+      <span><strong>Weight:</strong> ${selectedIngredient.weight}</span>
+      <span><strong>Value:</strong> ${selectedIngredient.value}</span>
+    </div>
 
-    <p><strong>Effects:</strong></p>
-    <p>${effectList}</p>
+    <div class="ingredient-effects">
+      ${effectList}
+    </div>
   `;
 }
 
@@ -411,6 +598,11 @@ ingredientLookupInput.addEventListener("keydown", event => {
   handleDropdownKeyboard(event, ingredientLookupInput, ingredientLookupDropdown);
 });
 
+savePotionBtn.addEventListener("click", savePotion);
+
+potionDatabaseSearch.addEventListener("input", renderPotionDatabase);
+potionDatabaseFilter.addEventListener("change", renderPotionDatabase);
+
 // Close custom dropdowns when clicking outside of them
 document.addEventListener("click", function (event) {
   document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
@@ -427,3 +619,4 @@ document.addEventListener("click", function (event) {
 updateResults();
 updateEffectResults();
 updateIngredientLookupResults();
+renderPotionDatabase();
