@@ -323,6 +323,18 @@ ingredientLookupInput.addEventListener("input", () => {
   updateIngredientLookupResults();
 });
 
+// Close custom dropdowns when clicking outside of them
+document.addEventListener("click", function (event) {
+  document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
+    if (!dropdown.contains(event.target)) {
+      const menu = dropdown.querySelector(".dropdown-options");
+      if (menu) {
+        menu.style.display = "none";
+      }
+    }
+  });
+});
+
 // Initial page text
 updateResults();
 updateEffectResults();
