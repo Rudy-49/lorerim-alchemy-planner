@@ -8,14 +8,22 @@
 
   <h1>Alchemy Planner</h1>
 
-  <input id="ingredient1" list="ingredient1List" placeholder="Ingredient 1">
-  <datalist id="ingredient1List"></datalist>
+  <h2>Potion Builder</h2>
 
-  <input id="ingredient2" list="ingredient2List" placeholder="Ingredient 2">
-  <datalist id="ingredient2List"></datalist>
+  <div class="custom-dropdown">
+    <input id="ingredient1" placeholder="Ingredient 1" autocomplete="off">
+    <div id="ingredient1Dropdown" class="dropdown-list"></div>
+  </div>
 
-  <input id="ingredient3" list="ingredient3List" placeholder="Ingredient 3">
-  <datalist id="ingredient3List"></datalist>
+  <div class="custom-dropdown">
+    <input id="ingredient2" placeholder="Ingredient 2" autocomplete="off">
+    <div id="ingredient2Dropdown" class="dropdown-list"></div>
+  </div>
+
+  <div class="custom-dropdown">
+    <input id="ingredient3" placeholder="Ingredient 3" autocomplete="off">
+    <div id="ingredient3Dropdown" class="dropdown-list"></div>
+  </div>
 
   <div id="results"></div>
 
@@ -23,17 +31,21 @@
 
   <h2>Search by Effect</h2>
 
-  <input id="effectSearch" list="effectList" placeholder="Search effect">
-  <datalist id="effectList"></datalist>
+  <div class="custom-dropdown">
+    <input id="effectSearch" placeholder="Search effect" autocomplete="off">
+    <div id="effectDropdown" class="dropdown-list"></div>
+  </div>
 
   <div id="effectResults"></div>
 
   <hr>
 
-  <h3>Ingredient Lookup</h3>
+  <h2>Ingredient Lookup</h2>
 
-  <input id="ingredientLookup" list="ingredientLookupList" placeholder="Search ingredient">
-  <datalist id="ingredientLookupList"></datalist>
+  <div class="custom-dropdown">
+    <input id="ingredientLookup" placeholder="Search ingredient" autocomplete="off">
+    <div id="ingredientLookupDropdown" class="dropdown-list"></div>
+  </div>
 
   <div id="ingredientLookupResults"></div>
 
