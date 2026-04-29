@@ -223,6 +223,16 @@ ing1Input.addEventListener("focus", () => {
   }, true);
 });
 
+ing1Input.addEventListener("click", (event) => {
+  event.stopPropagation();
+
+  renderDropdown(ing1Input, ing1Dropdown, ingredients, () => {
+    ing2Input.value = "";
+    ing3Input.value = "";
+    updateResults();
+  }, true);
+});
+
 ing1Input.addEventListener("input", () => {
   renderDropdown(ing1Input, ing1Dropdown, ingredients, () => {
     ing2Input.value = "";
@@ -243,7 +253,8 @@ ing2Input.addEventListener("focus", () => {
   }, true);
 });
 
-ing2Input.addEventListener("click", () => {
+ing2Input.addEventListener("click", (event) => {
+  event.stopPropagation();
   renderDropdown(ing2Input, ing2Dropdown, getIngredient2Matches(), () => {
     ing3Input.value = "";
     updateResults();
@@ -267,7 +278,8 @@ ing3Input.addEventListener("focus", () => {
   }, true);
 });
 
-ing3Input.addEventListener("click", () => {
+ing3Input.addEventListener("click", (event) => {
+  event.stopPropagation();
   renderDropdown(ing3Input, ing3Dropdown, getIngredient3Matches(), () => {
     updateResults();
   }, true);
@@ -288,7 +300,8 @@ effectSearchInput.addEventListener("focus", () => {
   }, true);
 });
 
-effectSearchInput.addEventListener("click", () => {
+effectSearchInput.addEventListener("click", (event) => {
+  event.stopPropagation();
   renderDropdown(effectSearchInput, effectDropdown, effects, () => {
     updateEffectResults();
   }, true);
@@ -309,7 +322,8 @@ ingredientLookupInput.addEventListener("focus", () => {
   }, true);
 });
 
-ingredientLookupInput.addEventListener("click", () => {
+ingredientLookupInput.addEventListener("click", (event) => {
+  event.stopPropagation();
   renderDropdown(ingredientLookupInput, ingredientLookupDropdown, ingredients, () => {
     updateIngredientLookupResults();
   }, true);
@@ -327,7 +341,7 @@ ingredientLookupInput.addEventListener("input", () => {
 document.addEventListener("click", function (event) {
   document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
     if (!dropdown.contains(event.target)) {
-      const menu = dropdown.querySelector(".dropdown-options");
+      const menu = dropdown.querySelector(".dropdown-list");
       if (menu) {
         menu.style.display = "none";
       }
