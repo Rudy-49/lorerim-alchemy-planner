@@ -14,7 +14,8 @@ const effectsMap = {};
 lines.forEach(line => {
   if (!line.trim()) return;
 
-  const parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/)
+  const parts = line
+    .split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/)
     .map(p => p.replace(/"/g, "").trim());
 
   const [
@@ -32,13 +33,11 @@ lines.forEach(line => {
     value
   ] = parts;
 
-  // skip bad rows
   if (!baseIngredientId || !ingredientName || !ingredientFormId || !effectId) {
     console.log("Skipped bad row:", line);
     return;
   }
 
-  // unique ingredient ID using FormID
   const ingredientId = `${baseIngredientId}_${ingredientFormId.toLowerCase()}`;
 
   if (!ingredientsMap[ingredientId]) {
@@ -70,6 +69,10 @@ lines.forEach(line => {
 const ingredients = Object.values(ingredientsMap).sort((a, b) =>
   a.baseName.localeCompare(b.baseName)
 );
+
+ingredients.forEach(ingredient => {
+  ingredient.effects.sort((a, b) => a.localeCompare(b));
+});
 
 const effects = Object.values(effectsMap).sort((a, b) =>
   a.name.localeCompare(b.name)

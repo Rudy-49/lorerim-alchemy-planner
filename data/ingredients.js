@@ -7,10 +7,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 15,
     "effects": [
-      "weakness_to_frost",
+      "fortify_restoration",
       "fortify_sneak",
-      "weakness_to_poison",
-      "fortify_restoration"
+      "weakness_to_frost",
+      "weakness_to_poison"
     ]
   },
   {
@@ -21,10 +21,10 @@ const ingredients = [
     "weight": 1,
     "value": 5,
     "effects": [
+      "damage_magicka_regeneration",
       "fortify_conjuration",
       "resist_magic",
-      "resist_shock",
-      "damage_magicka_regeneration"
+      "resist_shock"
     ]
   },
   {
@@ -35,10 +35,10 @@ const ingredients = [
     "weight": 1,
     "value": 5,
     "effects": [
-      "fortify_illusion",
+      "damage_magicka_regeneration",
       "fortify_alteration",
-      "resist_frost",
-      "damage_magicka_regeneration"
+      "fortify_illusion",
+      "resist_frost"
     ]
   },
   {
@@ -49,10 +49,10 @@ const ingredients = [
     "weight": 1,
     "value": 5,
     "effects": [
+      "damage_magicka_regeneration",
       "fortify_destruction",
       "fortify_restoration",
-      "resist_fire",
-      "damage_magicka_regeneration"
+      "resist_fire"
     ]
   },
   {
@@ -63,10 +63,10 @@ const ingredients = [
     "weight": 0.4,
     "value": 70,
     "effects": [
-      "resist_frost",
+      "damage_magicka_regeneration",
       "fortify_carry_weight",
-      "resist_poison",
-      "damage_magicka_regeneration"
+      "resist_frost",
+      "resist_poison"
     ]
   },
   {
@@ -77,10 +77,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 40,
     "effects": [
-      "fortify_stamina_regeneration",
-      "light",
       "damage_maximum_magicka",
-      "fortify_health_regeneration"
+      "fortify_health_regeneration",
+      "fortify_stamina_regeneration",
+      "light"
     ]
   },
   {
@@ -91,10 +91,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "restore_health",
-      "restore_stamina",
       "damage_magicka",
-      "invisibility"
+      "invisibility",
+      "restore_health",
+      "restore_stamina"
     ]
   },
   {
@@ -119,10 +119,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 40,
     "effects": [
-      "restore_health",
-      "fortify_health_regeneration",
+      "cure_poison",
       "fortify_health",
-      "cure_poison"
+      "fortify_health_regeneration",
+      "restore_health"
     ]
   },
   {
@@ -133,9 +133,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
+      "damage_magicka_regeneration",
       "damage_stamina",
       "fortify_conjuration",
-      "damage_magicka_regeneration",
       "soul_trap"
     ]
   },
@@ -147,9 +147,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 28,
     "effects": [
-      "restore_stamina",
       "fortify_armor_rating",
       "reflect_damage",
+      "restore_stamina",
       "weakness_to_poison"
     ]
   },
@@ -161,10 +161,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 250,
     "effects": [
-      "weakness_to_frost",
+      "fortify_magicka_regeneration",
       "resist_fire",
       "restore_magicka",
-      "fortify_magicka_regeneration"
+      "weakness_to_frost"
     ]
   },
   {
@@ -175,10 +175,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 400,
     "effects": [
-      "weakness_to_fire",
+      "fortify_conjuration",
       "resist_frost",
       "restore_magicka",
-      "fortify_conjuration"
+      "weakness_to_fire"
     ]
   },
   {
@@ -189,10 +189,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 500,
     "effects": [
-      "weakness_to_shock",
-      "resist_magic",
       "damage_health",
-      "fortify_magicka"
+      "fortify_magicka",
+      "resist_magic",
+      "weakness_to_shock"
     ]
   },
   {
@@ -204,8 +204,8 @@ const ingredients = [
     "value": 30,
     "effects": [
       "fortify_health_regeneration",
-      "resist_fire",
       "fortify_marksman",
+      "resist_fire",
       "waterbreathing"
     ]
   },
@@ -217,10 +217,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 1,
     "effects": [
-      "lingering_damage_health",
       "fortify_stamina_regeneration",
-      "waterbreathing",
-      "fortify_two_handed"
+      "fortify_two_handed",
+      "lingering_damage_health",
+      "waterbreathing"
     ]
   },
   {
@@ -231,10 +231,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "waterbreathing",
       "damage_health",
+      "damage_magicka_regeneration",
       "lingering_damage_magicka",
-      "damage_magicka_regeneration"
+      "waterbreathing"
     ]
   },
   {
@@ -245,10 +245,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_poison",
-      "fortify_restoration",
+      "damage_stamina_regeneration",
       "fortify_health",
-      "damage_stamina_regeneration"
+      "fortify_restoration",
+      "resist_poison"
     ]
   },
   {
@@ -260,9 +260,9 @@ const ingredients = [
     "value": 20,
     "effects": [
       "damage_stamina",
+      "fortify_destruction",
       "invisibility",
-      "resist_fire",
-      "fortify_destruction"
+      "resist_fire"
     ]
   },
   {
@@ -273,10 +273,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 15,
     "effects": [
-      "lesser_corpus",
       "fortify_carry_weight",
-      "restore_health",
-      "light"
+      "lesser_corpus",
+      "light",
+      "restore_health"
     ]
   },
   {
@@ -287,9 +287,9 @@ const ingredients = [
     "weight": 0.25,
     "value": 20,
     "effects": [
-      "restore_health",
       "fortify_speed",
       "resist_shock",
+      "restore_health",
       "weakness_to_frost"
     ]
   },
@@ -301,9 +301,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "slow",
-      "resist_magic",
       "cure_disease",
+      "resist_magic",
+      "slow",
       "spell_absorption"
     ]
   },
@@ -315,9 +315,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "slow",
-      "resist_magic",
       "cure_disease",
+      "resist_magic",
+      "slow",
       "spell_absorption"
     ]
   },
@@ -329,10 +329,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_fire",
-      "weakness_to_shock",
       "fortify_lockpicking",
-      "fortify_sneak"
+      "fortify_sneak",
+      "resist_fire",
+      "weakness_to_shock"
     ]
   },
   {
@@ -343,10 +343,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 100,
     "effects": [
-      "resist_magic",
-      "fortify_speed",
       "fortify_block",
-      "paralysis"
+      "fortify_speed",
+      "paralysis",
+      "resist_magic"
     ]
   },
   {
@@ -357,10 +357,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 25,
     "effects": [
+      "damage_health",
       "damage_magicka",
       "resist_fire",
-      "resist_shock",
-      "damage_health"
+      "resist_shock"
     ]
   },
   {
@@ -371,10 +371,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 10,
     "effects": [
-      "resist_shock",
-      "fortify_magicka",
+      "damage_stamina",
       "fortify_destruction",
-      "damage_stamina"
+      "fortify_magicka",
+      "resist_shock"
     ]
   },
   {
@@ -385,9 +385,9 @@ const ingredients = [
     "weight": 0.25,
     "value": 2,
     "effects": [
-      "restore_health",
-      "fortify_one_handed",
       "damage_stamina",
+      "fortify_one_handed",
+      "restore_health",
       "weakness_to_magic"
     ]
   },
@@ -399,10 +399,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "fortify_unarmed",
+      "damage_magicka_regeneration",
       "fortify_health",
       "fortify_one_handed",
-      "damage_magicka_regeneration"
+      "fortify_unarmed"
     ]
   },
   {
@@ -413,10 +413,10 @@ const ingredients = [
     "weight": 0.75,
     "value": 40,
     "effects": [
-      "fortify_health",
-      "frenzy",
       "damage_stamina",
-      "fortify_destruction"
+      "fortify_destruction",
+      "fortify_health",
+      "frenzy"
     ]
   },
   {
@@ -427,9 +427,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 3,
     "effects": [
-      "restore_stamina",
       "damage_maximum_stamina",
       "fortify_stamina_regeneration",
+      "restore_stamina",
       "weakness_to_shock"
     ]
   },
@@ -441,10 +441,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 5,
     "effects": [
-      "resist_poison",
-      "fortify_speed",
+      "fortify_destruction",
       "fortify_sneak",
-      "fortify_destruction"
+      "fortify_speed",
+      "resist_poison"
     ]
   },
   {
@@ -455,10 +455,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 10,
     "effects": [
-      "restore_health",
+      "fortify_carry_weight",
       "fortify_speech",
       "resist_magic",
-      "fortify_carry_weight"
+      "restore_health"
     ]
   },
   {
@@ -469,10 +469,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 10,
     "effects": [
-      "restore_health",
+      "fortify_carry_weight",
       "fortify_speech",
       "resist_fire",
-      "fortify_carry_weight"
+      "restore_health"
     ]
   },
   {
@@ -483,10 +483,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 10,
     "effects": [
-      "restore_health",
+      "fortify_carry_weight",
       "fortify_speech",
       "resist_frost",
-      "fortify_carry_weight"
+      "restore_health"
     ]
   },
   {
@@ -497,10 +497,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 10,
     "effects": [
-      "restore_health",
+      "fortify_carry_weight",
       "fortify_speech",
       "resist_shock",
-      "fortify_carry_weight"
+      "restore_health"
     ]
   },
   {
@@ -511,10 +511,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
+      "damage_maximum_stamina",
       "damage_stamina",
-      "lingering_damage_stamina",
       "damage_stamina_regeneration",
-      "damage_maximum_stamina"
+      "lingering_damage_stamina"
     ]
   },
   {
@@ -525,10 +525,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 5,
     "effects": [
+      "damage_maximum_stamina",
       "damage_stamina",
-      "resist_fire",
       "fortify_conjuration",
-      "damage_maximum_stamina"
+      "resist_fire"
     ]
   },
   {
@@ -539,10 +539,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "lingering_damage_stamina",
-      "invisibility",
       "cure_poison",
-      "damage_magicka"
+      "damage_magicka",
+      "invisibility",
+      "lingering_damage_stamina"
     ]
   },
   {
@@ -553,10 +553,10 @@ const ingredients = [
     "weight": 0.3,
     "value": 10,
     "effects": [
-      "weakness_to_fire",
       "fortify_block",
-      "weakness_to_poison",
-      "resist_magic"
+      "resist_magic",
+      "weakness_to_fire",
+      "weakness_to_poison"
     ]
   },
   {
@@ -567,9 +567,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 10,
     "effects": [
-      "light",
-      "fortify_magicka",
       "fortify_alteration",
+      "fortify_magicka",
+      "light",
       "spell_absorption"
     ]
   },
@@ -581,10 +581,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 30,
     "effects": [
-      "weakness_to_fire",
-      "resist_fire",
+      "fortify_illusion",
       "fortify_speed",
-      "fortify_illusion"
+      "resist_fire",
+      "weakness_to_fire"
     ]
   },
   {
@@ -595,10 +595,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 50,
     "effects": [
-      "restore_magicka",
       "fortify_magicka",
+      "invisibility",
       "night_eye",
-      "invisibility"
+      "restore_magicka"
     ]
   },
   {
@@ -611,8 +611,8 @@ const ingredients = [
     "effects": [
       "damage_stamina",
       "frenzy",
-      "restore_health",
-      "reflect_damage"
+      "reflect_damage",
+      "restore_health"
     ]
   },
   {
@@ -638,9 +638,9 @@ const ingredients = [
     "value": 5,
     "effects": [
       "damage_health",
+      "invisibility",
       "restore_health",
-      "weakness_to_magic",
-      "invisibility"
+      "weakness_to_magic"
     ]
   },
   {
@@ -651,10 +651,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 15,
     "effects": [
-      "restore_health",
+      "damage_health",
       "invisibility",
-      "weakness_to_magic",
-      "damage_health"
+      "restore_health",
+      "weakness_to_magic"
     ]
   },
   {
@@ -665,10 +665,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
+      "fortify_health",
       "invisibility",
       "resist_poison",
-      "slow",
-      "fortify_health"
+      "slow"
     ]
   },
   {
@@ -693,9 +693,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
+      "damage_magicka_regeneration",
       "damage_stamina",
       "fortify_conjuration",
-      "damage_magicka_regeneration",
       "soul_trap"
     ]
   },
@@ -707,10 +707,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_shock",
+      "fear",
       "fortify_pickpocket",
-      "restore_health",
-      "fear"
+      "resist_shock",
+      "restore_health"
     ]
   },
   {
@@ -721,8 +721,8 @@ const ingredients = [
     "weight": 0.3,
     "value": 100,
     "effects": [
-      "damage_stamina",
       "cure_poison",
+      "damage_stamina",
       "dispel",
       "resist_poison"
     ]
@@ -735,9 +735,9 @@ const ingredients = [
     "weight": 0.5,
     "value": 20,
     "effects": [
-      "fortify_stamina",
-      "fortify_health",
       "fortify_block",
+      "fortify_health",
+      "fortify_stamina",
       "frenzy"
     ]
   },
@@ -749,10 +749,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 3,
     "effects": [
-      "restore_magicka",
-      "resist_magic",
+      "damage_stamina_regeneration",
       "fortify_barter",
-      "damage_stamina_regeneration"
+      "resist_magic",
+      "restore_magicka"
     ]
   },
   {
@@ -763,10 +763,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 20,
     "effects": [
-      "restore_magicka",
-      "fortify_speed",
+      "damage_stamina",
       "fear",
-      "damage_stamina"
+      "fortify_speed",
+      "restore_magicka"
     ]
   },
   {
@@ -777,10 +777,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "restore_magicka",
-      "fortify_block",
       "fortify_barter",
-      "fortify_stamina"
+      "fortify_block",
+      "fortify_stamina",
+      "restore_magicka"
     ]
   },
   {
@@ -791,10 +791,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 5,
     "effects": [
+      "damage_maximum_stamina",
       "damage_stamina",
-      "resist_fire",
       "fortify_conjuration",
-      "damage_maximum_stamina"
+      "resist_fire"
     ]
   },
   {
@@ -805,10 +805,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 100,
     "effects": [
-      "restore_magicka",
       "fortify_block",
+      "fortify_magicka",
       "paralysis",
-      "fortify_magicka"
+      "restore_magicka"
     ]
   },
   {
@@ -819,10 +819,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 50,
     "effects": [
-      "slow",
       "damage_maximum_stamina",
       "damage_stamina_regeneration",
-      "resist_magic"
+      "resist_magic",
+      "slow"
     ]
   },
   {
@@ -833,10 +833,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 20,
     "effects": [
-      "weakness_to_fire",
       "fortify_alteration",
       "silence",
-      "slow"
+      "slow",
+      "weakness_to_fire"
     ]
   },
   {
@@ -847,10 +847,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 3,
     "effects": [
-      "restore_health",
+      "damage_magicka",
       "fortify_barter",
       "lingering_damage_stamina",
-      "damage_magicka"
+      "restore_health"
     ]
   },
   {
@@ -862,8 +862,8 @@ const ingredients = [
     "value": 15,
     "effects": [
       "damage_stamina",
-      "fortify_one_handed",
       "fortify_marksman",
+      "fortify_one_handed",
       "slow"
     ]
   },
@@ -875,10 +875,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 3,
     "effects": [
-      "resist_poison",
       "fortify_pickpocket",
+      "fortify_stamina",
       "lingering_damage_health",
-      "fortify_stamina"
+      "resist_poison"
     ]
   },
   {
@@ -890,9 +890,9 @@ const ingredients = [
     "value": 1,
     "effects": [
       "damage_stamina",
-      "weakness_to_fire",
       "damage_stamina_regeneration",
-      "frenzy"
+      "frenzy",
+      "weakness_to_fire"
     ]
   },
   {
@@ -903,10 +903,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 1,
     "effects": [
-      "restore_stamina",
       "cure_disease",
       "resist_poison",
-      "restore_health"
+      "restore_health",
+      "restore_stamina"
     ]
   },
   {
@@ -917,10 +917,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 10,
     "effects": [
-      "weakness_to_poison",
-      "fortify_stamina",
       "damage_magicka",
-      "invisibility"
+      "fortify_stamina",
+      "invisibility",
+      "weakness_to_poison"
     ]
   },
   {
@@ -931,9 +931,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
+      "damage_magicka_regeneration",
       "damage_stamina",
       "fortify_conjuration",
-      "damage_magicka_regeneration",
       "soul_trap"
     ]
   },
@@ -945,10 +945,10 @@ const ingredients = [
     "weight": 0.125,
     "value": 2,
     "effects": [
-      "resist_magic",
       "damage_magicka_regeneration",
-      "waterbreathing",
-      "lingering_damage_stamina"
+      "lingering_damage_stamina",
+      "resist_magic",
+      "waterbreathing"
     ]
   },
   {
@@ -973,10 +973,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 7,
     "effects": [
-      "weakness_to_frost",
-      "restore_stamina",
       "cure_disease",
-      "damage_magicka"
+      "damage_magicka",
+      "restore_stamina",
+      "weakness_to_frost"
     ]
   },
   {
@@ -988,9 +988,9 @@ const ingredients = [
     "value": 60,
     "effects": [
       "cure_disease",
-      "resist_magic",
+      "damage_health",
       "paralysis",
-      "damage_health"
+      "resist_magic"
     ]
   },
   {
@@ -1001,10 +1001,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "restore_stamina",
+      "damage_magicka_regeneration",
       "fortify_speed",
       "fortify_stamina_regeneration",
-      "damage_magicka_regeneration"
+      "restore_stamina"
     ]
   },
   {
@@ -1029,10 +1029,10 @@ const ingredients = [
     "weight": 0.05,
     "value": 15,
     "effects": [
-      "lingering_damage_magicka",
       "fortify_alteration",
+      "fortify_jump",
       "lingering_damage_health",
-      "fortify_jump"
+      "lingering_damage_magicka"
     ]
   },
   {
@@ -1044,9 +1044,9 @@ const ingredients = [
     "value": 30,
     "effects": [
       "damage_health",
-      "lingering_damage_stamina",
       "damage_maximum_magicka",
-      "fortify_carry_weight"
+      "fortify_carry_weight",
+      "lingering_damage_stamina"
     ]
   },
   {
@@ -1058,9 +1058,9 @@ const ingredients = [
     "value": 50,
     "effects": [
       "damage_stamina",
-      "spell_absorption",
+      "fortify_destruction",
       "restore_magicka",
-      "fortify_destruction"
+      "spell_absorption"
     ]
   },
   {
@@ -1072,9 +1072,9 @@ const ingredients = [
     "value": 10,
     "effects": [
       "damage_maximum_health",
+      "fortify_conjuration",
       "restore_magicka",
-      "weakness_to_fire",
-      "fortify_conjuration"
+      "weakness_to_fire"
     ]
   },
   {
@@ -1085,10 +1085,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 100,
     "effects": [
+      "fortify_marksman",
       "paralysis",
-      "restore_health",
       "resist_shock",
-      "fortify_marksman"
+      "restore_health"
     ]
   },
   {
@@ -1114,9 +1114,9 @@ const ingredients = [
     "value": 150,
     "effects": [
       "damage_stamina",
+      "damage_stamina_regeneration",
       "fortify_lockpicking",
-      "reflect_damage",
-      "damage_stamina_regeneration"
+      "reflect_damage"
     ]
   },
   {
@@ -1141,9 +1141,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 1,
     "effects": [
-      "restore_magicka",
       "damage_stamina_regeneration",
       "fortify_carry_weight",
+      "restore_magicka",
       "weakness_to_magic"
     ]
   },
@@ -1169,10 +1169,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 15,
     "effects": [
+      "damage_maximum_health",
       "damage_stamina",
-      "fortify_restoration",
       "fear",
-      "damage_maximum_health"
+      "fortify_restoration"
     ]
   },
   {
@@ -1184,9 +1184,9 @@ const ingredients = [
     "value": 1500,
     "effects": [
       "lingering_damage_health",
+      "restore_health",
       "restore_magicka",
-      "restore_stamina",
-      "restore_health"
+      "restore_stamina"
     ]
   },
   {
@@ -1197,10 +1197,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 2000,
     "effects": [
+      "invisibility",
       "lingering_damage_stamina",
-      "paralysis",
       "night_eye",
-      "invisibility"
+      "paralysis"
     ]
   },
   {
@@ -1212,8 +1212,8 @@ const ingredients = [
     "value": 2000,
     "effects": [
       "damage_maximum_health",
-      "paralysis",
       "fortify_destruction",
+      "paralysis",
       "spell_absorption"
     ]
   },
@@ -1225,10 +1225,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 2000,
     "effects": [
-      "resist_frost",
-      "light",
       "damage_magicka_regeneration",
-      "fortify_stamina_regeneration"
+      "fortify_stamina_regeneration",
+      "light",
+      "resist_frost"
     ]
   },
   {
@@ -1239,10 +1239,10 @@ const ingredients = [
     "weight": 0.4,
     "value": 70,
     "effects": [
-      "resist_frost",
-      "light",
       "damage_magicka_regeneration",
-      "fortify_carry_weight"
+      "fortify_carry_weight",
+      "light",
+      "resist_frost"
     ]
   },
   {
@@ -1253,10 +1253,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 10,
     "effects": [
-      "night_eye",
-      "resist_poison",
+      "cure_poison",
       "lingering_damage_health",
-      "cure_poison"
+      "night_eye",
+      "resist_poison"
     ]
   },
   {
@@ -1267,10 +1267,10 @@ const ingredients = [
     "weight": 0.05,
     "value": 1,
     "effects": [
-      "weakness_to_magic",
+      "fortify_magicka_regeneration",
       "fortify_restoration",
       "slow",
-      "fortify_magicka_regeneration"
+      "weakness_to_magic"
     ]
   },
   {
@@ -1281,10 +1281,10 @@ const ingredients = [
     "weight": 0.05,
     "value": 1,
     "effects": [
-      "weakness_to_magic",
+      "fortify_magicka_regeneration",
       "fortify_restoration",
       "slow",
-      "fortify_magicka_regeneration"
+      "weakness_to_magic"
     ]
   },
   {
@@ -1310,8 +1310,8 @@ const ingredients = [
     "value": 5,
     "effects": [
       "damage_stamina",
-      "fortify_speed",
       "fortify_magicka_regeneration",
+      "fortify_speed",
       "invisibility"
     ]
   },
@@ -1323,8 +1323,8 @@ const ingredients = [
     "weight": 0.5,
     "value": 35,
     "effects": [
-      "regenerate_stamina",
       "fortify_magicka",
+      "regenerate_stamina",
       "resist_shock",
       "waterbreathing"
     ]
@@ -1353,8 +1353,8 @@ const ingredients = [
     "effects": [
       "weakness_to_fire",
       "weakness_to_frost",
-      "weakness_to_shock",
-      "weakness_to_poison"
+      "weakness_to_poison",
+      "weakness_to_shock"
     ]
   },
   {
@@ -1365,10 +1365,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 50,
     "effects": [
-      "frenzy",
       "fortify_health_regeneration",
       "fortify_magicka_regeneration",
-      "fortify_stamina_regeneration"
+      "fortify_stamina_regeneration",
+      "frenzy"
     ]
   },
   {
@@ -1379,10 +1379,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 100,
     "effects": [
-      "fortify_one_handed",
-      "fortify_two_handed",
+      "fortify_destruction",
       "fortify_marksman",
-      "fortify_destruction"
+      "fortify_one_handed",
+      "fortify_two_handed"
     ]
   },
   {
@@ -1395,8 +1395,8 @@ const ingredients = [
     "effects": [
       "resist_fire",
       "resist_frost",
-      "resist_shock",
-      "resist_poison"
+      "resist_poison",
+      "resist_shock"
     ]
   },
   {
@@ -1435,10 +1435,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 5,
     "effects": [
-      "resist_fire",
       "fortify_barter",
       "fortify_illusion",
-      "fortify_two_handed"
+      "fortify_two_handed",
+      "resist_fire"
     ]
   },
   {
@@ -1449,10 +1449,10 @@ const ingredients = [
     "weight": 1,
     "value": 25,
     "effects": [
-      "weakness_to_magic",
       "frenzy",
+      "resist_poison",
       "waterbreathing",
-      "resist_poison"
+      "weakness_to_magic"
     ]
   },
   {
@@ -1463,10 +1463,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 59,
     "effects": [
-      "weakness_to_poison",
-      "fortify_stamina",
       "damage_magicka",
-      "invisibility"
+      "fortify_stamina",
+      "invisibility",
+      "weakness_to_poison"
     ]
   },
   {
@@ -1477,10 +1477,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 50,
     "effects": [
-      "weakness_to_magic",
       "fortify_illusion",
       "fortify_magicka_regeneration",
-      "restore_magicka"
+      "restore_magicka",
+      "weakness_to_magic"
     ]
   },
   {
@@ -1491,10 +1491,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 50,
     "effects": [
-      "weakness_to_magic",
       "fortify_illusion",
       "fortify_magicka_regeneration",
-      "restore_magicka"
+      "restore_magicka",
+      "weakness_to_magic"
     ]
   },
   {
@@ -1505,10 +1505,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 50,
     "effects": [
-      "weakness_to_magic",
       "fortify_illusion",
       "fortify_magicka_regeneration",
-      "restore_magicka"
+      "restore_magicka",
+      "weakness_to_magic"
     ]
   },
   {
@@ -1519,10 +1519,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 25,
     "effects": [
-      "resist_shock",
       "fortify_lockpicking",
-      "weakness_to_shock",
-      "paralysis"
+      "paralysis",
+      "resist_shock",
+      "weakness_to_shock"
     ]
   },
   {
@@ -1533,10 +1533,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 20,
     "effects": [
-      "restore_stamina",
-      "resist_frost",
       "fortify_carry_weight",
-      "resist_shock"
+      "resist_frost",
+      "resist_shock",
+      "restore_stamina"
     ]
   },
   {
@@ -1548,9 +1548,9 @@ const ingredients = [
     "value": 20,
     "effects": [
       "cure_disease",
-      "fortify_speed",
       "fortify_one_handed",
-      "fortify_sneak"
+      "fortify_sneak",
+      "fortify_speed"
     ]
   },
   {
@@ -1561,10 +1561,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "restore_magicka",
+      "damage_health",
       "fortify_destruction",
       "fortify_magicka",
-      "damage_health"
+      "restore_magicka"
     ]
   },
   {
@@ -1575,10 +1575,10 @@ const ingredients = [
     "weight": 0.3,
     "value": 10,
     "effects": [
-      "weakness_to_fire",
       "fortify_block",
-      "weakness_to_poison",
-      "resist_magic"
+      "resist_magic",
+      "weakness_to_fire",
+      "weakness_to_poison"
     ]
   },
   {
@@ -1591,8 +1591,8 @@ const ingredients = [
     "effects": [
       "damage_stamina",
       "frenzy",
-      "restore_health",
-      "reflect_damage"
+      "reflect_damage",
+      "restore_health"
     ]
   },
   {
@@ -1603,10 +1603,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "resist_fire",
+      "fortify_stamina_regeneration",
       "fortify_two_handed",
       "frenzy",
-      "fortify_stamina_regeneration"
+      "resist_fire"
     ]
   },
   {
@@ -1619,8 +1619,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "lingering_damage_health",
-      "slow",
-      "restore_health"
+      "restore_health",
+      "slow"
     ]
   },
   {
@@ -1632,9 +1632,9 @@ const ingredients = [
     "value": 12,
     "effects": [
       "damage_magicka",
-      "fortify_lockpicking",
       "fear",
-      "fortify_health_regeneration"
+      "fortify_health_regeneration",
+      "fortify_lockpicking"
     ]
   },
   {
@@ -1645,10 +1645,10 @@ const ingredients = [
     "weight": 0.3,
     "value": 12,
     "effects": [
-      "weakness_to_frost",
+      "damage_maximum_magicka",
       "fortify_armor_rating",
       "restore_magicka",
-      "damage_maximum_magicka"
+      "weakness_to_frost"
     ]
   },
   {
@@ -1660,9 +1660,9 @@ const ingredients = [
     "value": 5,
     "effects": [
       "cure_disease",
-      "lingering_damage_magicka",
       "damage_stamina",
-      "fortify_illusion"
+      "fortify_illusion",
+      "lingering_damage_magicka"
     ]
   },
   {
@@ -1674,9 +1674,9 @@ const ingredients = [
     "value": 2,
     "effects": [
       "cure_disease",
-      "lingering_damage_magicka",
       "damage_stamina",
-      "fortify_illusion"
+      "fortify_illusion",
+      "lingering_damage_magicka"
     ]
   },
   {
@@ -1687,10 +1687,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 10,
     "effects": [
-      "restore_magicka",
       "fortify_marksman",
-      "weakness_to_frost",
-      "resist_fire"
+      "resist_fire",
+      "restore_magicka",
+      "weakness_to_frost"
     ]
   },
   {
@@ -1701,10 +1701,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 50,
     "effects": [
-      "restore_magicka",
+      "fear",
       "invisibility",
-      "slow",
-      "fear"
+      "restore_magicka",
+      "slow"
     ]
   },
   {
@@ -1716,8 +1716,8 @@ const ingredients = [
     "value": 1,
     "effects": [
       "damage_health",
-      "fortify_magicka",
       "fortify_health_regeneration",
+      "fortify_magicka",
       "fortify_two_handed"
     ]
   },
@@ -1729,10 +1729,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 12,
     "effects": [
-      "restore_stamina",
-      "damage_maximum_health",
       "damage_magicka",
-      "restore_health"
+      "damage_maximum_health",
+      "restore_health",
+      "restore_stamina"
     ]
   },
   {
@@ -1744,9 +1744,9 @@ const ingredients = [
     "value": 10,
     "effects": [
       "damage_health",
+      "fortify_lockpicking",
       "frenzy",
-      "resist_poison",
-      "fortify_lockpicking"
+      "resist_poison"
     ]
   },
   {
@@ -1757,10 +1757,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 5,
     "effects": [
-      "weakness_to_fire",
+      "damage_health",
       "damage_magicka_regeneration",
-      "weakness_to_magic",
-      "damage_health"
+      "weakness_to_fire",
+      "weakness_to_magic"
     ]
   },
   {
@@ -1771,10 +1771,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 15,
     "effects": [
-      "restore_health",
-      "fortify_speed",
       "cure_poison",
-      "resist_magic"
+      "fortify_speed",
+      "resist_magic",
+      "restore_health"
     ]
   },
   {
@@ -1786,9 +1786,9 @@ const ingredients = [
     "value": 50,
     "effects": [
       "damage_health",
+      "paralysis",
       "resist_fire",
-      "spell_absorption",
-      "paralysis"
+      "spell_absorption"
     ]
   },
   {
@@ -1799,10 +1799,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 250,
     "effects": [
-      "weakness_to_frost",
+      "fortify_magicka_regeneration",
       "resist_fire",
       "restore_magicka",
-      "fortify_magicka_regeneration"
+      "weakness_to_frost"
     ]
   },
   {
@@ -1813,10 +1813,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 15,
     "effects": [
-      "weakness_to_magic",
+      "damage_health",
       "fortify_magicka",
       "fortify_magicka_regeneration",
-      "damage_health"
+      "weakness_to_magic"
     ]
   },
   {
@@ -1827,10 +1827,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 50,
     "effects": [
-      "restore_health",
+      "invisibility",
       "resist_frost",
-      "weakness_to_fire",
-      "invisibility"
+      "restore_health",
+      "weakness_to_fire"
     ]
   },
   {
@@ -1841,10 +1841,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 50,
     "effects": [
-      "restore_health",
+      "invisibility",
       "resist_frost",
-      "weakness_to_fire",
-      "invisibility"
+      "restore_health",
+      "weakness_to_fire"
     ]
   },
   {
@@ -1855,10 +1855,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "resist_fire",
+      "fortify_stamina_regeneration",
       "fortify_two_handed",
       "frenzy",
-      "fortify_stamina_regeneration"
+      "resist_fire"
     ]
   },
   {
@@ -1869,10 +1869,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_frost",
-      "fortify_sneak",
       "damage_maximum_magicka",
-      "damage_stamina_regeneration"
+      "damage_stamina_regeneration",
+      "fortify_sneak",
+      "resist_frost"
     ]
   },
   {
@@ -1883,10 +1883,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 400,
     "effects": [
-      "weakness_to_fire",
+      "fortify_conjuration",
       "resist_frost",
       "restore_magicka",
-      "fortify_conjuration"
+      "weakness_to_fire"
     ]
   },
   {
@@ -1897,10 +1897,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 40,
     "effects": [
-      "restore_stamina",
-      "waterbreathing",
       "fortify_health",
-      "restore_magicka"
+      "restore_magicka",
+      "restore_stamina",
+      "waterbreathing"
     ]
   },
   {
@@ -1911,10 +1911,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 40,
     "effects": [
-      "restore_stamina",
-      "waterbreathing",
       "fortify_health",
-      "restore_magicka"
+      "restore_magicka",
+      "restore_stamina",
+      "waterbreathing"
     ]
   },
   {
@@ -1925,10 +1925,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 10,
     "effects": [
-      "resist_poison",
-      "fortify_stamina",
+      "fortify_health_regeneration",
       "fortify_magicka_regeneration",
-      "fortify_health_regeneration"
+      "fortify_stamina",
+      "resist_poison"
     ]
   },
   {
@@ -1939,10 +1939,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 5,
     "effects": [
-      "weakness_to_shock",
       "damage_maximum_health",
+      "restore_magicka",
       "weakness_to_poison",
-      "restore_magicka"
+      "weakness_to_shock"
     ]
   },
   {
@@ -1954,9 +1954,9 @@ const ingredients = [
     "value": 20,
     "effects": [
       "damage_stamina",
-      "fortify_health",
+      "damage_strength",
       "fortify_carry_weight",
-      "damage_strength"
+      "fortify_health"
     ]
   },
   {
@@ -1967,10 +1967,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 1,
     "effects": [
-      "restore_magicka",
-      "invisibility",
       "fortify_illusion",
-      "fortify_speech"
+      "fortify_speech",
+      "invisibility",
+      "restore_magicka"
     ]
   },
   {
@@ -1981,10 +1981,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 5,
     "effects": [
-      "resist_magic",
       "fear",
       "fortify_health_regeneration",
-      "paralysis"
+      "paralysis",
+      "resist_magic"
     ]
   },
   {
@@ -1996,9 +1996,9 @@ const ingredients = [
     "value": 20,
     "effects": [
       "damage_magicka",
-      "silence",
       "fortify_destruction",
-      "resist_shock"
+      "resist_shock",
+      "silence"
     ]
   },
   {
@@ -2009,10 +2009,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 5,
     "effects": [
-      "resist_shock",
       "fortify_destruction",
+      "fortify_health",
       "reflect_damage",
-      "fortify_health"
+      "resist_shock"
     ]
   },
   {
@@ -2037,10 +2037,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 10,
     "effects": [
-      "lingering_damage_magicka",
       "cure_poison",
       "damage_maximum_health",
-      "fortify_stamina_regeneration"
+      "fortify_stamina_regeneration",
+      "lingering_damage_magicka"
     ]
   },
   {
@@ -2051,10 +2051,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 50,
     "effects": [
-      "paralysis",
       "damage_maximum_health",
-      "weakness_to_frost",
-      "fortify_two_handed"
+      "fortify_two_handed",
+      "paralysis",
+      "weakness_to_frost"
     ]
   },
   {
@@ -2065,10 +2065,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 15,
     "effects": [
-      "resist_fall_damage",
-      "resist_frost",
       "cure_disease",
-      "invisibility"
+      "invisibility",
+      "resist_fall_damage",
+      "resist_frost"
     ]
   },
   {
@@ -2079,10 +2079,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 10,
     "effects": [
-      "restore_stamina",
       "fortify_armor_rating",
-      "waterbreathing",
-      "resist_frost"
+      "resist_frost",
+      "restore_stamina",
+      "waterbreathing"
     ]
   },
   {
@@ -2093,10 +2093,10 @@ const ingredients = [
     "weight": 25,
     "value": 106,
     "effects": [
-      "restore_magicka",
       "damage_stamina_regeneration",
+      "fortify_block",
       "reflect_damage",
-      "fortify_block"
+      "restore_magicka"
     ]
   },
   {
@@ -2107,10 +2107,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 70,
     "effects": [
-      "fortify_carry_weight",
-      "resist_frost",
       "damage_magicka",
-      "night_eye"
+      "fortify_carry_weight",
+      "night_eye",
+      "resist_frost"
     ]
   },
   {
@@ -2121,10 +2121,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 20,
     "effects": [
-      "fortify_one_handed",
       "fortify_health",
-      "slow",
-      "frenzy"
+      "fortify_one_handed",
+      "frenzy",
+      "slow"
     ]
   },
   {
@@ -2135,9 +2135,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_poison",
       "damage_maximum_magicka",
       "fortify_alteration",
+      "resist_poison",
       "restore_magicka"
     ]
   },
@@ -2149,9 +2149,9 @@ const ingredients = [
     "weight": 0.5,
     "value": 15,
     "effects": [
-      "resist_frost",
       "damage_health",
       "fortify_stamina",
+      "resist_frost",
       "slow"
     ]
   },
@@ -2163,10 +2163,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 30,
     "effects": [
-      "restore_magicka",
       "fear",
-      "slow",
-      "invisibility"
+      "invisibility",
+      "restore_magicka",
+      "slow"
     ]
   },
   {
@@ -2177,10 +2177,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 50,
     "effects": [
-      "restore_stamina",
+      "fortify_restoration",
       "paralysis",
-      "waterbreathing",
-      "fortify_restoration"
+      "restore_stamina",
+      "waterbreathing"
     ]
   },
   {
@@ -2191,10 +2191,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 20,
     "effects": [
-      "resist_magic",
+      "fortify_barter",
       "lingering_damage_magicka",
-      "soul_trap",
-      "fortify_barter"
+      "resist_magic",
+      "soul_trap"
     ]
   },
   {
@@ -2220,8 +2220,8 @@ const ingredients = [
     "value": 1,
     "effects": [
       "damage_magicka",
-      "fortify_health",
       "damage_magicka_regeneration",
+      "fortify_health",
       "fortify_one_handed"
     ]
   },
@@ -2235,8 +2235,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka",
-      "paralysis",
-      "damage_magicka_regeneration"
+      "damage_magicka_regeneration",
+      "paralysis"
     ]
   },
   {
@@ -2247,9 +2247,9 @@ const ingredients = [
     "weight": 0.25,
     "value": 15,
     "effects": [
+      "fortify_carry_weight",
       "fortify_unarmed",
       "resist_frost",
-      "fortify_carry_weight",
       "resist_shock"
     ]
   },
@@ -2261,10 +2261,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 10,
     "effects": [
-      "fortify_speed",
       "cure_poison",
       "fortify_one_handed",
-      "fortify_sneak"
+      "fortify_sneak",
+      "fortify_speed"
     ]
   },
   {
@@ -2275,10 +2275,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 5,
     "effects": [
-      "resist_magic",
       "damage_magicka_regeneration",
-      "waterbreathing",
-      "lingering_damage_stamina"
+      "lingering_damage_stamina",
+      "resist_magic",
+      "waterbreathing"
     ]
   },
   {
@@ -2289,10 +2289,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 2,
     "effects": [
-      "weakness_to_magic",
       "fortify_restoration",
+      "regenerate_magicka",
       "slow",
-      "regenerate_magicka"
+      "weakness_to_magic"
     ]
   },
   {
@@ -2305,8 +2305,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka",
-      "silence",
-      "frenzy"
+      "frenzy",
+      "silence"
     ]
   },
   {
@@ -2317,10 +2317,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 3000,
     "effects": [
-      "restore_health",
       "fortify_health",
       "fortify_one_handed",
-      "fortify_two_handed"
+      "fortify_two_handed",
+      "restore_health"
     ]
   },
   {
@@ -2331,10 +2331,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 250,
     "effects": [
-      "restore_health",
-      "damage_stamina_regeneration",
       "damage_magicka",
-      "fear"
+      "damage_stamina_regeneration",
+      "fear",
+      "restore_health"
     ]
   },
   {
@@ -2345,9 +2345,9 @@ const ingredients = [
     "weight": 0.25,
     "value": 6,
     "effects": [
-      "restore_stamina",
-      "fortify_magicka",
       "damage_strength",
+      "fortify_magicka",
+      "restore_stamina",
       "waterbreathing"
     ]
   },
@@ -2359,10 +2359,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 12,
     "effects": [
-      "restore_stamina",
+      "damage_maximum_stamina",
       "fortify_block",
       "fortify_speed",
-      "damage_maximum_stamina"
+      "restore_stamina"
     ]
   },
   {
@@ -2373,10 +2373,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 25,
     "effects": [
-      "resist_poison",
+      "damage_health",
       "fortify_two_handed",
       "frenzy",
-      "damage_health"
+      "resist_poison"
     ]
   },
   {
@@ -2388,9 +2388,9 @@ const ingredients = [
     "value": 25,
     "effects": [
       "damage_health",
+      "fortify_sneak",
       "paralysis",
-      "restore_magicka",
-      "fortify_sneak"
+      "restore_magicka"
     ]
   },
   {
@@ -2401,10 +2401,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 70,
     "effects": [
-      "weakness_to_fire",
       "cure_disease",
       "cure_poison",
-      "fortify_magicka"
+      "fortify_magicka",
+      "weakness_to_fire"
     ]
   },
   {
@@ -2415,10 +2415,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 70,
     "effects": [
-      "weakness_to_fire",
       "cure_disease",
       "cure_poison",
-      "fortify_magicka"
+      "fortify_magicka",
+      "weakness_to_fire"
     ]
   },
   {
@@ -2429,10 +2429,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 40,
     "effects": [
-      "resist_frost",
       "fortify_health",
       "fortify_health_regeneration",
-      "light"
+      "light",
+      "resist_frost"
     ]
   },
   {
@@ -2443,10 +2443,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 23,
     "effects": [
-      "weakness_to_poison",
-      "frenzy",
       "damage_maximum_stamina",
-      "resist_magic"
+      "frenzy",
+      "resist_magic",
+      "weakness_to_poison"
     ]
   },
   {
@@ -2457,10 +2457,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 30,
     "effects": [
-      "weakness_to_frost",
       "fortify_armor_rating",
       "invisibility",
-      "weakness_to_fire"
+      "weakness_to_fire",
+      "weakness_to_frost"
     ]
   },
   {
@@ -2471,10 +2471,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 80,
     "effects": [
-      "weakness_to_magic",
+      "fortify_magicka_regeneration",
       "fortify_restoration",
       "slow",
-      "fortify_magicka_regeneration"
+      "weakness_to_magic"
     ]
   },
   {
@@ -2485,10 +2485,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 15,
     "effects": [
+      "cure_poison",
       "damage_health",
-      "weakness_to_fire",
       "fortify_barter",
-      "cure_poison"
+      "weakness_to_fire"
     ]
   },
   {
@@ -2501,8 +2501,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "lingering_damage_health",
-      "slow",
-      "restore_health"
+      "restore_health",
+      "slow"
     ]
   },
   {
@@ -2513,8 +2513,8 @@ const ingredients = [
     "weight": 0.2,
     "value": 5,
     "effects": [
-      "damage_stamina",
       "damage_magicka_regeneration",
+      "damage_stamina",
       "fortify_lockpicking",
       "fortify_marksman"
     ]
@@ -2527,9 +2527,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 5,
     "effects": [
-      "restore_health",
-      "resist_fire",
       "damage_stamina",
+      "resist_fire",
+      "restore_health",
       "restore_magicka"
     ]
   },
@@ -2543,8 +2543,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka",
-      "damage_stamina",
-      "damage_magicka_regeneration"
+      "damage_magicka_regeneration",
+      "damage_stamina"
     ]
   },
   {
@@ -2557,8 +2557,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka",
-      "damage_stamina",
-      "damage_magicka_regeneration"
+      "damage_magicka_regeneration",
+      "damage_stamina"
     ]
   },
   {
@@ -2569,10 +2569,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 5,
     "effects": [
-      "resist_fire",
       "fortify_barter",
       "fortify_illusion",
-      "fortify_two_handed"
+      "fortify_two_handed",
+      "resist_fire"
     ]
   },
   {
@@ -2583,10 +2583,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "weakness_to_magic",
+      "damage_maximum_health",
       "fortify_magicka",
       "fortify_magicka_regeneration",
-      "damage_maximum_health"
+      "weakness_to_magic"
     ]
   },
   {
@@ -2597,10 +2597,10 @@ const ingredients = [
     "weight": 1,
     "value": 500,
     "effects": [
-      "weakness_to_frost",
+      "fortify_restoration",
       "fortify_sneak",
-      "weakness_to_poison",
-      "fortify_restoration"
+      "weakness_to_frost",
+      "weakness_to_poison"
     ]
   },
   {
@@ -2611,10 +2611,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "weakness_to_fire",
-      "fortify_marksman",
+      "damage_stamina_regeneration",
       "fortify_health_regeneration",
-      "damage_stamina_regeneration"
+      "fortify_marksman",
+      "weakness_to_fire"
     ]
   },
   {
@@ -2625,9 +2625,9 @@ const ingredients = [
     "weight": 0.25,
     "value": 10,
     "effects": [
-      "fortify_stamina_regeneration",
-      "fortify_carry_weight",
       "cure_disease",
+      "fortify_carry_weight",
+      "fortify_stamina_regeneration",
       "fortify_two_handed"
     ]
   },
@@ -2639,9 +2639,9 @@ const ingredients = [
     "weight": 1,
     "value": 20,
     "effects": [
+      "fortify_carry_weight",
       "lingering_damage_stamina",
       "night_eye",
-      "fortify_carry_weight",
       "resist_shock"
     ]
   },
@@ -2653,10 +2653,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 30,
     "effects": [
-      "weakness_to_magic",
-      "slow",
+      "fortify_pickpocket",
       "fortify_sneak",
-      "fortify_pickpocket"
+      "slow",
+      "weakness_to_magic"
     ]
   },
   {
@@ -2667,10 +2667,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 28,
     "effects": [
-      "restore_magicka",
+      "damage_health",
       "fortify_destruction",
       "fortify_magicka",
-      "damage_health"
+      "restore_magicka"
     ]
   },
   {
@@ -2682,9 +2682,9 @@ const ingredients = [
     "value": 120,
     "effects": [
       "damage_health",
-      "slow",
+      "invisibility",
       "paralysis",
-      "invisibility"
+      "slow"
     ]
   },
   {
@@ -2695,10 +2695,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "restore_stamina",
       "fortify_sneak",
       "lingering_damage_magicka",
-      "resist_frost"
+      "resist_frost",
+      "restore_stamina"
     ]
   },
   {
@@ -2709,10 +2709,10 @@ const ingredients = [
     "weight": 1,
     "value": 25,
     "effects": [
-      "fortify_unarmed",
+      "damage_strength",
       "fortify_stamina",
-      "slow",
-      "damage_strength"
+      "fortify_unarmed",
+      "slow"
     ]
   },
   {
@@ -2723,10 +2723,10 @@ const ingredients = [
     "weight": 1,
     "value": 25,
     "effects": [
-      "fortify_unarmed",
+      "damage_strength",
       "fortify_stamina",
-      "slow",
-      "damage_strength"
+      "fortify_unarmed",
+      "slow"
     ]
   },
   {
@@ -2737,10 +2737,10 @@ const ingredients = [
     "weight": 1,
     "value": 25,
     "effects": [
-      "fortify_unarmed",
+      "damage_strength",
       "fortify_stamina",
-      "slow",
-      "damage_strength"
+      "fortify_unarmed",
+      "slow"
     ]
   },
   {
@@ -2751,10 +2751,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 5,
     "effects": [
-      "resist_magic",
-      "fortify_stamina",
       "damage_maximum_magicka",
-      "fortify_conjuration"
+      "fortify_conjuration",
+      "fortify_stamina",
+      "resist_magic"
     ]
   },
   {
@@ -2766,9 +2766,9 @@ const ingredients = [
     "value": 1000,
     "effects": [
       "damage_health",
-      "weakness_to_fire",
       "fortify_magicka",
-      "spell_absorption"
+      "spell_absorption",
+      "weakness_to_fire"
     ]
   },
   {
@@ -2779,9 +2779,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 100,
     "effects": [
-      "restore_magicka",
-      "fortify_magicka_regeneration",
       "fortify_magicka",
+      "fortify_magicka_regeneration",
+      "restore_magicka",
       "spell_absorption"
     ]
   },
@@ -2793,10 +2793,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 25,
     "effects": [
-      "lingering_damage_stamina",
+      "fear",
       "lingering_damage_health",
-      "waterbreathing",
-      "fear"
+      "lingering_damage_stamina",
+      "waterbreathing"
     ]
   },
   {
@@ -2808,8 +2808,8 @@ const ingredients = [
     "value": 5,
     "effects": [
       "damage_magicka",
-      "fortify_speed",
       "fortify_health_regeneration",
+      "fortify_speed",
       "invisibility"
     ]
   },
@@ -2822,8 +2822,8 @@ const ingredients = [
     "value": 2000,
     "effects": [
       "lingering_damage_stamina",
-      "spell_absorption",
       "resist_poison",
+      "spell_absorption",
       "waterbreathing"
     ]
   },
@@ -2835,10 +2835,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 30,
     "effects": [
-      "restore_magicka",
       "fortify_alteration",
+      "fortify_carry_weight",
       "fortify_conjuration",
-      "fortify_carry_weight"
+      "restore_magicka"
     ]
   },
   {
@@ -2849,10 +2849,10 @@ const ingredients = [
     "weight": 1,
     "value": 250,
     "effects": [
-      "fortify_carry_weight",
       "fortify_armor_rating",
-      "fortify_stamina",
-      "fortify_health"
+      "fortify_carry_weight",
+      "fortify_health",
+      "fortify_stamina"
     ]
   },
   {
@@ -2863,10 +2863,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 35,
     "effects": [
-      "waterbreathing",
-      "weakness_to_shock",
+      "damage_stamina_regen",
       "ravage_magicka",
-      "damage_stamina_regen"
+      "waterbreathing",
+      "weakness_to_shock"
     ]
   },
   {
@@ -2877,10 +2877,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 10,
     "effects": [
-      "waterwalking",
       "damage_magicka",
       "fortify_carry_weight",
-      "slow"
+      "slow",
+      "waterwalking"
     ]
   },
   {
@@ -2892,9 +2892,9 @@ const ingredients = [
     "value": 2,
     "effects": [
       "damage_health",
+      "damage_magicka",
       "damage_stamina",
-      "lingering_damage_health",
-      "damage_magicka"
+      "lingering_damage_health"
     ]
   },
   {
@@ -2905,10 +2905,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "restore_health",
+      "damage_magicka_regeneration",
       "fortify_conjuration",
       "fortify_health",
-      "damage_magicka_regeneration"
+      "restore_health"
     ]
   },
   {
@@ -2919,10 +2919,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 18,
     "effects": [
-      "restore_health",
+      "damage_stamina",
       "fortify_carry_weight",
-      "weakness_to_magic",
-      "damage_stamina"
+      "restore_health",
+      "weakness_to_magic"
     ]
   },
   {
@@ -2933,10 +2933,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 1,
     "effects": [
-      "damage_stamina",
-      "damage_stamina_regeneration",
+      "cure_poison",
       "damage_maximum_stamina",
-      "cure_poison"
+      "damage_stamina",
+      "damage_stamina_regeneration"
     ]
   },
   {
@@ -2947,10 +2947,10 @@ const ingredients = [
     "weight": 1,
     "value": 110,
     "effects": [
-      "resist_poison",
       "damage_magicka_regeneration",
       "fortify_health_regeneration",
-      "fortify_magicka_regeneration"
+      "fortify_magicka_regeneration",
+      "resist_poison"
     ]
   },
   {
@@ -2961,10 +2961,10 @@ const ingredients = [
     "weight": 1,
     "value": 110,
     "effects": [
-      "resist_poison",
       "damage_magicka_regeneration",
       "fortify_health_regeneration",
-      "fortify_magicka_regeneration"
+      "fortify_magicka_regeneration",
+      "resist_poison"
     ]
   },
   {
@@ -2975,10 +2975,10 @@ const ingredients = [
     "weight": 1,
     "value": 25,
     "effects": [
-      "resist_poison",
+      "damage_health",
       "fortify_two_handed",
       "frenzy",
-      "damage_health"
+      "resist_poison"
     ]
   },
   {
@@ -2989,10 +2989,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 50,
     "effects": [
+      "fortify_magicka_regeneration",
       "moon_sugar",
       "resist_frost",
-      "restore_magicka",
-      "fortify_magicka_regeneration"
+      "restore_magicka"
     ]
   },
   {
@@ -3003,10 +3003,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 50,
     "effects": [
-      "weakness_to_fire",
+      "fortify_magicka_regeneration",
       "resist_frost",
       "restore_magicka",
-      "fortify_magicka_regeneration"
+      "weakness_to_fire"
     ]
   },
   {
@@ -3017,10 +3017,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 4,
     "effects": [
-      "restore_magicka",
-      "lingering_damage_health",
+      "fortify_illusion",
       "fortify_stamina_regeneration",
-      "fortify_illusion"
+      "lingering_damage_health",
+      "restore_magicka"
     ]
   },
   {
@@ -3045,10 +3045,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 6,
     "effects": [
-      "slow",
-      "fortify_speed",
       "fortify_alteration",
-      "fortify_two_handed"
+      "fortify_speed",
+      "fortify_two_handed",
+      "slow"
     ]
   },
   {
@@ -3059,10 +3059,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 7,
     "effects": [
-      "fortify_unarmed",
       "cure_disease",
-      "resist_poison",
-      "resist_fire"
+      "fortify_unarmed",
+      "resist_fire",
+      "resist_poison"
     ]
   },
   {
@@ -3075,8 +3075,8 @@ const ingredients = [
     "effects": [
       "fortify_illusion",
       "fortify_sneak",
-      "resist_poison",
-      "resist_fire"
+      "resist_fire",
+      "resist_poison"
     ]
   },
   {
@@ -3087,10 +3087,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 25,
     "effects": [
-      "drugged",
       "cure_poison",
-      "resist_magic",
-      "fortify_illusion"
+      "drugged",
+      "fortify_illusion",
+      "resist_magic"
     ]
   },
   {
@@ -3101,10 +3101,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 25,
     "effects": [
-      "drugged",
       "cure_poison",
-      "resist_shock",
-      "fortify_alteration"
+      "drugged",
+      "fortify_alteration",
+      "resist_shock"
     ]
   },
   {
@@ -3115,10 +3115,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 25,
     "effects": [
-      "drugged",
       "cure_poison",
-      "resist_frost",
-      "fortify_alteration"
+      "drugged",
+      "fortify_alteration",
+      "resist_frost"
     ]
   },
   {
@@ -3129,10 +3129,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 25,
     "effects": [
-      "drugged",
       "cure_poison",
-      "resist_fire",
-      "fortify_alteration"
+      "drugged",
+      "fortify_alteration",
+      "resist_fire"
     ]
   },
   {
@@ -3143,9 +3143,9 @@ const ingredients = [
     "weight": 0.5,
     "value": 2,
     "effects": [
-      "restore_health",
-      "fortify_one_handed",
       "damage_stamina",
+      "fortify_one_handed",
+      "restore_health",
       "weakness_to_magic"
     ]
   },
@@ -3158,9 +3158,9 @@ const ingredients = [
     "value": 12,
     "effects": [
       "damage_magicka",
-      "fortify_lockpicking",
       "fear",
-      "fortify_health_regeneration"
+      "fortify_health_regeneration",
+      "fortify_lockpicking"
     ]
   },
   {
@@ -3171,10 +3171,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 20,
     "effects": [
-      "paralysis",
+      "fear",
       "fortify_carry_weight",
-      "restore_stamina",
-      "fear"
+      "paralysis",
+      "restore_stamina"
     ]
   },
   {
@@ -3187,8 +3187,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka_regeneration",
-      "lingering_damage_stamina",
-      "fortify_destruction"
+      "fortify_destruction",
+      "lingering_damage_stamina"
     ]
   },
   {
@@ -3201,8 +3201,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka_regen",
-      "lingering_damage_stamina",
-      "fortify_destruction"
+      "fortify_destruction",
+      "lingering_damage_stamina"
     ]
   },
   {
@@ -3228,9 +3228,9 @@ const ingredients = [
     "value": 2,
     "effects": [
       "lingering_damage_magicka",
-      "restore_stamina",
+      "night_eye",
       "resist_magic",
-      "night_eye"
+      "restore_stamina"
     ]
   },
   {
@@ -3241,10 +3241,10 @@ const ingredients = [
     "weight": 0.4,
     "value": 25,
     "effects": [
+      "damage_stamina",
       "fortify_stamina",
-      "restore_stamina",
       "frenzy",
-      "damage_stamina"
+      "restore_stamina"
     ]
   },
   {
@@ -3256,9 +3256,9 @@ const ingredients = [
     "value": 5,
     "effects": [
       "damage_magicka",
-      "waterbreathing",
       "fortify_health_regeneration",
-      "fortify_pickpocket"
+      "fortify_pickpocket",
+      "waterbreathing"
     ]
   },
   {
@@ -3269,10 +3269,10 @@ const ingredients = [
     "weight": 1,
     "value": 100,
     "effects": [
-      "weakness_to_shock",
-      "resist_poison",
+      "fortify_health_regeneration",
       "lingering_damage_magicka",
-      "fortify_health_regeneration"
+      "resist_poison",
+      "weakness_to_shock"
     ]
   },
   {
@@ -3283,10 +3283,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "restore_health",
+      "damage_magicka",
       "fortify_restoration",
       "resist_poison",
-      "damage_magicka"
+      "restore_health"
     ]
   },
   {
@@ -3297,10 +3297,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 80,
     "effects": [
-      "restore_stamina",
+      "damage_magicka_regeneration",
       "fortify_health",
       "fortify_one_handed",
-      "damage_magicka_regeneration"
+      "restore_stamina"
     ]
   },
   {
@@ -3311,10 +3311,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "restore_stamina",
       "damage_maximum_magicka",
       "fortify_pickpocket",
-      "lingering_damage_health"
+      "lingering_damage_health",
+      "restore_stamina"
     ]
   },
   {
@@ -3325,10 +3325,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 2,
     "effects": [
-      "resist_magic",
       "damage_magicka_regeneration",
-      "waterbreathing",
-      "lingering_damage_stamina"
+      "lingering_damage_stamina",
+      "resist_magic",
+      "waterbreathing"
     ]
   },
   {
@@ -3339,10 +3339,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 40,
     "effects": [
-      "restore_stamina",
       "fortify_block",
+      "resist_shock",
       "restore_magicka",
-      "resist_shock"
+      "restore_stamina"
     ]
   },
   {
@@ -3353,10 +3353,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 15,
     "effects": [
-      "restore_stamina",
-      "resist_frost",
+      "fortify_one_handed",
       "reflect_damage",
-      "fortify_one_handed"
+      "resist_frost",
+      "restore_stamina"
     ]
   },
   {
@@ -3367,10 +3367,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 10,
     "effects": [
-      "weakness_to_poison",
-      "fortify_stamina",
       "damage_magicka",
-      "invisibility"
+      "fortify_stamina",
+      "invisibility",
+      "weakness_to_poison"
     ]
   },
   {
@@ -3382,9 +3382,9 @@ const ingredients = [
     "value": 5,
     "effects": [
       "damage_magicka",
-      "waterbreathing",
       "fortify_health_regeneration",
-      "fortify_pickpocket"
+      "fortify_pickpocket",
+      "waterbreathing"
     ]
   },
   {
@@ -3395,8 +3395,8 @@ const ingredients = [
     "weight": 0.2,
     "value": 5,
     "effects": [
-      "damage_stamina",
       "damage_magicka_regeneration",
+      "damage_stamina",
       "fortify_lockpicking",
       "fortify_marksman"
     ]
@@ -3409,10 +3409,10 @@ const ingredients = [
     "weight": 0.05,
     "value": 2,
     "effects": [
-      "restore_stamina",
       "fortify_lockpicking",
-      "weakness_to_poison",
-      "resist_shock"
+      "resist_shock",
+      "restore_stamina",
+      "weakness_to_poison"
     ]
   },
   {
@@ -3423,10 +3423,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 20,
     "effects": [
-      "resist_magic",
-      "lingering_damage_magicka",
+      "fortify_barter",
       "fortify_enchanting",
-      "fortify_barter"
+      "lingering_damage_magicka",
+      "resist_magic"
     ]
   },
   {
@@ -3453,8 +3453,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka",
-      "damage_stamina",
-      "damage_magicka_regeneration"
+      "damage_magicka_regeneration",
+      "damage_stamina"
     ]
   },
   {
@@ -3466,9 +3466,9 @@ const ingredients = [
     "value": 5,
     "effects": [
       "damage_health",
-      "slow",
+      "fear",
       "fortify_carry_weight",
-      "fear"
+      "slow"
     ]
   },
   {
@@ -3480,9 +3480,9 @@ const ingredients = [
     "value": 560,
     "effects": [
       "cure_disease",
-      "waterwalking",
       "invisibility",
-      "paralysis"
+      "paralysis",
+      "waterwalking"
     ]
   },
   {
@@ -3493,10 +3493,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 20,
     "effects": [
-      "resist_magic",
+      "fortify_barter",
       "lingering_damage_magicka",
-      "soul_trap",
-      "fortify_barter"
+      "resist_magic",
+      "soul_trap"
     ]
   },
   {
@@ -3507,9 +3507,9 @@ const ingredients = [
     "weight": 0.25,
     "value": 15,
     "effects": [
+      "fortify_carry_weight",
       "fortify_unarmed",
       "resist_frost",
-      "fortify_carry_weight",
       "resist_shock"
     ]
   },
@@ -3521,9 +3521,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "fortify_unarmed",
       "fortify_armor_rating",
       "fortify_smithing",
+      "fortify_unarmed",
       "weakness_to_poison"
     ]
   },
@@ -3535,10 +3535,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "fortify_unarmed",
+      "fear",
       "fortify_sneak",
-      "weakness_to_fire",
-      "fear"
+      "fortify_unarmed",
+      "weakness_to_fire"
     ]
   },
   {
@@ -3549,10 +3549,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 5,
     "effects": [
+      "damage_maximum_stamina",
       "damage_stamina",
-      "resist_fire",
       "fortify_conjuration",
-      "damage_maximum_stamina"
+      "resist_fire"
     ]
   },
   {
@@ -3591,10 +3591,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 2,
     "effects": [
-      "restore_stamina",
-      "lingering_damage_magicka",
       "damage_magicka_regeneration",
-      "fortify_restoration"
+      "fortify_restoration",
+      "lingering_damage_magicka",
+      "restore_stamina"
     ]
   },
   {
@@ -3605,10 +3605,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 10,
     "effects": [
-      "night_eye",
       "fortify_barter",
       "fortify_pickpocket",
-      "fortify_sneak"
+      "fortify_sneak",
+      "night_eye"
     ]
   },
   {
@@ -3620,9 +3620,9 @@ const ingredients = [
     "value": 50,
     "effects": [
       "damage_health",
+      "dispel",
       "fortify_carry_weight",
-      "restore_magicka",
-      "dispel"
+      "restore_magicka"
     ]
   },
   {
@@ -3633,10 +3633,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 40,
     "effects": [
-      "fortify_stamina_regeneration",
-      "waterbreathing",
       "cure_disease",
-      "fortify_magicka"
+      "fortify_magicka",
+      "fortify_stamina_regeneration",
+      "waterbreathing"
     ]
   },
   {
@@ -3647,10 +3647,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "resist_frost",
       "cure_poison",
       "damage_health",
-      "invisibility"
+      "invisibility",
+      "resist_frost"
     ]
   },
   {
@@ -3661,9 +3661,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 10,
     "effects": [
-      "lingering_damage_magicka",
-      "fortify_stamina_regeneration",
       "cure_poison",
+      "fortify_stamina_regeneration",
+      "lingering_damage_magicka",
       "resist_frost"
     ]
   },
@@ -3677,8 +3677,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "fortify_alteration",
-      "slow",
-      "fortify_carry_weight"
+      "fortify_carry_weight",
+      "slow"
     ]
   },
   {
@@ -3689,9 +3689,9 @@ const ingredients = [
     "weight": 0.05,
     "value": 2,
     "effects": [
-      "restore_health",
-      "fortify_one_handed",
       "damage_stamina",
+      "fortify_one_handed",
+      "restore_health",
       "weakness_to_magic"
     ]
   },
@@ -3703,10 +3703,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 20,
     "effects": [
-      "weakness_to_magic",
+      "cure_poison",
       "fortify_sneak",
       "lingering_damage_health",
-      "cure_poison"
+      "weakness_to_magic"
     ]
   },
   {
@@ -3717,10 +3717,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 100,
     "effects": [
-      "slow",
-      "lingering_damage_health",
       "fear",
-      "paralysis"
+      "lingering_damage_health",
+      "paralysis",
+      "slow"
     ]
   },
   {
@@ -3731,10 +3731,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "restore_stamina",
-      "damage_maximum_health",
       "damage_magicka",
-      "restore_health"
+      "damage_maximum_health",
+      "restore_health",
+      "restore_stamina"
     ]
   },
   {
@@ -3745,10 +3745,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "restore_stamina",
-      "damage_maximum_health",
       "damage_magicka",
-      "restore_health"
+      "damage_maximum_health",
+      "restore_health",
+      "restore_stamina"
     ]
   },
   {
@@ -3773,8 +3773,8 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "fortify_unarmed",
       "fortify_armor_rating",
+      "fortify_unarmed",
       "reflect_damage",
       "weakness_to_poison"
     ]
@@ -3787,10 +3787,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 5,
     "effects": [
-      "restore_stamina",
-      "waterbreathing",
       "fortify_magicka",
-      "fortify_magicka_regeneration"
+      "fortify_magicka_regeneration",
+      "restore_stamina",
+      "waterbreathing"
     ]
   },
   {
@@ -3801,10 +3801,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 6,
     "effects": [
-      "restore_stamina",
-      "fortify_magicka",
       "damage_stamina_regeneration",
-      "restore_health"
+      "fortify_magicka",
+      "restore_health",
+      "restore_stamina"
     ]
   },
   {
@@ -3815,10 +3815,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 10,
     "effects": [
-      "invisibility",
-      "fortify_stamina",
+      "cure_poison",
       "damage_magicka",
-      "cure_poison"
+      "fortify_stamina",
+      "invisibility"
     ]
   },
   {
@@ -3829,10 +3829,10 @@ const ingredients = [
     "weight": 1,
     "value": 150,
     "effects": [
-      "waterbreathing",
       "damage_health",
+      "damage_magicka_regeneration",
       "lingering_damage_magicka",
-      "damage_magicka_regeneration"
+      "waterbreathing"
     ]
   },
   {
@@ -3843,10 +3843,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 4,
     "effects": [
-      "weakness_to_magic",
+      "fortify_carry_weight",
       "fortify_illusion",
       "fortify_stamina_regeneration",
-      "fortify_carry_weight"
+      "weakness_to_magic"
     ]
   },
   {
@@ -3857,9 +3857,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 3,
     "effects": [
-      "damage_stamina_regeneration",
-      "damage_maximum_health",
       "damage_health",
+      "damage_maximum_health",
+      "damage_stamina_regeneration",
       "fortify_armor_rating"
     ]
   },
@@ -3871,9 +3871,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 3,
     "effects": [
+      "damage_magicka",
       "damage_magicka_regeneration",
       "damage_maximum_magicka",
-      "damage_magicka",
       "fortify_armor_rating"
     ]
   },
@@ -3885,10 +3885,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 25,
     "effects": [
+      "damage_health",
       "damage_magicka",
       "resist_fire",
-      "resist_shock",
-      "damage_health"
+      "resist_shock"
     ]
   },
   {
@@ -3899,10 +3899,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 8,
     "effects": [
-      "restore_health",
       "fortify_magicka",
+      "fortify_restoration",
       "lingering_damage_health",
-      "fortify_restoration"
+      "restore_health"
     ]
   },
   {
@@ -3914,8 +3914,8 @@ const ingredients = [
     "value": 1,
     "effects": [
       "damage_maximum_health",
-      "damage_maximum_stamina",
       "damage_maximum_magicka",
+      "damage_maximum_stamina",
       "lingering_damage_health"
     ]
   },
@@ -3927,10 +3927,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 50,
     "effects": [
-      "fortify_magicka_regeneration",
       "fortify_alteration",
-      "invisibility",
-      "fortify_health_regeneration"
+      "fortify_health_regeneration",
+      "fortify_magicka_regeneration",
+      "invisibility"
     ]
   },
   {
@@ -3941,9 +3941,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 20,
     "effects": [
-      "fortify_magicka_regeneration",
-      "cure_poison",
       "cure_disease",
+      "cure_poison",
+      "fortify_magicka_regeneration",
       "fortify_stamina_regeneration"
     ]
   },
@@ -3955,9 +3955,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 50,
     "effects": [
-      "restore_stamina",
       "fortify_stamina",
       "paralysis",
+      "restore_stamina",
       "waterbreathing"
     ]
   },
@@ -3970,9 +3970,9 @@ const ingredients = [
     "value": 80,
     "effects": [
       "damage_stamina",
+      "damage_stamina_regeneration",
       "fortify_health",
-      "resist_frost",
-      "damage_stamina_regeneration"
+      "resist_frost"
     ]
   },
   {
@@ -3984,9 +3984,9 @@ const ingredients = [
     "value": 2,
     "effects": [
       "fortify_jump",
-      "frenzy",
+      "fortify_sneak",
       "fortify_stamina_regeneration",
-      "fortify_sneak"
+      "frenzy"
     ]
   },
   {
@@ -3997,10 +3997,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "restore_health",
+      "damage_magicka",
       "fortify_conjuration",
       "fortify_health",
-      "damage_magicka"
+      "restore_health"
     ]
   },
   {
@@ -4013,8 +4013,8 @@ const ingredients = [
     "effects": [
       "damage_stamina",
       "fortify_health",
-      "frenzy",
-      "fortify_stamina_regeneration"
+      "fortify_stamina_regeneration",
+      "frenzy"
     ]
   },
   {
@@ -4025,10 +4025,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 15,
     "effects": [
-      "spell_absorption",
       "cure_poison",
       "light",
-      "night_eye"
+      "night_eye",
+      "spell_absorption"
     ]
   },
   {
@@ -4039,10 +4039,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 15,
     "effects": [
-      "restore_stamina",
-      "damage_strength",
       "damage_maximum_health",
-      "resist_frost"
+      "damage_strength",
+      "resist_frost",
+      "restore_stamina"
     ]
   },
   {
@@ -4067,9 +4067,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 3,
     "effects": [
-      "damage_strength",
-      "damage_maximum_health",
       "damage_health",
+      "damage_maximum_health",
+      "damage_strength",
       "fortify_speed"
     ]
   },
@@ -4081,10 +4081,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 3,
     "effects": [
-      "resist_poison",
       "fortify_pickpocket",
+      "fortify_stamina",
       "lingering_damage_health",
-      "fortify_stamina"
+      "resist_poison"
     ]
   },
   {
@@ -4095,10 +4095,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 3,
     "effects": [
-      "resist_frost",
-      "lingering_damage_health",
       "fortify_armor_rating",
-      "fortify_block"
+      "fortify_block",
+      "lingering_damage_health",
+      "resist_frost"
     ]
   },
   {
@@ -4109,10 +4109,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 50,
     "effects": [
-      "resist_fire",
       "fear",
+      "fortify_alteration",
       "fortify_conjuration",
-      "fortify_alteration"
+      "resist_fire"
     ]
   },
   {
@@ -4123,10 +4123,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 15,
     "effects": [
-      "weakness_to_poison",
+      "damage_health",
       "fortify_restoration",
       "lingering_damage_stamina",
-      "damage_health"
+      "weakness_to_poison"
     ]
   },
   {
@@ -4137,10 +4137,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 35,
     "effects": [
-      "restore_stamina",
       "fortify_one_handed",
       "fortify_restoration",
-      "resist_frost"
+      "resist_frost",
+      "restore_stamina"
     ]
   },
   {
@@ -4151,10 +4151,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 5,
     "effects": [
-      "resist_frost",
+      "cure_disease",
       "fortify_lockpicking",
-      "resist_shock",
-      "cure_disease"
+      "resist_frost",
+      "resist_shock"
     ]
   },
   {
@@ -4166,9 +4166,9 @@ const ingredients = [
     "value": 1,
     "effects": [
       "resist_fire",
-      "soul_trap",
       "resist_frost",
-      "resist_shock"
+      "resist_shock",
+      "soul_trap"
     ]
   },
   {
@@ -4179,10 +4179,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 15,
     "effects": [
-      "restore_health",
+      "cure_disease",
       "fortify_lockpicking",
       "fortify_pickpocket",
-      "cure_disease"
+      "restore_health"
     ]
   },
   {
@@ -4193,10 +4193,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 20,
     "effects": [
+      "damage_maximum_magicka",
       "damage_maximum_stamina",
       "resist_fire",
-      "soul_trap",
-      "damage_maximum_magicka"
+      "soul_trap"
     ]
   },
   {
@@ -4209,8 +4209,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka",
-      "weakness_to_fire",
-      "restore_stamina"
+      "restore_stamina",
+      "weakness_to_fire"
     ]
   },
   {
@@ -4223,8 +4223,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka",
-      "weakness_to_fire",
-      "restore_stamina"
+      "restore_stamina",
+      "weakness_to_fire"
     ]
   },
   {
@@ -4237,8 +4237,8 @@ const ingredients = [
     "effects": [
       "damage_health",
       "damage_magicka",
-      "weakness_to_fire",
-      "restore_stamina"
+      "restore_stamina",
+      "weakness_to_fire"
     ]
   },
   {
@@ -4249,8 +4249,8 @@ const ingredients = [
     "weight": 0.2,
     "value": 5,
     "effects": [
-      "damage_stamina",
       "damage_magicka_regeneration",
+      "damage_stamina",
       "fortify_lockpicking",
       "fortify_marksman"
     ]
@@ -4263,10 +4263,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 50,
     "effects": [
-      "silence",
-      "soul_trap",
+      "fortify_alteration",
       "reflect_damage",
-      "fortify_alteration"
+      "silence",
+      "soul_trap"
     ]
   },
   {
@@ -4277,10 +4277,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 20,
     "effects": [
-      "resist_magic",
-      "weakness_to_shock",
       "invisibility",
-      "waterwalking"
+      "resist_magic",
+      "waterwalking",
+      "weakness_to_shock"
     ]
   },
   {
@@ -4291,10 +4291,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 20,
     "effects": [
-      "restore_health",
-      "weakness_to_magic",
       "fortify_jump",
-      "waterwalking"
+      "restore_health",
+      "waterwalking",
+      "weakness_to_magic"
     ]
   },
   {
@@ -4306,9 +4306,9 @@ const ingredients = [
     "value": 20,
     "effects": [
       "reflect_damage",
-      "weakness_to_fire",
       "waterbreathing",
-      "waterwalking"
+      "waterwalking",
+      "weakness_to_fire"
     ]
   },
   {
@@ -4333,10 +4333,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 25,
     "effects": [
-      "restore_magicka",
+      "damage_health",
       "fortify_destruction",
       "fortify_magicka",
-      "damage_health"
+      "restore_magicka"
     ]
   },
   {
@@ -4348,9 +4348,9 @@ const ingredients = [
     "value": 10,
     "effects": [
       "damage_health",
+      "fortify_lockpicking",
       "frenzy",
-      "resist_poison",
-      "fortify_lockpicking"
+      "resist_poison"
     ]
   },
   {
@@ -4361,10 +4361,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_frost",
-      "fortify_sneak",
       "damage_maximum_magicka",
-      "damage_stamina_regeneration"
+      "damage_stamina_regeneration",
+      "fortify_sneak",
+      "resist_frost"
     ]
   },
   {
@@ -4375,10 +4375,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 50,
     "effects": [
-      "weakness_to_fire",
+      "fortify_magicka_regeneration",
       "resist_frost",
       "restore_magicka",
-      "fortify_magicka_regeneration"
+      "weakness_to_fire"
     ]
   },
   {
@@ -4389,10 +4389,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 50,
     "effects": [
-      "silence",
-      "soul_trap",
+      "fortify_alteration",
       "reflect_damage",
-      "fortify_alteration"
+      "silence",
+      "soul_trap"
     ]
   },
   {
@@ -4403,10 +4403,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "restore_magicka",
+      "fortify_carry_weight",
       "fortify_destruction",
       "resist_frost",
-      "fortify_carry_weight"
+      "restore_magicka"
     ]
   },
   {
@@ -4417,10 +4417,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 15,
     "effects": [
-      "weakness_to_shock",
-      "fortify_one_handed",
+      "fortify_barter",
       "fortify_magicka",
-      "fortify_barter"
+      "fortify_one_handed",
+      "weakness_to_shock"
     ]
   },
   {
@@ -4431,10 +4431,10 @@ const ingredients = [
     "weight": 0.75,
     "value": 850,
     "effects": [
-      "invisibility",
-      "soul_trap",
       "fortify_destruction",
-      "resist_shock"
+      "invisibility",
+      "resist_shock",
+      "soul_trap"
     ]
   },
   {
@@ -4446,9 +4446,9 @@ const ingredients = [
     "value": 5,
     "effects": [
       "damage_health",
-      "slow",
+      "fear",
       "fortify_carry_weight",
-      "fear"
+      "slow"
     ]
   },
   {
@@ -4459,10 +4459,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 5,
     "effects": [
-      "resist_shock",
       "lingering_damage_magicka",
-      "slow",
-      "restore_health"
+      "resist_shock",
+      "restore_health",
+      "slow"
     ]
   },
   {
@@ -4473,8 +4473,8 @@ const ingredients = [
     "weight": 0.2,
     "value": 15,
     "effects": [
-      "damage_stamina",
       "damage_magicka_regeneration",
+      "damage_stamina",
       "fortify_lockpicking",
       "fortify_marksman"
     ]
@@ -4487,10 +4487,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 40,
     "effects": [
-      "weakness_to_magic",
       "fortify_illusion",
       "fortify_magicka_regeneration",
-      "restore_magicka"
+      "restore_magicka",
+      "weakness_to_magic"
     ]
   },
   {
@@ -4501,10 +4501,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 15,
     "effects": [
-      "weakness_to_magic",
       "fortify_illusion",
       "fortify_magicka_regeneration",
-      "restore_magicka"
+      "restore_magicka",
+      "weakness_to_magic"
     ]
   },
   {
@@ -4515,10 +4515,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_frost",
       "damage_maximum_stamina",
-      "resist_poison",
-      "fortify_armor_rating"
+      "fortify_armor_rating",
+      "resist_frost",
+      "resist_poison"
     ]
   },
   {
@@ -4529,10 +4529,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 100,
     "effects": [
-      "lingering_damage_health",
-      "paralysis",
+      "fortify_health_regeneration",
       "fortify_magicka_regeneration",
-      "fortify_health_regeneration"
+      "lingering_damage_health",
+      "paralysis"
     ]
   },
   {
@@ -4543,10 +4543,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "restore_stamina",
+      "fortify_stamina",
       "lingering_damage_magicka",
-      "weakness_to_magic",
-      "fortify_stamina"
+      "restore_stamina",
+      "weakness_to_magic"
     ]
   },
   {
@@ -4557,10 +4557,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 1,
     "effects": [
-      "weakness_to_shock",
-      "fortify_carry_weight",
       "damage_magicka",
-      "slow"
+      "fortify_carry_weight",
+      "slow",
+      "weakness_to_shock"
     ]
   },
   {
@@ -4571,10 +4571,10 @@ const ingredients = [
     "weight": 1,
     "value": 25,
     "effects": [
-      "resist_poison",
+      "damage_health",
       "fortify_two_handed",
       "frenzy",
-      "damage_health"
+      "resist_poison"
     ]
   },
   {
@@ -4585,10 +4585,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_magic",
-      "fortify_magicka",
+      "fortify_barter",
       "fortify_block",
-      "fortify_barter"
+      "fortify_magicka",
+      "resist_magic"
     ]
   },
   {
@@ -4599,10 +4599,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 250,
     "effects": [
-      "sanguinare_vampiris",
-      "restore_magicka",
+      "cure_disease",
       "invisibility",
-      "cure_disease"
+      "restore_magicka",
+      "sanguinare_vampiris"
     ]
   },
   {
@@ -4613,10 +4613,10 @@ const ingredients = [
     "weight": 0.5,
     "value": 250,
     "effects": [
-      "restore_health",
-      "damage_stamina_regeneration",
       "damage_magicka",
-      "fear"
+      "damage_stamina_regeneration",
+      "fear",
+      "restore_health"
     ]
   },
   {
@@ -4627,8 +4627,8 @@ const ingredients = [
     "weight": 0.3,
     "value": 50,
     "effects": [
-      "lingering_damage_health",
       "damage_health",
+      "lingering_damage_health",
       "lingering_damage_stamina",
       "paralysis"
     ]
@@ -4641,10 +4641,10 @@ const ingredients = [
     "weight": 0.25,
     "value": 50,
     "effects": [
-      "weakness_to_magic",
       "fortify_illusion",
       "fortify_magicka_regeneration",
-      "restore_magicka"
+      "restore_magicka",
+      "weakness_to_magic"
     ]
   },
   {
@@ -4655,10 +4655,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 100,
     "effects": [
-      "restore_health",
       "fortify_health",
+      "fortify_health_regeneration",
       "fortify_stamina",
-      "fortify_health_regeneration"
+      "restore_health"
     ]
   },
   {
@@ -4669,10 +4669,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 500,
     "effects": [
-      "weakness_to_shock",
-      "resist_magic",
       "damage_health",
-      "fortify_magicka"
+      "fortify_magicka",
+      "resist_magic",
+      "weakness_to_shock"
     ]
   },
   {
@@ -4683,9 +4683,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 10,
     "effects": [
-      "night_eye",
-      "fortify_magicka",
       "fortify_illusion",
+      "fortify_magicka",
+      "night_eye",
       "spell_absorption"
     ]
   },
@@ -4699,8 +4699,8 @@ const ingredients = [
     "effects": [
       "beast_form",
       "fortify_health",
-      "frenzy",
-      "fortify_health_regeneration"
+      "fortify_health_regeneration",
+      "frenzy"
     ]
   },
   {
@@ -4711,10 +4711,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 1,
     "effects": [
-      "restore_health",
-      "fortify_health",
       "damage_stamina_regeneration",
-      "lingering_damage_magicka"
+      "fortify_health",
+      "lingering_damage_magicka",
+      "restore_health"
     ]
   },
   {
@@ -4725,10 +4725,10 @@ const ingredients = [
     "weight": 0.3,
     "value": 12,
     "effects": [
-      "weakness_to_frost",
+      "damage_maximum_magicka",
       "fortify_armor_rating",
       "restore_magicka",
-      "damage_maximum_magicka"
+      "weakness_to_frost"
     ]
   },
   {
@@ -4739,10 +4739,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "restore_health",
+      "damage_magicka_regeneration",
       "fortify_conjuration",
       "fortify_health",
-      "damage_magicka_regeneration"
+      "restore_health"
     ]
   },
   {
@@ -4753,10 +4753,10 @@ const ingredients = [
     "weight": 0.2,
     "value": 1,
     "effects": [
-      "restore_health",
-      "fortify_health",
       "damage_stamina_regeneration",
-      "lingering_damage_magicka"
+      "fortify_health",
+      "lingering_damage_magicka",
+      "restore_health"
     ]
   },
   {
@@ -4767,9 +4767,9 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "resist_poison",
       "damage_maximum_magicka",
       "fortify_alteration",
+      "resist_poison",
       "restore_magicka"
     ]
   },
@@ -4781,10 +4781,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 2,
     "effects": [
-      "fortify_barter",
-      "weakness_to_frost",
       "cure_disease",
-      "paralysis"
+      "fortify_barter",
+      "paralysis",
+      "weakness_to_frost"
     ]
   },
   {
@@ -4796,9 +4796,9 @@ const ingredients = [
     "value": 20,
     "effects": [
       "damage_health",
-      "weakness_to_poison",
+      "fortify_stamina_regeneration",
       "frenzy",
-      "fortify_stamina_regeneration"
+      "weakness_to_poison"
     ]
   },
   {
@@ -4809,10 +4809,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 30,
     "effects": [
-      "restore_stamina",
-      "fortify_destruction",
       "fortify_carry_weight",
-      "resist_magic"
+      "fortify_destruction",
+      "resist_magic",
+      "restore_stamina"
     ]
   },
   {
@@ -4823,10 +4823,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 100,
     "effects": [
-      "restore_magicka",
-      "spell_absorption",
+      "cure_disease",
       "fortify_speed",
-      "cure_disease"
+      "restore_magicka",
+      "spell_absorption"
     ]
   },
   {
@@ -4851,9 +4851,9 @@ const ingredients = [
     "weight": 0.2,
     "value": 40,
     "effects": [
+      "fortify_carry_weight",
       "fortify_lockpicking",
       "night_eye",
-      "fortify_carry_weight",
       "slow"
     ]
   },
@@ -4865,10 +4865,10 @@ const ingredients = [
     "weight": 0.1,
     "value": 1,
     "effects": [
-      "restore_magicka",
+      "damage_health",
       "damage_maximum_magicka",
       "fortify_magicka",
-      "damage_health"
+      "restore_magicka"
     ]
   }
 ];
