@@ -1,82 +1,27 @@
 const ing1Input = document.getElementById("ingredient1");
 const ing2Input = document.getElementById("ingredient2");
 const ing3Input = document.getElementById("ingredient3");
-const ing1List = document.getElementById("ingredient1List");
-const ing2List = document.getElementById("ingredient2List");
-const ing3List = document.getElementById("ingredient3List");
+
+const ing1Dropdown = document.getElementById("ingredient1Dropdown");
+const ing2Dropdown = document.getElementById("ingredient2Dropdown");
+const ing3Dropdown = document.getElementById("ingredient3Dropdown");
+
 const results = document.getElementById("results");
+
 const effectSearchInput = document.getElementById("effectSearch");
-const effectList = document.getElementById("effectList");
+const effectDropdown = document.getElementById("effectDropdown");
 const effectResults = document.getElementById("effectResults");
+
 const ingredientLookupInput = document.getElementById("ingredientLookup");
-const ingredientLookupList = document.getElementById("ingredientLookupList");
+const ingredientLookupDropdown = document.getElementById("ingredientLookupDropdown");
 const ingredientLookupResults = document.getElementById("ingredientLookupResults");
-
-function getEffectByName(name) {
-  return effects.find(effect => effect.name === name);
-}
-
-function populateEffectList() {
-  effectList.innerHTML = "";
-
-  effects.forEach(effect => {
-    const option = document.createElement("option");
-    option.value = effect.name;
-    effectList.appendChild(option);
-  });
-}
-
-function getIngredientsWithEffect(effectId) {
-  return ingredients.filter(ingredient =>
-    ingredient.effects.includes(effectId)
-  );
-}
 
 function getIngredientByName(name) {
   return ingredients.find(ingredient => ingredient.name === name);
 }
 
-function populateDatalist(listElement, ingredientOptions) {
-  listElement.innerHTML = "";
-
-  ingredientOptions.forEach(ingredient => {
-    const option = document.createElement("option");
-    option.value = ingredient.name;
-    listElement.appendChild(option);
-  });
-}
-
-function getPotionName(sharedEffects) {
-  if (sharedEffects.length === 0) return "";
-
-  const mainLabel = getPotionLabel(sharedEffects);
-
-  const effectNames = sharedEffects.map(effectId => getEffectName(effectId));
-
-  if (effectNames.length === 1) {
-    return `${mainLabel} of ${effectNames[0]}`;
-  }
-
-  if (effectNames.length === 2) {
-    return `${mainLabel} of ${effectNames[0]} and ${effectNames[1]}`;
-  }
-
-  const lastEffect = effectNames.pop();
-
-  return `${mainLabel} of ${effectNames.join(", ")}, and ${lastEffect}`;
-}
-
-function addPlaceholder(selectElement, text) {
-  const placeholder = new Option(text, "");
-  placeholder.dataset.placeholder = "true";
-  selectElement.add(placeholder);
-}
-
-function removePlaceholder(selectElement) {
-  const placeholder = selectElement.querySelector('option[data-placeholder="true"]');
-  if (placeholder && selectElement.value !== "") {
-    placeholder.remove();
-  }
+function getEffectByName(name) {
+  return effects.find(effect => effect.name === name);
 }
 
 function getEffectName(effectId) {
@@ -93,65 +38,89 @@ function getPotionLabel(sharedEffects) {
   const positiveCount = sharedEffects.filter(effectId => getEffectType(effectId) === "positive").length;
   const negativeCount = sharedEffects.filter(effectId => getEffectType(effectId) === "negative").length;
 
-  if (negativeCount > positiveCount) {
-    return "Poison";
+  return negativeCount > positiveCount ? "Poison" : "Potion";
+}
+
+function getPotionName(sharedEffects) {
+  if (sharedEffects.length === 0) return "";
+
+  const mainLabel = getPotionLabel(sharedEffects);
+  const effectNames = sharedEffects.map(effectId => getEffectName(effectId));
+
+  if (effectNames.length === 1) {
+    return `${mainLabel} of ${effectNames[0]}`;
   }
 
-  return "Potion";
+  if (effectNames.length === 2) {
+    return `${mainLabel} of ${effectNames[0]} and ${effectNames[1]}`;
+  }
+
+  const lastEffect = effectNames.pop();
+  return `${mainLabel} of ${effectNames.join(", ")}, and ${lastEffect}`;
 }
 
-function getIngredientById(id) {
-  return ingredients.find(ingredient => ingredient.id === id);
+function renderDropdown(inputElement, dropdownElement, options, onSelect, showFullList = false) {
+  dropdownElement.innerHTML = "";
+
+  const filterText = inputElement.value.toLowerCase();
+
+  const matches = showFullList
+    ? options
+    : options.filter(option =>
+        option.name.toLowerCase().includes(filterText)
+      );
+
+  matches.forEach(option => {
+    const item = document.createElement("div");
+    item.className = "dropdown-item";
+    item.innerText = option.name;
+
+    item.addEventListener("mousedown", event => {
+      event.preventDefault();
+
+      inputElement.value = option.name;
+      dropdownElement.style.display = "none";
+      onSelect(option);
+    });
+
+    dropdownElement.appendChild(item);
+  });
+
+  dropdownElement.style.display = matches.length > 0 ? "block" : "none";
 }
 
-function populateIngredient1() {
-  populateDatalist(ing1List, ingredients);
+function hideAllDropdowns() {
+  ing1Dropdown.style.display = "none";
+  ing2Dropdown.style.display = "none";
+  ing3Dropdown.style.display = "none";
+  effectDropdown.style.display = "none";
+  ingredientLookupDropdown.style.display = "none";
 }
 
-function populateIngredient2() {
+function getIngredient2Matches() {
   const ing1 = getIngredientByName(ing1Input.value);
 
-  if (!ing1) {
-    populateDatalist(ing2List, []);
-    return;
-  }
+  if (!ing1) return [];
 
-  const matches = ingredients.filter(ingredient => {
+  return ingredients.filter(ingredient => {
     if (ingredient.id === ing1.id) return false;
     return getSharedEffects(ing1, ingredient).length > 0;
   });
-
-  populateDatalist(ing2List, matches);
 }
 
-function populateIngredient3() {
+function getIngredient3Matches() {
   const ing1 = getIngredientByName(ing1Input.value);
   const ing2 = getIngredientByName(ing2Input.value);
 
-  if (!ing1 && !ing2) {
-    populateDatalist(ing3List, []);
-    return;
-  }
+  if (!ing1 && !ing2) return [];
 
-  const matches = ingredients.filter(ingredient => {
+  return ingredients.filter(ingredient => {
     if (ingredient.id === ing1?.id || ingredient.id === ing2?.id) return false;
 
     const sharesWith1 = ing1 && getSharedEffects(ing1, ingredient).length > 0;
     const sharesWith2 = ing2 && getSharedEffects(ing2, ingredient).length > 0;
 
     return sharesWith1 || sharesWith2;
-  });
-
-  populateDatalist(ing3List, matches);
-}
-
-function populateIngredientLookupList() {
-  ingredientLookupList.innerHTML = "";
-
-  ingredients.forEach(ingredient => {
-    const option = document.createElement("option");
-    option.value = ingredient.name;
-    ingredientLookupList.appendChild(option);
   });
 }
 
@@ -191,6 +160,12 @@ function updateResults() {
     "Shared Effects: " + effectNames.join(", ");
 }
 
+function getIngredientsWithEffect(effectId) {
+  return ingredients.filter(ingredient =>
+    ingredient.effects.includes(effectId)
+  );
+}
+
 function updateEffectResults() {
   const selectedEffect = getEffectByName(effectSearchInput.value);
 
@@ -215,9 +190,7 @@ function updateEffectResults() {
 }
 
 function updateIngredientLookupResults() {
-  const selectedIngredient = ingredients.find(
-    ingredient => ingredient.name === ingredientLookupInput.value
-  );
+  const selectedIngredient = getIngredientByName(ingredientLookupInput.value);
 
   if (!selectedIngredient) {
     ingredientLookupResults.innerText = "Select an ingredient to view details.";
@@ -241,49 +214,128 @@ function updateIngredientLookupResults() {
   `;
 }
 
-function handleIngredient1Change() {
-  removePlaceholder(ing1Select);
-  populateIngredient2();
-  populateIngredient3();
-  updateResults();
-}
-
-function handleIngredient2Change() {
-  removePlaceholder(ing2Select);
-  populateIngredient3();
-  updateResults();
-}
-
-function handleIngredient3Change() {
-  removePlaceholder(ing3Select);
-  updateResults();
-}
+// Ingredient 1
+ing1Input.addEventListener("focus", () => {
+  renderDropdown(ing1Input, ing1Dropdown, ingredients, () => {
+    ing2Input.value = "";
+    ing3Input.value = "";
+    updateResults();
+  }, true);
+});
 
 ing1Input.addEventListener("input", () => {
+  renderDropdown(ing1Input, ing1Dropdown, ingredients, () => {
+    ing2Input.value = "";
+    ing3Input.value = "";
+    updateResults();
+  }, false);
+
   ing2Input.value = "";
   ing3Input.value = "";
-  populateIngredient2();
-  populateIngredient3();
   updateResults();
+});
+
+// Ingredient 2
+ing2Input.addEventListener("focus", () => {
+  renderDropdown(ing2Input, ing2Dropdown, getIngredient2Matches(), () => {
+    ing3Input.value = "";
+    updateResults();
+  }, true);
+});
+
+ing2Input.addEventListener("click", () => {
+  renderDropdown(ing2Input, ing2Dropdown, getIngredient2Matches(), () => {
+    ing3Input.value = "";
+    updateResults();
+  }, true);
 });
 
 ing2Input.addEventListener("input", () => {
+  renderDropdown(ing2Input, ing2Dropdown, getIngredient2Matches(), () => {
+    ing3Input.value = "";
+    updateResults();
+  }, false);
+
   ing3Input.value = "";
-  populateIngredient3();
   updateResults();
 });
 
-ing3Input.addEventListener("input", updateResults);
+// Ingredient 3
+ing3Input.addEventListener("focus", () => {
+  renderDropdown(ing3Input, ing3Dropdown, getIngredient3Matches(), () => {
+    updateResults();
+  }, true);
+});
 
-effectSearchInput.addEventListener("input", updateEffectResults);
+ing3Input.addEventListener("click", () => {
+  renderDropdown(ing3Input, ing3Dropdown, getIngredient3Matches(), () => {
+    updateResults();
+  }, true);
+});
 
-ingredientLookupInput.addEventListener("input", updateIngredientLookupResults);
+ing3Input.addEventListener("input", () => {
+  renderDropdown(ing3Input, ing3Dropdown, getIngredient3Matches(), () => {
+    updateResults();
+  }, false);
 
-populateIngredient1();
-populateIngredient2();
-populateIngredient3();
+  updateResults();
+});
+
+// Effect search
+effectSearchInput.addEventListener("focus", () => {
+  renderDropdown(effectSearchInput, effectDropdown, effects, () => {
+    updateEffectResults();
+  }, true);
+});
+
+effectSearchInput.addEventListener("click", () => {
+  renderDropdown(effectSearchInput, effectDropdown, effects, () => {
+    updateEffectResults();
+  }, true);
+});
+
+effectSearchInput.addEventListener("input", () => {
+  renderDropdown(effectSearchInput, effectDropdown, effects, () => {
+    updateEffectResults();
+  }, false);
+
+  updateEffectResults();
+});
+
+// Ingredient lookup
+ingredientLookupInput.addEventListener("focus", () => {
+  renderDropdown(ingredientLookupInput, ingredientLookupDropdown, ingredients, () => {
+    updateIngredientLookupResults();
+  }, true);
+});
+
+ingredientLookupInput.addEventListener("click", () => {
+  renderDropdown(ingredientLookupInput, ingredientLookupDropdown, ingredients, () => {
+    updateIngredientLookupResults();
+  }, true);
+});
+
+ingredientLookupInput.addEventListener("input", () => {
+  renderDropdown(ingredientLookupInput, ingredientLookupDropdown, ingredients, () => {
+    updateIngredientLookupResults();
+  }, false);
+
+  updateIngredientLookupResults();
+});
+
+// Close custom dropdowns when clicking outside of them
+document.addEventListener("click", function (event) {
+  document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
+    if (!dropdown.contains(event.target)) {
+      const menu = dropdown.querySelector(".dropdown-options");
+      if (menu) {
+        menu.style.display = "none";
+      }
+    }
+  });
+});
+
+// Initial page text
 updateResults();
-populateEffectList();
 updateEffectResults();
-populateIngredientLookupList();
 updateIngredientLookupResults();
