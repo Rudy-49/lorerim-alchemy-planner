@@ -16,6 +16,8 @@ const ingredientLookupInput = document.getElementById("ingredientLookup");
 const ingredientLookupDropdown = document.getElementById("ingredientLookupDropdown");
 const ingredientLookupResults = document.getElementById("ingredientLookupResults");
 
+let activeDropdownIndex = -1;
+
 function getIngredientByName(name) {
   return ingredients.find(ingredient => ingredient.name === name);
 }
@@ -61,6 +63,7 @@ function getPotionName(sharedEffects) {
 
 function renderDropdown(inputElement, dropdownElement, options, onSelect, showFullList = false) {
   dropdownElement.innerHTML = "";
+  activeDropdownIndex = -1;
 
   const filterText = inputElement.value.toLowerCase();
 
@@ -87,6 +90,57 @@ function renderDropdown(inputElement, dropdownElement, options, onSelect, showFu
   });
 
   dropdownElement.style.display = matches.length > 0 ? "block" : "none";
+}
+
+function handleDropdownKeyboard(event, inputElement, dropdownElement) {
+  const items = dropdownElement.querySelectorAll(".dropdown-item");
+
+  if (dropdownElement.style.display !== "block" || items.length === 0) {
+    return;
+  }
+
+  if (event.key === "ArrowDown") {
+    event.preventDefault();
+
+    activeDropdownIndex++;
+
+    if (activeDropdownIndex >= items.length) {
+      activeDropdownIndex = 0;
+    }
+  }
+
+  else if (event.key === "ArrowUp") {
+    event.preventDefault();
+
+    activeDropdownIndex--;
+
+    if (activeDropdownIndex < 0) {
+      activeDropdownIndex = items.length - 1;
+    }
+  }
+
+  else if (event.key === "Enter") {
+    event.preventDefault();
+
+    if (activeDropdownIndex >= 0 && items[activeDropdownIndex]) {
+      items[activeDropdownIndex].dispatchEvent(new MouseEvent("mousedown"));
+    }
+
+    return;
+  }
+
+  else if (event.key === "Escape") {
+    dropdownElement.style.display = "none";
+    activeDropdownIndex = -1;
+    return;
+  }
+
+  items.forEach(item => item.classList.remove("active"));
+
+  if (activeDropdownIndex >= 0 && items[activeDropdownIndex]) {
+    items[activeDropdownIndex].classList.add("active");
+    items[activeDropdownIndex].scrollIntoView({ block: "nearest" });
+  }
 }
 
 function hideAllDropdowns() {
@@ -335,6 +389,26 @@ ingredientLookupInput.addEventListener("input", () => {
   }, false);
 
   updateIngredientLookupResults();
+});
+
+ing1Input.addEventListener("keydown", event => {
+  handleDropdownKeyboard(event, ing1Input, ing1Dropdown);
+});
+
+ing2Input.addEventListener("keydown", event => {
+  handleDropdownKeyboard(event, ing2Input, ing2Dropdown);
+});
+
+ing3Input.addEventListener("keydown", event => {
+  handleDropdownKeyboard(event, ing3Input, ing3Dropdown);
+});
+
+effectSearchInput.addEventListener("keydown", event => {
+  handleDropdownKeyboard(event, effectSearchInput, effectDropdown);
+});
+
+ingredientLookupInput.addEventListener("keydown", event => {
+  handleDropdownKeyboard(event, ingredientLookupInput, ingredientLookupDropdown);
 });
 
 // Close custom dropdowns when clicking outside of them

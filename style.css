@@ -28,3 +28,7 @@
 .dropdown-item:hover {
   background: #eee;
 }
+
+.dropdown-item.active {
+  background: rgba(139, 106, 62, 0.3);
+}
