@@ -3,6 +3,19 @@ const ing2Select = document.getElementById("ingredient2");
 const ing3Select = document.getElementById("ingredient3");
 const results = document.getElementById("results");
 
+function addPlaceholder(selectElement, text) {
+  const placeholder = new Option(text, "");
+  placeholder.dataset.placeholder = "true";
+  selectElement.add(placeholder);
+}
+
+function removePlaceholder(selectElement) {
+  const placeholder = selectElement.querySelector('option[data-placeholder="true"]');
+  if (placeholder && selectElement.value !== "") {
+    placeholder.remove();
+  }
+}
+
 function getEffectName(effectId) {
   const effect = effects.find(e => e.id === effectId);
   return effect ? effect.name : effectId;
@@ -31,6 +44,8 @@ function getIngredientById(id) {
 function populateIngredient1() {
   ing1Select.innerHTML = "";
 
+  addPlaceholder(ing1Select, "Ingredient 1");
+
   ingredients.forEach(ingredient => {
     ing1Select.add(new Option(ingredient.name, ingredient.id));
   });
@@ -39,17 +54,17 @@ function populateIngredient1() {
 function populateIngredient2() {
   ing2Select.innerHTML = "";
 
+  addPlaceholder(ing2Select, "Ingredient 2");
+
   const ing1 = getIngredientById(ing1Select.value);
   if (!ing1) return;
 
-  const matchingIngredients = ingredients.filter(ingredient => {
+  const matches = ingredients.filter(ingredient => {
     if (ingredient.id === ing1.id) return false;
-
-    const sharedEffects = getSharedEffects(ing1, ingredient);
-    return sharedEffects.length > 0;
+    return getSharedEffects(ing1, ingredient).length > 0;
   });
 
-  matchingIngredients.forEach(ingredient => {
+  matches.forEach(ingredient => {
     ing2Select.add(new Option(ingredient.name, ingredient.id));
   });
 }
@@ -57,21 +72,23 @@ function populateIngredient2() {
 function populateIngredient3() {
   ing3Select.innerHTML = "";
 
+  addPlaceholder(ing3Select, "Ingredient 3");
+
   const ing1 = getIngredientById(ing1Select.value);
   const ing2 = getIngredientById(ing2Select.value);
 
-  if (!ing1 || !ing2) return;
+  if (!ing1 && !ing2) return;
 
-  const matchingIngredients = ingredients.filter(ingredient => {
-    if (ingredient.id === ing1.id || ingredient.id === ing2.id) return false;
+  const matches = ingredients.filter(ingredient => {
+    if (ingredient.id === ing1?.id || ingredient.id === ing2?.id) return false;
 
-    const sharesWithIng1 = getSharedEffects(ing1, ingredient).length > 0;
-    const sharesWithIng2 = getSharedEffects(ing2, ingredient).length > 0;
+    const sharesWith1 = ing1 && getSharedEffects(ing1, ingredient).length > 0;
+    const sharesWith2 = ing2 && getSharedEffects(ing2, ingredient).length > 0;
 
-    return sharesWithIng1 || sharesWithIng2;
+    return sharesWith1 || sharesWith2;
   });
 
-  matchingIngredients.forEach(ingredient => {
+  matches.forEach(ingredient => {
     ing3Select.add(new Option(ingredient.name, ingredient.id));
   });
 }
@@ -82,6 +99,8 @@ function getSharedEffectsAcrossSelected() {
     getIngredientById(ing2Select.value),
     getIngredientById(ing3Select.value)
   ].filter(Boolean);
+
+  if (selectedIngredients.length < 2) return [];
 
   const effectCounts = {};
 
@@ -98,7 +117,7 @@ function updateResults() {
   const sharedEffects = getSharedEffectsAcrossSelected();
 
   if (sharedEffects.length === 0) {
-    results.innerText = "No valid potion/poison";
+    results.innerText = "Select at least 2 ingredients with shared effects";
     return;
   }
 
@@ -111,19 +130,26 @@ function updateResults() {
 }
 
 function handleIngredient1Change() {
+  removePlaceholder(ing1Select);
   populateIngredient2();
   populateIngredient3();
   updateResults();
 }
 
 function handleIngredient2Change() {
+  removePlaceholder(ing2Select);
   populateIngredient3();
+  updateResults();
+}
+
+function handleIngredient3Change() {
+  removePlaceholder(ing3Select);
   updateResults();
 }
 
 ing1Select.addEventListener("change", handleIngredient1Change);
 ing2Select.addEventListener("change", handleIngredient2Change);
-ing3Select.addEventListener("change", updateResults);
+ing3Select.addEventListener("change", handleIngredient3Change);
 
 populateIngredient1();
 populateIngredient2();
