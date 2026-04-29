@@ -7,6 +7,7 @@ const ing2Dropdown = document.getElementById("ingredient2Dropdown");
 const ing3Dropdown = document.getElementById("ingredient3Dropdown");
 
 const results = document.getElementById("results");
+const savePotionBtn = document.getElementById("savePotionBtn");
 
 const effectSearchInput = document.getElementById("effectSearch");
 const effectDropdown = document.getElementById("effectDropdown");
@@ -15,13 +16,16 @@ const effectResults = document.getElementById("effectResults");
 const ingredientLookupInput = document.getElementById("ingredientLookup");
 const ingredientLookupDropdown = document.getElementById("ingredientLookupDropdown");
 const ingredientLookupResults = document.getElementById("ingredientLookupResults");
-const potionNameDisplay = document.getElementById("potionNameDisplay");
 
+const potionNameDisplay = document.getElementById("potionNameDisplay");
 const potionNotesInput = document.getElementById("potionNotes");
 const potionDatabaseList = document.getElementById("potionDatabaseList");
 
 const potionDatabaseSearch = document.getElementById("potionDatabaseSearch");
 const potionDatabaseFilter = document.getElementById("potionDatabaseFilter");
+
+const exportPotionsBtn = document.getElementById("exportPotionsBtn");
+const importPotionsInput = document.getElementById("importPotionsInput");
 
 let activeDropdownIndex = -1;
 
@@ -241,8 +245,46 @@ function getCurrentPotionData() {
     ingredients: selectedIngredients.map(ingredient => ingredient.name.replace(/\s*\(.*?\)\s*/g, "")),
     effects: sharedEffects.map(effectId => getEffectName(effectId)),
     notes: potionNotesInput.value.trim(),
-    favorite: false,
+    favorite: false
   };
+}
+
+function getSavedPotions() {
+  return JSON.parse(localStorage.getItem("potionDatabase")) || [];
+}
+
+function savePotionsToStorage(potions) {
+  localStorage.setItem("potionDatabase", JSON.stringify(potions));
+}
+
+function savePotion() {
+  const potion = getCurrentPotionData();
+
+  if (!potion) {
+    alert("Select at least 2 ingredients with shared effects before saving.");
+    return;
+  }
+
+  const potions = getSavedPotions();
+  potions.unshift(potion);
+
+  savePotionsToStorage(potions);
+
+  ing1Input.value = "";
+  ing2Input.value = "";
+  ing3Input.value = "";
+  potionNotesInput.value = "";
+
+  hideAllDropdowns();
+  updateResults();
+  renderPotionDatabase();
+}
+
+function deletePotion(potionId) {
+  const potions = getSavedPotions().filter(potion => potion.id !== potionId);
+
+  savePotionsToStorage(potions);
+  renderPotionDatabase();
 }
 
 function toggleFavorite(potionId) {
@@ -259,45 +301,82 @@ function toggleFavorite(potionId) {
     return potion;
   });
 
-  localStorage.setItem("potionDatabase", JSON.stringify(updatedPotions));
+  savePotionsToStorage(updatedPotions);
   renderPotionDatabase();
 }
 
-function getSavedPotions() {
-  return JSON.parse(localStorage.getItem("potionDatabase")) || [];
-}
+function exportPotionsJSON() {
+  const potions = getSavedPotions();
 
-function savePotion() {
-  const potion = getCurrentPotionData();
-
-  if (!potion) {
-    alert("Select at least 2 ingredients with shared effects before saving.");
+  if (potions.length === 0) {
+    alert("No saved potions to export.");
     return;
   }
 
-  const potions = getSavedPotions();
-  potions.unshift(potion);
+  const exportData = {
+    app: "Rudy's Alchemy Ledger",
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    potions: potions
+  };
 
-  localStorage.setItem("potionDatabase", JSON.stringify(potions));
-  ing1Input.value = "";
-  ing2Input.value = "";
-  ing3Input.value = "";
-  potionNotesInput.value = "";
+  const json = JSON.stringify(exportData, null, 2);
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
 
-  hideAllDropdowns();
-  updateResults();
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "rudys-alchemy-ledger-potions.json";
+  link.click();
 
-  potionNotesInput.value = "";
-
-  renderPotionDatabase();
+  URL.revokeObjectURL(url);
 }
 
-function deletePotion(potionId) {
-  const potions = getSavedPotions().filter(potion => potion.id !== potionId);
+function normalizeImportedPotion(potion) {
+  return {
+    id: Date.now() + Math.floor(Math.random() * 1000000),
+    name: potion.name || "Unnamed Potion",
+    type: potion.type === "Poison" ? "Poison" : "Potion",
+    ingredients: Array.isArray(potion.ingredients) ? potion.ingredients : [],
+    effects: Array.isArray(potion.effects) ? potion.effects : [],
+    notes: potion.notes || "",
+    favorite: Boolean(potion.favorite)
+  };
+}
 
-  localStorage.setItem("potionDatabase", JSON.stringify(potions));
+function importPotionsJSON(event) {
+  const file = event.target.files[0];
 
-  renderPotionDatabase();
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    try {
+      const importedData = JSON.parse(e.target.result);
+
+      if (!importedData.potions || !Array.isArray(importedData.potions)) {
+        alert("Invalid potion file. Could not find a potions list.");
+        return;
+      }
+
+      const currentPotions = getSavedPotions();
+      const importedPotions = importedData.potions.map(normalizeImportedPotion);
+      const updatedPotions = [...importedPotions, ...currentPotions];
+
+      savePotionsToStorage(updatedPotions);
+      renderPotionDatabase();
+
+      alert(`${importedPotions.length} potions imported successfully.`);
+    } catch (error) {
+      alert("Could not import this JSON file.");
+      console.error(error);
+    }
+
+    event.target.value = "";
+  };
+
+  reader.readAsText(file);
 }
 
 function renderPotionDatabase() {
@@ -464,7 +543,7 @@ ing1Input.addEventListener("focus", () => {
   }, true);
 });
 
-ing1Input.addEventListener("click", (event) => {
+ing1Input.addEventListener("click", event => {
   event.stopPropagation();
 
   renderDropdown(ing1Input, ing1Dropdown, ingredients, () => {
@@ -494,8 +573,9 @@ ing2Input.addEventListener("focus", () => {
   }, true);
 });
 
-ing2Input.addEventListener("click", (event) => {
+ing2Input.addEventListener("click", event => {
   event.stopPropagation();
+
   renderDropdown(ing2Input, ing2Dropdown, getIngredient2Matches(), () => {
     ing3Input.value = "";
     updateResults();
@@ -519,8 +599,9 @@ ing3Input.addEventListener("focus", () => {
   }, true);
 });
 
-ing3Input.addEventListener("click", (event) => {
+ing3Input.addEventListener("click", event => {
   event.stopPropagation();
+
   renderDropdown(ing3Input, ing3Dropdown, getIngredient3Matches(), () => {
     updateResults();
   }, true);
@@ -541,8 +622,9 @@ effectSearchInput.addEventListener("focus", () => {
   }, true);
 });
 
-effectSearchInput.addEventListener("click", (event) => {
+effectSearchInput.addEventListener("click", event => {
   event.stopPropagation();
+
   renderDropdown(effectSearchInput, effectDropdown, effects, () => {
     updateEffectResults();
   }, true);
@@ -563,8 +645,9 @@ ingredientLookupInput.addEventListener("focus", () => {
   }, true);
 });
 
-ingredientLookupInput.addEventListener("click", (event) => {
+ingredientLookupInput.addEventListener("click", event => {
   event.stopPropagation();
+
   renderDropdown(ingredientLookupInput, ingredientLookupDropdown, ingredients, () => {
     updateIngredientLookupResults();
   }, true);
@@ -578,6 +661,7 @@ ingredientLookupInput.addEventListener("input", () => {
   updateIngredientLookupResults();
 });
 
+// Keyboard controls
 ing1Input.addEventListener("keydown", event => {
   handleDropdownKeyboard(event, ing1Input, ing1Dropdown);
 });
@@ -598,16 +682,21 @@ ingredientLookupInput.addEventListener("keydown", event => {
   handleDropdownKeyboard(event, ingredientLookupInput, ingredientLookupDropdown);
 });
 
+// Main controls
 savePotionBtn.addEventListener("click", savePotion);
 
 potionDatabaseSearch.addEventListener("input", renderPotionDatabase);
 potionDatabaseFilter.addEventListener("change", renderPotionDatabase);
 
+exportPotionsBtn.addEventListener("click", exportPotionsJSON);
+importPotionsInput.addEventListener("change", importPotionsJSON);
+
 // Close custom dropdowns when clicking outside of them
-document.addEventListener("click", function (event) {
+document.addEventListener("click", function(event) {
   document.querySelectorAll(".custom-dropdown").forEach(dropdown => {
     if (!dropdown.contains(event.target)) {
       const menu = dropdown.querySelector(".dropdown-list");
+
       if (menu) {
         menu.style.display = "none";
       }
