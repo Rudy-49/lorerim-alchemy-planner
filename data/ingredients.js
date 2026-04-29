@@ -2863,7 +2863,7 @@ const ingredients = [
     "weight": 0.5,
     "value": 35,
     "effects": [
-      "damage_stamina_regen",
+      "damage_stamina_regeneration",
       "ravage_magicka",
       "waterbreathing",
       "weakness_to_shock"

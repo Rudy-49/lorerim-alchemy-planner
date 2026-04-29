@@ -30,12 +30,6 @@ const effects = [
     "type": "negative"
   },
   {
-    "id": "damage_magicka_regen",
-    "name": "Damage Magicka Regen",
-    "formId": "00073F2B",
-    "type": "negative"
-  },
-  {
     "id": "damage_magicka_regeneration",
     "name": "Damage Magicka Regeneration",
     "formId": "00073F2B",
@@ -63,12 +57,6 @@ const effects = [
     "id": "damage_stamina",
     "name": "Damage Stamina",
     "formId": "0003A2C6",
-    "type": "negative"
-  },
-  {
-    "id": "damage_stamina_regen",
-    "name": "Damage Stamina Regen",
-    "formId": "00073F2C",
     "type": "negative"
   },
   {

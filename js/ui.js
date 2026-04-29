@@ -1,12 +1,33 @@
 const ing1Input = document.getElementById("ingredient1");
 const ing2Input = document.getElementById("ingredient2");
 const ing3Input = document.getElementById("ingredient3");
-
 const ing1List = document.getElementById("ingredient1List");
 const ing2List = document.getElementById("ingredient2List");
 const ing3List = document.getElementById("ingredient3List");
-
 const results = document.getElementById("results");
+const effectSearchInput = document.getElementById("effectSearch");
+const effectList = document.getElementById("effectList");
+const effectResults = document.getElementById("effectResults");
+
+function getEffectByName(name) {
+  return effects.find(effect => effect.name === name);
+}
+
+function populateEffectList() {
+  effectList.innerHTML = "";
+
+  effects.forEach(effect => {
+    const option = document.createElement("option");
+    option.value = effect.name;
+    effectList.appendChild(option);
+  });
+}
+
+function getIngredientsWithEffect(effectId) {
+  return ingredients.filter(ingredient =>
+    ingredient.effects.includes(effectId)
+  );
+}
 
 function getIngredientByName(name) {
   return ingredients.find(ingredient => ingredient.name === name);
@@ -157,6 +178,29 @@ function updateResults() {
     "Shared Effects: " + effectNames.join(", ");
 }
 
+function updateEffectResults() {
+  const selectedEffect = getEffectByName(effectSearchInput.value);
+
+  if (!selectedEffect) {
+    effectResults.innerText = "Select an effect to see matching ingredients.";
+    return;
+  }
+
+  const matches = getIngredientsWithEffect(selectedEffect.id);
+
+  if (matches.length === 0) {
+    effectResults.innerText = "No ingredients found for this effect.";
+    return;
+  }
+
+  effectResults.innerHTML =
+    `<h3>${selectedEffect.name}</h3>` +
+    `<p>${matches.length} ingredients found</p>` +
+    `<ul>` +
+    matches.map(ingredient => `<li>${ingredient.name}</li>`).join("") +
+    `</ul>`;
+}
+
 function handleIngredient1Change() {
   removePlaceholder(ing1Select);
   populateIngredient2();
@@ -191,7 +235,11 @@ ing2Input.addEventListener("input", () => {
 
 ing3Input.addEventListener("input", updateResults);
 
+effectSearchInput.addEventListener("input", updateEffectResults);
+
 populateIngredient1();
 populateIngredient2();
 populateIngredient3();
 updateResults();
+populateEffectList();
+updateEffectResults();
