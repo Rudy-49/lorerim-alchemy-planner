@@ -3,6 +3,27 @@ const ing2Select = document.getElementById("ingredient2");
 const ing3Select = document.getElementById("ingredient3");
 const results = document.getElementById("results");
 
+function getEffectName(effectId) {
+  const effect = effects.find(e => e.id === effectId);
+  return effect ? effect.name : effectId;
+}
+
+function getEffectType(effectId) {
+  const effect = effects.find(e => e.id === effectId);
+  return effect ? effect.type : "unknown";
+}
+
+function getPotionLabel(sharedEffects) {
+  const positiveCount = sharedEffects.filter(effectId => getEffectType(effectId) === "positive").length;
+  const negativeCount = sharedEffects.filter(effectId => getEffectType(effectId) === "negative").length;
+
+  if (negativeCount > positiveCount) {
+    return "Poison";
+  }
+
+  return "Potion";
+}
+
 function getIngredientById(id) {
   return ingredients.find(ingredient => ingredient.id === id);
 }
@@ -77,10 +98,16 @@ function updateResults() {
   const sharedEffects = getSharedEffectsAcrossSelected();
 
   if (sharedEffects.length === 0) {
-    results.innerText = "Shared Effects: None";
-  } else {
-    results.innerText = "Shared Effects: " + sharedEffects.join(", ");
+    results.innerText = "No valid potion/poison";
+    return;
   }
+
+  const effectNames = sharedEffects.map(effectId => getEffectName(effectId));
+  const label = getPotionLabel(sharedEffects);
+
+  results.innerText =
+    label + "\n" +
+    "Shared Effects: " + effectNames.join(", ");
 }
 
 function handleIngredient1Change() {
