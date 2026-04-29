@@ -3,6 +3,26 @@ const ing2Select = document.getElementById("ingredient2");
 const ing3Select = document.getElementById("ingredient3");
 const results = document.getElementById("results");
 
+function getPotionName(sharedEffects) {
+  if (sharedEffects.length === 0) return "";
+
+  const mainLabel = getPotionLabel(sharedEffects);
+
+  const effectNames = sharedEffects.map(effectId => getEffectName(effectId));
+
+  if (effectNames.length === 1) {
+    return `${mainLabel} of ${effectNames[0]}`;
+  }
+
+  if (effectNames.length === 2) {
+    return `${mainLabel} of ${effectNames[0]} and ${effectNames[1]}`;
+  }
+
+  const lastEffect = effectNames.pop();
+
+  return `${mainLabel} of ${effectNames.join(", ")}, and ${lastEffect}`;
+}
+
 function addPlaceholder(selectElement, text) {
   const placeholder = new Option(text, "");
   placeholder.dataset.placeholder = "true";
@@ -122,10 +142,10 @@ function updateResults() {
   }
 
   const effectNames = sharedEffects.map(effectId => getEffectName(effectId));
-  const label = getPotionLabel(sharedEffects);
+  const potionName = getPotionName(sharedEffects);
 
   results.innerText =
-    label + "\n" +
+    potionName + "\n" +
     "Shared Effects: " + effectNames.join(", ");
 }
 
