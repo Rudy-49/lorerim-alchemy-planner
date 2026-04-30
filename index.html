@@ -7,170 +7,183 @@
 </head>
 <body>
 
-<div class="app-shell">
+<div id="bookCover" class="book-cover-screen">
+  <div class="closed-book-cover" id="openBookBtn"></div>
+</div>
 
-  <!-- LEFT: Tips Placeholder -->
-  <aside class="left-ledger">
-    <section class="panel dark-panel">
+<div id="appShell" class="app-shell hidden">
 
-      <h2>Alchemy Notes</h2>
-      <p class="muted">Tips, tricks, and discoveries will live here later.</p>
-
-      <div class="placeholder-entry">
-        <strong>Coming Soon</strong>
-        <span>Alchemy tips and useful notes.</span>
-      </div>
-
-    </section>
-  </aside>
-
-  <!-- CENTER: Book Spread -->
   <main class="book-page book-spread">
 
-    <!-- LEFT PAGE -->
-    <section class="inner-page left-page">
+    <div id="pageFlipOverlay" class="page-flip-overlay"></div>
 
-      <header class="ledger-title">
-        <h1>Rudy's Alchemy Ledger</h1>
-        <p>Experiments in tinctures, tonics, and toxins</p>
-      </header>
+    <div id="spread1" class="book-spread-pages active-spread">
 
-      <div class="left-page-content">
+      <section class="inner-page left-page">
 
-        <div class="result-card">
-          <h3 id="potionNameDisplay">No Potion Discovered</h3>
-          <div id="results"></div>
-          <button id="savePotionBtn">Save Experiment</button>
+        <div class="page-nav-group left-page-nav">
+          <button class="page-nav prev-page" data-nav="prev">←</button>
         </div>
 
-        <div class="stacked-ingredients">
+        <header class="ledger-title">
+          <h1>The Brewing Station</h1>
+          <p>Experiment with tinctures, tonics, and toxins</p>
+        </header>
 
-          <div class="ingredient-card">
-            <label>Ingredient 1</label>
-            <div class="custom-dropdown">
-              <input id="ingredient1" placeholder="Ingredient 1" autocomplete="off">
-              <div id="ingredient1Dropdown" class="dropdown-list"></div>
-            </div>
+        <div class="left-page-content">
+
+          <div class="result-card">
+            <h3 id="potionNameDisplay">No Potion Discovered</h3>
+            <div id="results"></div>
+            <button id="savePotionBtn">Save Experiment</button>
           </div>
 
-          <div class="ingredient-card">
-            <label>Ingredient 2</label>
-            <div class="custom-dropdown">
-              <input id="ingredient2" placeholder="Ingredient 2" autocomplete="off">
-              <div id="ingredient2Dropdown" class="dropdown-list"></div>
+          <div class="stacked-ingredients">
+
+            <div class="ingredient-card">
+              <label>Ingredient 1</label>
+              <div class="custom-dropdown">
+                <input id="ingredient1" placeholder="Ingredient 1" autocomplete="off">
+                <div id="ingredient1Dropdown" class="dropdown-list"></div>
+              </div>
             </div>
+
+            <div class="ingredient-card">
+              <label>Ingredient 2</label>
+              <div class="custom-dropdown">
+                <input id="ingredient2" placeholder="Ingredient 2" autocomplete="off">
+                <div id="ingredient2Dropdown" class="dropdown-list"></div>
+              </div>
+            </div>
+
+            <div class="ingredient-card">
+              <label>Ingredient 3</label>
+              <div class="custom-dropdown">
+                <input id="ingredient3" placeholder="Ingredient 3" autocomplete="off">
+                <div id="ingredient3Dropdown" class="dropdown-list"></div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="ingredient-card">
-            <label>Ingredient 3</label>
-            <div class="custom-dropdown">
-              <input id="ingredient3" placeholder="Ingredient 3" autocomplete="off">
-              <div id="ingredient3Dropdown" class="dropdown-list"></div>
-            </div>
+          <div class="notes-section">
+            <label>Alchemist Notes</label>
+            <textarea id="potionNotes"></textarea>
           </div>
 
+          <p class="muted book-note">
+            Select ingredients to reveal shared effects.
+          </p>
+
+        </div>
+      </section>
+
+      <section class="inner-page right-page">
+
+        <div class="page-nav-group right-page-nav">
+          <button class="page-nav next-page" data-nav="next">→</button>
         </div>
 
-        <div class="notes-section">
-          <label>Alchemist Notes</label>
-          <textarea id="potionNotes" placeholder="Record observations, effects, or variations..."></textarea>
-        </div>
+        <header class="ledger-title database-title">
+          <h1>Alchemical Records</h1>
 
-        <p class="muted book-note">
-          Select ingredients to reveal shared effects.
-        </p>
+          <div class="database-controls">
+            <input id="potionDatabaseSearch" placeholder="Search...">
 
+            <select id="potionDatabaseFilter">
+              <option value="all">All</option>
+              <option value="favorites">Favorites</option>
+              <option value="Potion">Potions</option>
+              <option value="Poison">Poisons</option>
+            </select>
+
+            <select id="potionDatabaseSort">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="az">A–Z</option>
+              <option value="favorites">Favorites First</option>
+            </select>
+
+            <button id="selectAllExportBtn">Select All</button>
+            <button id="bulkDeleteBtn">Delete</button>
+            <button id="exportPotionsBtn">Export</button>
+
+            <label class="import-json-btn">
+              Import
+              <input id="importPotionsInput" type="file" hidden>
+            </label>
+          </div>
+
+          <p id="databaseStatus" class="database-status"></p>
+        </header>
+
+        <div id="potionDatabaseList" class="potion-database-list"></div>
+
+      </section>
+    </div>
+
+    <div id="spread2" class="book-spread-pages">
+
+  <section class="inner-page left-page lookup-page">
+
+    <div class="page-nav-group left-page-nav">
+      <button class="page-nav prev-page" data-nav="prev">←</button>
+    </div>
+
+    <header class="ledger-title">
+      <h1>Ingredient Lookup</h1>
+    </header>
+
+    <div class="lookup-content ingredient-lookup-content">
+
+      <div id="ingredientImagePreview" class="ingredient-image-preview">
+        <span>Select an ingredient to view its image.</span>
       </div>
-
-    </section>
-
-    <!-- RIGHT PAGE -->
-    <section class="inner-page right-page">
-
-      <header class="ledger-title">
-
-        <h1>Alchemical Record</h1>
-        <p>Catalog of discovered potions and recorded experiments</p>
-
-        <!-- CONTROLS MOVED INTO HEADER -->
-        <div class="database-controls">
-
-          <input id="potionDatabaseSearch" placeholder="Search saved potions..." autocomplete="off">
-
-          <select id="potionDatabaseFilter">
-            <option value="all">All</option>
-            <option value="favorites">Favorites</option>
-            <option value="Potion">Potions</option>
-            <option value="Poison">Poisons</option>
-          </select>
-
-          <select id="potionDatabaseSort">
-            <option value="newest">Newest</option>
-            <option value="oldest">Oldest</option>
-            <option value="az">A–Z</option>
-            <option value="favorites">Favorites First</option>
-          </select>
-
-          <button id="selectAllExportBtn">Select All</button>
-
-          <button id="bulkDeleteBtn">Delete Selected</button>
-
-          <button id="exportPotionsBtn">Export All</button>
-
-          <label class="import-json-btn">
-            Import
-            <input id="importPotionsInput" type="file" accept=".json,application/json" hidden>
-          </label>
-
-        </div>
-
-        <div id="databaseStatus" class="database-status">
-          0 potions saved • 0 selected
-        </div>
-
-      </header>
-
-      <!-- DATABASE LIST (clean area under divider line) -->
-      <div id="potionDatabaseList" class="potion-database-list">
-        No potions saved yet.
-      </div>
-
-      <div id="undoToast" class="undo-toast hidden">
-        <span id="undoToastText">Potion deleted</span>
-        <button id="undoDeleteBtn">Undo</button>
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- RIGHT: Tools -->
-  <aside class="right-tools">
-
-    <section class="panel parchment-panel">
-      <h2>Ingredient Lookup</h2>
 
       <div class="custom-dropdown">
-        <input id="ingredientLookup" placeholder="Search ingredients..." autocomplete="off">
+        <input id="ingredientLookup" placeholder="Search ingredients...">
         <div id="ingredientLookupDropdown" class="dropdown-list"></div>
       </div>
 
       <div id="ingredientLookupResults"></div>
-    </section>
 
-    <section class="panel parchment-panel">
-      <h2>Effect Lookup</h2>
+    </div>
+
+  </section>
+
+
+  <section class="inner-page right-page lookup-page">
+
+    <div class="page-nav-group right-page-nav">
+      <button class="page-nav next-page" data-nav="next">→</button>
+    </div>
+
+    <header class="ledger-title">
+      <h1>Effect Lookup</h1>
+    </header>
+
+    <div class="lookup-content effect-lookup-content">
 
       <div class="custom-dropdown">
-        <input id="effectSearch" placeholder="Search effects..." autocomplete="off">
+        <input id="effectSearch" placeholder="Search effects...">
         <div id="effectDropdown" class="dropdown-list"></div>
       </div>
 
       <div id="effectResults"></div>
-    </section>
 
-  </aside>
+    </div>
 
+  </section>
+
+</div>
+
+  </main>
+
+</div>
+
+<div id="undoToast" class="undo-toast hidden">
+  <span id="undoToastText"></span>
+  <button id="undoDeleteBtn">Undo</button>
 </div>
 
 <script src="data/effects.js"></script>
