@@ -795,7 +795,7 @@ function updateIngredientLookupResults() {
   }
 
   if (imagePreview) {
-    const imagePath = `assets/ingredients/${selectedIngredient.id}.png`;
+    const imagePath = `./assets/ingredients/${selectedIngredient.formId}.png`;
 
     imagePreview.innerHTML = `
       <img 
