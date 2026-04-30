@@ -88,31 +88,56 @@
     <section class="inner-page right-page">
 
       <header class="ledger-title">
-        <h1>Alchemical Records</h1>
+
+        <h1>Alchemical Record</h1>
         <p>Catalog of discovered potions and recorded experiments</p>
+
+        <!-- CONTROLS MOVED INTO HEADER -->
+        <div class="database-controls">
+
+          <input id="potionDatabaseSearch" placeholder="Search saved potions..." autocomplete="off">
+
+          <select id="potionDatabaseFilter">
+            <option value="all">All</option>
+            <option value="favorites">Favorites</option>
+            <option value="Potion">Potions</option>
+            <option value="Poison">Poisons</option>
+          </select>
+
+          <select id="potionDatabaseSort">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="az">A–Z</option>
+            <option value="favorites">Favorites First</option>
+          </select>
+
+          <button id="selectAllExportBtn">Select All</button>
+
+          <button id="bulkDeleteBtn">Delete Selected</button>
+
+          <button id="exportPotionsBtn">Export All</button>
+
+          <label class="import-json-btn">
+            Import
+            <input id="importPotionsInput" type="file" accept=".json,application/json" hidden>
+          </label>
+
+        </div>
+
+        <div id="databaseStatus" class="database-status">
+          0 potions saved • 0 selected
+        </div>
+
       </header>
 
-      <!-- DATABASE CONTROLS -->
-      <div class="database-controls">
-        <input id="potionDatabaseSearch" placeholder="Search saved potions..." autocomplete="off">
-
-        <select id="potionDatabaseFilter">
-          <option value="all">All</option>
-          <option value="favorites">Favorites</option>
-          <option value="Potion">Potions</option>
-          <option value="Poison">Poisons</option>
-        </select>
-
-        <button id="exportPotionsBtn">Export</button>
-
-        <label class="import-json-btn">
-          Import
-          <input id="importPotionsInput" type="file" accept=".json,application/json" hidden>
-        </label>
-      </div>
-
+      <!-- DATABASE LIST (clean area under divider line) -->
       <div id="potionDatabaseList" class="potion-database-list">
         No potions saved yet.
+      </div>
+
+      <div id="undoToast" class="undo-toast hidden">
+        <span id="undoToastText">Potion deleted</span>
+        <button id="undoDeleteBtn">Undo</button>
       </div>
 
     </section>
