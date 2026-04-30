@@ -17,6 +17,7 @@
   --gold: #f2c94c;
   --poison: #7a1f1f;
   --cream-text: #ead8b3;
+  --panel-bottom-buffer: clamp(12px, 2vh, 24px);
 }
 
 /* ---------- Base ---------- */
@@ -33,19 +34,20 @@ body {
 
 .app-shell {
   display: grid;
-  grid-template-columns: 360px 1fr 360px;
-  gap: 24px;
-  padding: 28px;
-  min-height: 100vh;
+  grid-template-columns: clamp(110px, 10vw, 220px) minmax(900px, 1fr) clamp(110px, 10vw, 220px);
+  gap: clamp(8px, 1vw, 20px);
+  padding: clamp(8px, 1.5vw, 24px);
+  padding-bottom: clamp(18px, 2vh, 32px);
   height: 100vh;
   overflow: hidden;
+  align-items: start;
 }
 
 .left-ledger,
 .right-tools {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  max-height: calc(100vh - clamp(26px, 3vh, 56px));
+  padding-bottom: var(--panel-bottom-buffer);
+  overflow: hidden;
 }
 
 .muted {
@@ -91,7 +93,8 @@ body {
 .book-page {
   padding: 34px;
   border-radius: 8px;
-  min-height: 780px;
+  min-height: auto;
+  height: calc(100vh - clamp(26px, 3vh, 56px));
 }
 
 .panel,
@@ -161,23 +164,42 @@ body {
 }
 
 .ledger-title {
-  padding-bottom: 18px;
-  margin-bottom: 28px;
+  min-height: 130px;
+  padding-bottom: clamp(10px, 1.5vh, 18px);
+  margin-bottom: clamp(14px, 2vh, 28px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .ledger-title h1 {
-  font-size: 42px;
-  letter-spacing: 3px;
+  margin: 0;
+  font-size: clamp(28px, 2.2vw, 42px);
+  letter-spacing: clamp(1px, 0.18vw, 3px);
   font-variant: small-caps;
 }
 
 .ledger-title p {
-  font-size: 16px;
+  font-size: clamp(13px, 0.9vw, 16px);
   opacity: 0.75;
 }
 
+.right-page .ledger-title {
+  margin-top: -8px;
+  padding-bottom: 6px;
+  margin-bottom: 22px;
+}
+
+.right-page .ledger-title h1 {
+  margin-bottom: 8px;
+}
+
+.right-page .ledger-title p {
+  display: none;
+}
+
 .left-page-content {
-  margin-top: 54px;
+  margin-top: clamp(20px, 4vh, 54px);
 }
 
 /* ---------- Open Book ---------- */
@@ -215,8 +237,9 @@ body {
 .inner-page {
   position: relative;
   z-index: 1;
-  padding: 32px;
-  min-height: 780px;
+  padding: clamp(18px, 2vw, 32px);
+  min-height: auto;
+  height: 100%;
 }
 
 .left-page {
@@ -269,20 +292,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  margin-top: 24px;
+  gap: clamp(8px, 1.5vh, 16px);
+  margin-top: clamp(14px, 2vh, 24px);
 }
 
 .stacked-ingredients .ingredient-card {
-  width: 70%;
-  max-width: 420px;
-  min-height: 105px;
-  padding: 14px 18px;
+  width: clamp(320px, 58%, 420px);
+  min-height: clamp(82px, 10vh, 105px);
+  padding: clamp(10px, 1.2vw, 18px);
 }
 
 .stacked-ingredients .ingredient-card label {
-  font-size: 17px;
-  margin-bottom: 8px;
+  font-size: clamp(14px, 1vw, 17px);
+  margin-bottom: clamp(5px, 0.8vh, 8px);
   padding-bottom: 4px;
 }
 
@@ -316,7 +338,8 @@ input::placeholder {
 }
 
 input:focus,
-.notes-section textarea:focus {
+.notes-section textarea:focus,
+.saved-notes-input:focus {
   outline: none;
   border-color: #5f3a1a;
   box-shadow:
@@ -340,7 +363,7 @@ input:focus,
   transform: translateX(-50%);
   z-index: 9999;
   width: 85%;
-  max-height: 220px;
+  max-height: clamp(260px, 35vh, 420px);
   overflow-y: auto;
   display: none;
   background: #fff4d2;
@@ -381,7 +404,7 @@ input:focus,
 }
 
 .result-card {
-  padding: 22px;
+  padding: clamp(14px, 1.6vw, 22px);
   border: 2px solid rgba(90, 55, 24, 0.55);
   text-align: center;
 }
@@ -389,7 +412,7 @@ input:focus,
 .result-card h3 {
   margin-top: 0;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: clamp(22px, 1.8vw, 30px);
   text-transform: none;
   letter-spacing: 1px;
 }
@@ -399,34 +422,12 @@ input:focus,
   opacity: 0.85;
 }
 
-#savedPotions,
-#effectResults,
-#ingredientLookupResults {
-  margin-top: 14px;
-  line-height: 1.45;
-  background: var(--panel-soft);
-  border: 1px solid rgba(100, 65, 30, 0.35);
-  border-radius: 6px;
-  padding: 12px;
-}
-
-#effectResults:empty,
-#ingredientLookupResults:empty,
-#savedPotions:empty {
-  display: none;
-}
-
-#effectResults {
-  max-height: 685px;
-  overflow-y: auto;
-}
-
 /* ---------- Notes ---------- */
 
 .notes-section {
   width: 75%;
   max-width: 460px;
-  margin: 24px auto 0;
+  margin: clamp(12px, 2vh, 24px) auto 0;
   display: flex;
   flex-direction: column;
 }
@@ -440,7 +441,7 @@ input:focus,
 }
 
 .notes-section textarea {
-  min-height: 90px;
+  min-height: clamp(60px, 9vh, 90px);
   resize: vertical;
   padding: 10px 12px;
   font-size: 14px;
@@ -448,22 +449,7 @@ input:focus,
 
 /* ---------- Buttons ---------- */
 
-button {
-  margin-top: 14px;
-  padding: 10px 18px;
-  background: var(--dark-2);
-  color: var(--cream-text);
-  border: 2px solid var(--border);
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #3a2415;
-}
-
+button,
 .import-json-btn {
   margin-top: 14px;
   padding: 10px 18px;
@@ -476,8 +462,67 @@ button:hover {
   cursor: pointer;
 }
 
+button:hover,
 .import-json-btn:hover {
   background: #3a2415;
+}
+
+.import-json-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#importPotionsInput {
+  display: none;
+}
+
+/* ---------- Right Page Database Controls ---------- */
+
+.ledger-title .database-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  flex-wrap: nowrap;
+}
+
+.ledger-title .database-controls input {
+  flex: 2;
+  min-width: 0;
+  width: auto;
+}
+
+.ledger-title .database-controls select {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  padding: 4px 6px;
+}
+
+.ledger-title .database-controls button,
+.ledger-title .database-controls .import-json-btn {
+  flex: 0 0 auto;
+  width: auto;
+  height: 26px;
+  margin: 0;
+  padding: 2px 7px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.ledger-title .database-controls input,
+.ledger-title .database-controls select {
+  height: 26px;
+  font-size: 11px;
+}
+
+.ledger-title .database-status {
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
 }
 
 /* ---------- Saved Potions / Database ---------- */
@@ -508,15 +553,29 @@ button:hover {
 
 .potion-database-list {
   flex: 1;
-  max-height: 75vh;
+  max-height: none;
   overflow-y: auto;
-  margin-top: 12px;
+  overflow-x: hidden;
+  margin-top: 8px;
+  padding-bottom: 48px;
+  min-width: 0;
 }
 
 .database-potion {
   margin-bottom: 10px;
   padding: 8px 10px;
   border-radius: 5px;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.database-potion:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 0 6px rgba(0, 0, 0, 0.08),
+    0 6px 14px rgba(0, 0, 0, 0.18);
 }
 
 .database-potion + .database-potion {
@@ -551,12 +610,6 @@ button:hover {
   margin-top: 8px;
 }
 
-.database-potion button {
-  margin-top: 10px;
-  padding: 6px 10px;
-  font-size: 13px;
-}
-
 .database-header {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -568,6 +621,11 @@ button:hover {
 .database-header h3 {
   margin: 0;
   font-size: 15px;
+  transition: color 0.18s ease;
+}
+
+.database-potion:hover .database-header h3 {
+  color: #1d150f;
 }
 
 .database-header button {
@@ -577,7 +635,7 @@ button:hover {
 
 .database-body {
   position: relative;
-  padding-bottom: 18px; /* space for delete button */
+  padding-bottom: 18px;
 }
 
 .database-body p {
@@ -586,25 +644,78 @@ button:hover {
   line-height: 1.3;
 }
 
+.database-ingredients,
+.saved-notes-label {
+  transition: color 0.18s ease;
+}
+
 .database-ingredients strong,
-.database-notes strong {
+.database-notes strong,
+.saved-notes-label strong {
   display: inline-block;
   width: 90px;
+  vertical-align: top;
 }
 
-.database-controls {
+/* ---------- Database UX Polish ---------- */
+
+.database-status {
+  margin: -6px 0 10px;
+  font-size: 13px;
+  opacity: 0.75;
+  text-align: center;
+}
+
+.database-empty-state {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px dashed var(--border-soft);
+  border-radius: 6px;
+  background: rgba(255, 245, 215, 0.45);
+  text-align: center;
   display: flex;
-  gap: 10px;
-  margin-bottom: 14px;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.database-controls input {
-  flex: 1;
-  width: auto;
+.database-potion.selected-for-export {
+  outline: none;
+  background: rgba(210, 230, 180, 0.55);
+  box-shadow:
+    inset 0 0 0 2px rgba(73, 107, 53, 0.65),
+    inset 0 0 6px rgba(0, 0, 0, 0.08);
 }
 
-.database-controls select {
-  padding: 8px;
+.right-page {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.potion-database-list {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.database-potion {
+  max-width: 100%;
+}
+
+.saved-notes-label {
+  margin: 2px 0 2px 12px;
+  font-size: 13px;
+}
+
+.saved-notes-input {
+  width: calc(100% - 104px);
+  min-height: 34px;
+  padding: 4px 6px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 13px;
+  background: rgba(255, 248, 220, 0.65);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  color: var(--ink);
 }
 
 /* ---------- Favorites ---------- */
@@ -618,7 +729,11 @@ button:hover {
   border: none;
   cursor: pointer;
   color: #5c4a2a;
-  transition: 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
 }
 
 .favorite-btn:hover {
@@ -651,13 +766,77 @@ button:hover {
   font-size: 10px;
   padding: 2px 6px;
   opacity: 0.75;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
 }
 
 .delete-btn:hover {
   opacity: 1;
+  transform: scale(1.05);
 }
 
 /* ---------- Lookup / Effect Details ---------- */
+
+#savedPotions,
+#effectResults,
+#ingredientLookupResults {
+  max-height: calc(40vh - var(--panel-bottom-buffer));
+  margin-top: 14px;
+  line-height: 1.45;
+  background: var(--panel-soft);
+  border: 1px solid rgba(100, 65, 30, 0.35);
+  border-radius: 6px;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+#effectResults:empty,
+#ingredientLookupResults:empty,
+#savedPotions:empty {
+  display: none;
+}
+
+#effectResults {
+  max-height: calc(48vh - var(--panel-bottom-buffer));
+  overflow-y: auto;
+  padding: 12px 12px 56px 12px;
+  box-sizing: border-box;
+}
+
+.effect-ingredient-list {
+  padding-bottom: 18px;
+}
+
+.effect-ingredient-item {
+  height: auto;
+  min-height: fit-content;
+  padding: 6px 4px;
+  margin-bottom: 8px;
+  overflow: visible;
+}
+
+.effect-ingredient-item:last-child {
+  margin-bottom: 18px;
+}
+
+.effect-ingredient-name {
+  font-weight: 600;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+}
+
+.effect-ingredient-meta {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-left: 12px;
+  margin-top: 2px;
+  white-space: normal;
+  line-height: 1.2;
+}
 
 .ingredient-stats {
   display: flex;
@@ -670,18 +849,15 @@ button:hover {
   margin-top: 8px;
 }
 
-.effect-item,
-.effect-ingredient-item {
+.effect-item {
   margin-bottom: 8px;
 }
 
-.effect-name,
-.effect-ingredient-name {
+.effect-name {
   font-weight: 600;
 }
 
-.effect-meta,
-.effect-ingredient-meta {
+.effect-meta {
   font-size: 13px;
   opacity: 0.7;
   margin-left: 12px;
@@ -713,9 +889,23 @@ button:hover {
   gap: 6px;
 }
 
+/* ---------- Small Interactions ---------- */
+
+.export-checkbox {
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.export-checkbox:hover {
+  transform: scale(1.15);
+}
+
 /* ---------- Responsive ---------- */
 
-@media (max-width: 1100px) {
+@media (max-width: 1350px) {
   .app-shell {
     grid-template-columns: 1fr;
     height: auto;
@@ -745,5 +935,86 @@ button:hover {
 
   .book-header h1 {
     font-size: 38px;
+  }
+
+  .ledger-title .database-controls {
+    flex-wrap: wrap;
+  }
+
+  .ledger-title .database-controls input {
+    flex: 1 1 100%;
+  }
+}
+
+/* ---------- Undo Delete Toast ---------- */
+
+.undo-toast {
+  position: absolute;
+  right: 18px;
+  bottom: clamp(24px, 4vh, 48px);
+  left: auto;
+  transform: none;
+  background: var(--dark-2);
+  color: var(--cream-text);
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  z-index: 9999;
+  opacity: 0;
+}
+
+.undo-toast button {
+  margin: 0;
+  padding: 2px 6px;
+  background: transparent;
+  border: none;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.undo-toast button:hover {
+  background: transparent;
+  color: #ffe58a;
+}
+
+.undo-toast.fade-in {
+  animation: undoFadeIn 0.25s ease forwards;
+}
+
+.undo-toast.fade-out {
+  animation: undoFadeOut 0.3s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes undoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes undoFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(8px);
   }
 }
