@@ -651,7 +651,7 @@ function renderPotionDatabase() {
           type="checkbox" 
           class="export-checkbox" 
           data-id="${potion.id}"
-          title="Select for export"
+          title="Select for export/delete"
           ${selectedExportPotionIds.has(potion.id) ? "checked" : ""}
         >
 
@@ -660,6 +660,7 @@ function renderPotionDatabase() {
         <button 
           class="favorite-btn ${potion.favorite ? "favorited" : ""}" 
           onclick="toggleFavorite(${potion.id})"
+          title="Favorite"
         >
           ${potion.favorite ? "★" : "☆"}
         </button>
@@ -672,21 +673,11 @@ function renderPotionDatabase() {
           <strong>Ingredients:</strong> ${potion.ingredients.map(escapeHTML).join(", ")}
         </p>
 
-        <label class="saved-notes-label">
-          <strong>Notes:</strong>
-          <textarea 
-            class="saved-notes-input" 
-            placeholder="Add notes..."
-            onchange="updatePotionNotes(${potion.id}, this.value)"
-          >${escapeHTML(potion.notes || "")}</textarea>
-        </label>
-
-        <button 
-          class="delete-btn" 
-          onclick="deletePotion(${potion.id})"
-        >
-          Delete
-        </button>
+        <textarea 
+          class="saved-notes-input collapsed" 
+          placeholder="Notes..."
+          data-id="${potion.id}"
+        >${escapeHTML(potion.notes || "")}</textarea>
 
       </div>
 
@@ -697,6 +688,21 @@ function renderPotionDatabase() {
     checkbox.addEventListener("change", event => {
       const potionId = Number(event.target.dataset.id);
       updateExportSelection(potionId, event.target.checked);
+    });
+  });
+
+  document.querySelectorAll(".saved-notes-input").forEach(notesInput => {
+    notesInput.addEventListener("focus", () => {
+      notesInput.classList.remove("collapsed");
+      notesInput.classList.add("expanded");
+    });
+
+    notesInput.addEventListener("blur", () => {
+      const potionId = Number(notesInput.dataset.id);
+      updatePotionNotes(potionId, notesInput.value);
+
+      notesInput.classList.remove("expanded");
+      notesInput.classList.add("collapsed");
     });
   });
 
@@ -750,8 +756,13 @@ function updateEffectResults() {
 
 function updateIngredientLookupResults() {
   const selectedIngredient = getIngredientByName(ingredientLookupInput.value);
+  const imagePreview = document.getElementById("ingredientImagePreview");
 
   if (!selectedIngredient) {
+    if (imagePreview) {
+      imagePreview.innerHTML = `<span>Select an ingredient to view its image.</span>`;
+    }
+
     ingredientLookupResults.innerHTML = `
       <div class="ingredient-stats">
         <span><strong>Weight:</strong> —</span>
@@ -781,6 +792,18 @@ function updateIngredientLookupResults() {
       </div>
     `;
     return;
+  }
+
+  if (imagePreview) {
+    const imagePath = `./assets/ingredients/${selectedIngredient.formId}.png`;
+
+    imagePreview.innerHTML = `
+      <img 
+        src="${imagePath}" 
+        alt="${selectedIngredient.name}"
+        onerror="this.parentElement.innerHTML='<span>No image found for this ingredient.</span>'"
+      >
+    `;
   }
 
   const effectList = selectedIngredient.effectDetails
@@ -999,3 +1022,100 @@ updateResults();
 updateEffectResults();
 updateIngredientLookupResults();
 renderPotionDatabase();
+
+// =======================
+// 📖 BOOK NAVIGATION
+// =======================
+
+const bookCover = document.getElementById("bookCover");
+const appShell = document.getElementById("appShell");
+const openBookBtn = document.getElementById("openBookBtn");
+
+const spreads = document.querySelectorAll(".book-spread-pages");
+const totalSpreads = spreads.length;
+
+let currentSpread = 1;
+
+function showSpread(spreadNumber, direction = "next") {
+  const nextSpread = document.getElementById(`spread${spreadNumber}`);
+  const flipOverlay = document.getElementById("pageFlipOverlay");
+
+  if (!nextSpread || currentSpread === spreadNumber) {
+    currentSpread = spreadNumber;
+    return;
+  }
+
+  const flipClass = direction === "prev" ? "flip-prev" : "flip-next";
+
+  flipOverlay.classList.remove("flip-next", "flip-prev");
+  void flipOverlay.offsetWidth;
+  flipOverlay.classList.add(flipClass);
+
+  setTimeout(() => {
+    spreads.forEach(spread => {
+      spread.classList.remove("active-spread");
+    });
+
+    nextSpread.classList.add("active-spread");
+    currentSpread = spreadNumber;
+    hideAllDropdowns();
+  }, 320);
+
+  setTimeout(() => {
+    flipOverlay.classList.remove("flip-next", "flip-prev");
+  }, 720);
+}
+
+function openBook() {
+  showSpread(1);
+
+  appShell.classList.remove("hidden");
+  appShell.classList.add("opening-book");
+
+  requestAnimationFrame(() => {
+    bookCover.classList.add("opening");
+
+    setTimeout(() => {
+      appShell.classList.remove("opening-book");
+    }, 50);
+  });
+
+  setTimeout(() => {
+    bookCover.style.display = "none";
+    bookCover.classList.remove("opening");
+  }, 450);
+}
+
+function returnToCover() {
+  appShell.classList.add("opening-book");
+
+  setTimeout(() => {
+    appShell.classList.add("hidden");
+    appShell.classList.remove("opening-book");
+
+    bookCover.style.display = "flex";
+    bookCover.classList.remove("opening");
+
+    showSpread(1);
+  }, 250);
+}
+
+openBookBtn.addEventListener("click", openBook);
+
+document.querySelectorAll("[data-nav]").forEach(button => {
+  button.addEventListener("click", () => {
+    const action = button.dataset.nav;
+
+    if (action === "next" && currentSpread < totalSpreads) {
+      showSpread(currentSpread + 1, "next");
+    }
+
+    if (action === "prev") {
+      if (currentSpread === 1) {
+        returnToCover();
+      } else {
+        showSpread(currentSpread - 1, "prev");
+      }
+    }
+  });
+});
