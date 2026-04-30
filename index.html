@@ -124,58 +124,101 @@
 
     <div id="spread2" class="book-spread-pages">
 
-  <section class="inner-page left-page lookup-page">
+      <section class="inner-page left-page lookup-page">
 
-    <div class="page-nav-group left-page-nav">
-      <button class="page-nav prev-page" data-nav="prev">←</button>
+        <div class="page-nav-group left-page-nav">
+          <button class="page-nav prev-page" data-nav="prev">←</button>
+        </div>
+
+        <header class="ledger-title">
+          <h1>Ingredient Lookup</h1>
+        </header>
+
+        <div class="lookup-content ingredient-lookup-content">
+
+          <div id="ingredientImagePreview" class="ingredient-image-preview">
+            <span>Select an ingredient to view its image.</span>
+          </div>
+
+          <div class="custom-dropdown">
+            <input id="ingredientLookup" placeholder="Search ingredients..." autocomplete="off">
+            <div id="ingredientLookupDropdown" class="dropdown-list"></div>
+          </div>
+
+          <div id="ingredientLookupResults"></div>
+
+        </div>
+
+      </section>
+
+      <section class="inner-page right-page lookup-page">
+
+        <div class="page-nav-group right-page-nav">
+          <button class="page-nav next-page" data-nav="next">→</button>
+        </div>
+
+        <header class="ledger-title">
+          <h1>Effect Lookup</h1>
+        </header>
+
+        <div class="lookup-content effect-lookup-content">
+
+          <div class="custom-dropdown">
+            <input id="effectSearch" placeholder="Search effects..." autocomplete="off">
+            <div id="effectDropdown" class="dropdown-list"></div>
+          </div>
+
+          <div id="effectResults"></div>
+
+        </div>
+
+      </section>
+
     </div>
 
-    <header class="ledger-title">
-      <h1>Ingredient Lookup</h1>
-    </header>
+    <div id="spread3" class="book-spread-pages">
 
-    <div class="lookup-content ingredient-lookup-content">
+      <section class="inner-page left-page lookup-page">
 
-      <div id="ingredientImagePreview" class="ingredient-image-preview">
-        <span>Select an ingredient to view its image.</span>
-      </div>
+        <div class="page-nav-group left-page-nav">
+          <button class="page-nav prev-page" data-nav="prev">←</button>
+        </div>
 
-      <div class="custom-dropdown">
-        <input id="ingredientLookup" placeholder="Search ingredients...">
-        <div id="ingredientLookupDropdown" class="dropdown-list"></div>
-      </div>
+        <header class="ledger-title">
+          <h1>Tips & Tricks</h1>
+          <p>Useful notes for better brewing</p>
+        </header>
 
-      <div id="ingredientLookupResults"></div>
+        <div class="lookup-content">
+          <div class="parchment-panel">
+            <h2>Blank Page</h2>
+            <p>This page is ready for alchemy tips, tricks, reminders, or brewing notes.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="inner-page right-page lookup-page">
+
+        <div class="page-nav-group right-page-nav">
+          <button class="page-nav next-page" data-nav="next">→</button>
+        </div>
+
+        <header class="ledger-title">
+          <h1>Gear to Find</h1>
+          <p>Track useful equipment and upgrades</p>
+        </header>
+
+        <div class="lookup-content">
+          <div class="parchment-panel">
+            <h2>Blank Page</h2>
+            <p>This page is ready for gear notes, enchanted items, vendors, or future upgrades.</p>
+          </div>
+        </div>
+
+      </section>
 
     </div>
-
-  </section>
-
-
-  <section class="inner-page right-page lookup-page">
-
-    <div class="page-nav-group right-page-nav">
-      <button class="page-nav next-page" data-nav="next">→</button>
-    </div>
-
-    <header class="ledger-title">
-      <h1>Effect Lookup</h1>
-    </header>
-
-    <div class="lookup-content effect-lookup-content">
-
-      <div class="custom-dropdown">
-        <input id="effectSearch" placeholder="Search effects...">
-        <div id="effectDropdown" class="dropdown-list"></div>
-      </div>
-
-      <div id="effectResults"></div>
-
-    </div>
-
-  </section>
-
-</div>
 
   </main>
 

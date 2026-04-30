@@ -1031,13 +1031,13 @@ const bookCover = document.getElementById("bookCover");
 const appShell = document.getElementById("appShell");
 const openBookBtn = document.getElementById("openBookBtn");
 
-const spread1 = document.getElementById("spread1");
-const spread2 = document.getElementById("spread2");
+const spreads = document.querySelectorAll(".book-spread-pages");
+const totalSpreads = spreads.length;
 
 let currentSpread = 1;
 
 function showSpread(spreadNumber, direction = "next") {
-  const nextSpread = spreadNumber === 1 ? spread1 : spread2;
+  const nextSpread = document.getElementById(`spread${spreadNumber}`);
   const flipOverlay = document.getElementById("pageFlipOverlay");
 
   if (!nextSpread || currentSpread === spreadNumber) {
@@ -1052,7 +1052,7 @@ function showSpread(spreadNumber, direction = "next") {
   flipOverlay.classList.add(flipClass);
 
   setTimeout(() => {
-    document.querySelectorAll(".book-spread-pages").forEach(spread => {
+    spreads.forEach(spread => {
       spread.classList.remove("active-spread");
     });
 
@@ -1106,8 +1106,8 @@ document.querySelectorAll("[data-nav]").forEach(button => {
   button.addEventListener("click", () => {
     const action = button.dataset.nav;
 
-    if (action === "next" && currentSpread < 2) {
-  showSpread(currentSpread + 1, "next");
+    if (action === "next" && currentSpread < totalSpreads) {
+      showSpread(currentSpread + 1, "next");
     }
 
     if (action === "prev") {
