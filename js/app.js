@@ -116,12 +116,9 @@ async function openBook() {
   book.classList.remove("closed");
   book.classList.add("open");
 
+  await loadAlchemyData();
+
   currentSpread = 0;
-
-  if (ingredients.length === 0) {
-    await loadAlchemyData();
-  }
-
   renderSpread();
 }
 

@@ -1,3 +1,14 @@
+/* 
+  LoreRim Alchemy Book - cleaned full stylesheet
+  Notes:
+  - Preserves your existing page/database/dropdown styling.
+  - Removes the frame-over-pages layering issue.
+  - Uses responsive scaling for shorter screens.
+  - Requires:
+      assets/cover.png
+      assets/book-frame.png
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -13,56 +24,83 @@ body {
 /* ===== APP LAYOUT ===== */
 
 .app {
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   place-items: center;
-  padding: clamp(10px, 2vw, 32px);
+  padding: clamp(8px, 1.5vmin, 24px);
+  overflow: hidden;
 }
 
 /* ===== BOOK SHELL ===== */
 
 .book {
   position: relative;
-  width: clamp(900px, 94vw, 2200px);
-  height: clamp(650px, 92vh, 1200px);
+
+  width: min(94vw, calc(92vh * 1.7));
+  height: min(92vh, calc(94vw / 1.7));
+
   transition: width 0.35s ease, height 0.35s ease;
 }
 
 .book.closed {
-  width: clamp(520px, 42vw, 950px);
-  height: clamp(720px, 86vh, 1100px);
+  width: min(42vw, calc(86vh * 0.72));
+  height: min(86vh, calc(42vw / 0.72));
 }
 
 /* ===== COVER ===== */
 
 .book-cover {
+  position: relative;
   width: 100%;
   height: 100%;
   display: grid;
   place-content: center;
-  text-align: center;
+  overflow: hidden;
   cursor: pointer;
 
-  border: 4px solid #1c0f08;
-  border-radius: 18px 28px 28px 18px;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent 14%),
-    linear-gradient(135deg, #4b2617, #7b3f22, #3a1c12);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
+  border: none;
+  border-radius: 18px;
+  background-image: url("../assets/cover.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   color: #f3dfb4;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75);
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.book-cover h1 {
-  margin: 0;
-  font-size: clamp(2.4rem, 6vw, 5rem);
+.book-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, transparent 45%, rgba(0, 0, 0, 0.35) 100%),
+    linear-gradient(to bottom, rgba(255, 180, 60, 0.08), rgba(0, 0, 0, 0.22));
+  pointer-events: none;
+}
+
+.book-cover:hover {
+  transform: scale(1.01);
+  filter: brightness(1.08);
+}
+
+.cover-click-text {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  z-index: 2;
+  transform: translateX(-50%);
+
+  color: #d8b46a;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
   letter-spacing: 0.08em;
-  text-shadow: 0 4px 8px #000;
-}
-
-.book-cover p {
-  margin-top: 24px;
-  font-size: clamp(1rem, 2vw, 1.35rem);
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px #000;
+  opacity: 0.85;
 }
 
 /* ===== BOOK INTERIOR ===== */
@@ -73,12 +111,19 @@ body {
   width: 100%;
   height: 100%;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(1px, 0.4vw, 4px);
-  padding: clamp(14px, 2vw, 34px);
+  gap: 0.4rem;
+  padding: 2.1% 7.2% 5.2% 5.5%;
+  padding-bottom: 2%;
   border-radius: 18px;
   background: linear-gradient(90deg, #3a2415, #1c120c 50%, #3a2415);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
   perspective: 1800px;
+  overflow: hidden;
+}
+
+.book-inside::before {
+  top: 6.6%;
+  bottom: 6.4%;
 }
 
 .book.open .book-cover {
@@ -89,7 +134,99 @@ body {
   display: grid;
 }
 
-/* ===== PAGE HEADER RULE ===== */
+/* ===== PAGES ===== */
+
+.page {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.book-frame-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: url("../assets/book-frame.png") center / cover no-repeat;
+  pointer-events: none;
+}
+
+.left-page {
+  border-radius: 14px 4px 4px 14px;
+  transform: perspective(1400px) rotateY(0.6deg);
+  transform-origin: right center;
+  justify-content: flex-end;
+}
+
+.right-page {
+  min-height: 0;
+  overflow: hidden !important;
+  border-radius: 4px 14px 14px 4px;
+  transform: perspective(1400px) rotateY(-0.6deg);
+  transform-origin: left center;
+  justify-content: flex-start;
+}
+
+.page-inner {
+  position: relative;
+  z-index: 20;
+  width: 98%;
+  height: 100%;
+
+  padding:
+    clamp(1.2rem, 2.2vh, 2rem)
+    clamp(1rem, 1.5vw, 1.75rem)
+    clamp(0.8rem, 1.5vh, 1.5rem);
+
+  overflow-y: auto;
+}
+
+.right-page .page-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.08),
+      transparent 8%,
+      transparent 92%,
+      rgba(0, 0, 0, 0.08)
+    ),
+    #efe0b5;
+  box-shadow:
+    inset 10px 0 18px rgba(35, 18, 8, 0.12),
+    inset 0 0 24px rgba(80, 48, 18, 0.18);
+}
+
+.left-page .page-inner {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.08),
+      transparent 8%,
+      transparent 92%,
+      rgba(0, 0, 0, 0.08)
+    ),
+    #ead6a6;
+  box-shadow:
+    inset -10px 0 18px rgba(35, 18, 8, 0.12),
+    inset 0 0 24px rgba(80, 48, 18, 0.18);
+}
+
+.page h2 {
+  margin-top: 0;
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+}
+
+.page p {
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  line-height: 1.5;
+}
 
 .page-inner h2 {
   position: relative;
@@ -104,73 +241,82 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-
   background: linear-gradient(
     to right,
     rgba(90, 55, 24, 0.6),
     rgba(90, 55, 24, 0.3),
     rgba(90, 55, 24, 0.6)
   );
-
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
-/* ===== PAGES ===== */
+/* ===== PAGE TEXTURING ===== */
 
-.page {
-  position: relative;
-  min-width: 0;
-  height: 100%;
-  overflow: visible;
-}
-
-.left-page {
-  border-radius: 14px 4px 4px 14px;
-  transform: perspective(1400px) rotateY(0.6deg);
-  transform-origin: right center;
-}
-
-.right-page {
-  border-radius: 4px 14px 14px 4px;
-  transform: perspective(1400px) rotateY(-0.6deg);
-  transform-origin: left center;
-}
-
-.page-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  padding:
-    clamp(2.5rem, 4vh, 4rem)
-    clamp(1rem, 2vw, 2rem)
-    clamp(1rem, 2vw, 2rem);
-
-  overflow-y: auto;
-  color: #2a1b10;
-
-  border: 2px solid #8a6a3f;
+.page-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.08),
-      transparent 8%,
-      transparent 92%,
-      rgba(0, 0, 0, 0.08)
+    radial-gradient(circle at 25% 30%, rgba(0, 0, 0, 0.06), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.05), transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(60, 30, 10, 0.035),
+      rgba(60, 30, 10, 0.035) 1px,
+      transparent 1px,
+      transparent 4px
     ),
-    #ead8aa;
-
-  box-shadow: inset 0 0 30px rgba(80, 48, 18, 0.22);
+    repeating-linear-gradient(
+      90deg,
+      rgba(80, 50, 20, 0.02),
+      rgba(80, 50, 20, 0.02) 2px,
+      transparent 2px,
+      transparent 6px
+    );
 }
 
-.page h2 {
-  margin-top: 0;
-  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+.page-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.18), transparent 22%),
+    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.20), transparent 24%),
+    linear-gradient(
+      to right,
+      rgba(70, 38, 14, 0.16),
+      transparent 10%,
+      transparent 90%,
+      rgba(70, 38, 14, 0.16)
+    );
 }
 
-.page p {
-  font-size: clamp(1rem, 1.25vw, 1.25rem);
-  line-height: 1.5;
+.left-page .page-inner::after {
+  background:
+    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.12), transparent 22%),
+    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.12), transparent 24%),
+    linear-gradient(
+      to right,
+      rgba(70, 38, 14, 0.08),
+      transparent 12%,
+      transparent 82%,
+      rgba(20, 10, 4, 0.10)
+    );
+}
+
+.right-page .page-inner::after {
+  background:
+    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.12), transparent 22%),
+    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.12), transparent 24%),
+    linear-gradient(
+      to right,
+      rgba(20, 10, 4, 0.10),
+      transparent 18%,
+      transparent 88%,
+      rgba(70, 38, 14, 0.08)
+    );
 }
 
 /* ===== PAGE TURN OVERLAY ===== */
@@ -179,24 +325,20 @@ body {
   position: absolute;
   top: clamp(14px, 2vw, 34px);
   bottom: clamp(14px, 2vw, 34px);
-  width: calc((100% - (2 * clamp(14px, 2vw, 34px))) / 2);
   z-index: 200;
+  width: calc((100% - (2 * clamp(14px, 2vw, 34px))) / 2);
   pointer-events: none;
-
-  background:
-    linear-gradient(
-      to right,
-      rgba(255, 248, 220, 0.85),
-      rgba(205, 175, 115, 0.95)
-    );
-
-  box-shadow:
-    inset 0 0 35px rgba(80, 45, 15, 0.25),
-    0 0 30px rgba(0, 0, 0, 0.35);
-
   opacity: 0;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  background: linear-gradient(
+    to right,
+    rgba(255, 248, 220, 0.85),
+    rgba(205, 175, 115, 0.95)
+  );
+  box-shadow:
+    inset 0 0 35px rgba(80, 45, 15, 0.25),
+    0 0 30px rgba(0, 0, 0, 0.35);
 }
 
 .page-flip-overlay.flip-next {
@@ -255,20 +397,16 @@ body {
   position: absolute;
   top: 0;
   z-index: 250;
-
   width: clamp(44px, 4vw, 64px);
   height: clamp(44px, 4vw, 64px);
-
+  display: grid;
+  place-items: center;
   border: none;
   cursor: pointer;
   background: #e6cf9e;
   color: #2a1b10;
   font-family: Georgia, serif;
   font-size: clamp(1.2rem, 2.2vw, 1.8rem);
-
-  display: grid;
-  place-items: center;
-
   opacity: 0.85;
   transition: opacity 0.2s ease, filter 0.2s ease;
 }
@@ -307,139 +445,6 @@ body {
   cursor: not-allowed;
 }
 
-/* ===== PAGE TEXTURING ===== */
-
-.page-inner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  background:
-    radial-gradient(circle at 25% 30%, rgba(0, 0, 0, 0.06), transparent 55%),
-    radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.05), transparent 60%),
-
-    repeating-linear-gradient(
-      0deg,
-      rgba(60, 30, 10, 0.035),
-      rgba(60, 30, 10, 0.035) 1px,
-      transparent 1px,
-      transparent 4px
-    ),
-
-    repeating-linear-gradient(
-      90deg,
-      rgba(80, 50, 20, 0.02),
-      rgba(80, 50, 20, 0.02) 2px,
-      transparent 2px,
-      transparent 6px
-    );
-}
-
-.page-inner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  background:
-    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.18), transparent 22%),
-    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.20), transparent 24%),
-    linear-gradient(
-      to right,
-      rgba(70, 38, 14, 0.16),
-      transparent 10%,
-      transparent 90%,
-      rgba(70, 38, 14, 0.16)
-    );
-}
-
-.book-inside::before {
-  content: "";
-  position: absolute;
-  top: clamp(14px, 2vw, 34px);
-  bottom: clamp(14px, 2vw, 34px);
-  left: 50%;
-  width: 1px;
-  transform: translateX(-50%);
-  z-index: 6;
-  pointer-events: none;
-  background: rgba(40, 22, 10, 0.12);
-}
-
-.left-page .page-inner {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.08),
-      transparent 8%,
-      transparent 92%,
-      rgba(0, 0, 0, 0.08)
-    ),
-    #ead6a6;
-
-  box-shadow:
-    inset -10px 0 18px rgba(35, 18, 8, 0.12),
-    inset 0 0 24px rgba(80, 48, 18, 0.18);
-}
-
-.right-page .page-inner {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.08),
-      transparent 8%,
-      transparent 92%,
-      rgba(0, 0, 0, 0.08)
-    ),
-    #efe0b5;
-
-  box-shadow:
-    inset 10px 0 18px rgba(35, 18, 8, 0.12),
-    inset 0 0 24px rgba(80, 48, 18, 0.18);
-}
-
-.left-page .page-inner::after {
-  background:
-    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.12), transparent 22%),
-    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.12), transparent 24%),
-    linear-gradient(
-      to right,
-      rgba(70, 38, 14, 0.08),
-      transparent 12%,
-      transparent 82%,
-      rgba(20, 10, 4, 0.10)
-    );
-}
-
-.right-page .page-inner::after {
-  background:
-    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.12), transparent 22%),
-    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.12), transparent 24%),
-    linear-gradient(
-      to right,
-      rgba(20, 10, 4, 0.10),
-      transparent 18%,
-      transparent 88%,
-      rgba(70, 38, 14, 0.08)
-    );
-}
-
-.book-cover {
-  background:
-    radial-gradient(circle at 20% 25%, rgba(255, 230, 170, 0.08), transparent 18%),
-    radial-gradient(circle at 75% 70%, rgba(0, 0, 0, 0.28), transparent 28%),
-    repeating-linear-gradient(
-      35deg,
-      rgba(255, 255, 255, 0.025),
-      rgba(255, 255, 255, 0.025) 2px,
-      transparent 2px,
-      transparent 7px
-    ),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.45), transparent 18%),
-    linear-gradient(135deg, #2f1710, #65351f, #24110b);
-}
-
 /* ===== SHARED INPUTS / DROPDOWNS ===== */
 
 .custom-dropdown {
@@ -452,12 +457,12 @@ body {
 .book-input {
   width: 100%;
   padding: 0.6rem 0.75rem;
-  text-align: center;
   border: 1px solid rgba(70, 45, 20, 0.5);
   border-radius: 10px 10px 0 0;
   background: rgba(255, 248, 220, 0.85);
   font-family: inherit;
   font-size: 1.05rem;
+  text-align: center;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -480,12 +485,11 @@ body {
   top: calc(100% + 4px);
   left: 0;
   right: 0;
+  z-index: 9999;
   width: 100%;
   max-height: 220px;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 9999;
-
   border: 1px solid rgba(70, 45, 20, 0.45);
   border-radius: 8px;
   background: #ead8aa;
@@ -538,25 +542,20 @@ body {
   width: 100%;
   height: clamp(150px, 24vh, 260px);
   margin-bottom: clamp(0.45rem, 1vh, 0.75rem);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
+  padding: 1rem 1rem 0.75rem;
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-radius: 12px;
-  padding: 1rem 1rem 0.75rem;
-
   background:
     radial-gradient(circle at center, rgba(0, 0, 0, 0.06), transparent 70%),
     rgba(255, 248, 220, 0.35);
-
+  text-align: center;
   box-shadow:
     inset 0 0 25px rgba(80, 48, 18, 0.2),
     0 4px 12px rgba(0, 0, 0, 0.15);
-
-  text-align: center;
 }
 
 .potion-result-text {
@@ -568,27 +567,27 @@ body {
 }
 
 .generated-potion-name {
+  margin-bottom: 6px;
   font-size: clamp(22px, 1.8vw, 28px);
   font-weight: 700;
   letter-spacing: 0.5px;
-  margin-bottom: 6px;
 }
 
 .shared-effects-box {
-  font-size: clamp(13px, 0.95vw, 15px);
   min-height: clamp(20px, 3vh, 30px);
   margin-bottom: 8px;
+  font-size: clamp(13px, 0.95vw, 15px);
 }
 
 .save-potion-btn {
   width: 100%;
   margin-top: 12px;
   padding: 0.6rem 0;
-  background: #3a2415;
-  color: #ead8b3;
   border: none;
   border-top: 2px solid rgba(90, 55, 24, 0.4);
   border-radius: 0 0 10px 10px;
+  background: #3a2415;
+  color: #ead8b3;
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: all 0.2s ease;
@@ -608,22 +607,18 @@ body {
 }
 
 .potion-ingredient-stack {
+  position: relative;
+  isolation: isolate;
   width: clamp(420px, 78%, 620px);
   margin-top: 0;
   margin-bottom: 0;
-
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-
-  position: relative;
   overflow: visible !important;
-  isolation: isolate;
-
-  background: rgba(255, 248, 220, 0.45);
   border: 2px solid rgba(90, 55, 24, 0.5);
   border-radius: 6px;
-
+  background: rgba(255, 248, 220, 0.45);
   box-shadow:
     inset 0 0 20px rgba(90, 55, 24, 0.15),
     0 4px 10px rgba(0, 0, 0, 0.15);
@@ -632,21 +627,18 @@ body {
 .potion-ingredient-card {
   position: relative;
   z-index: 1;
-
   width: 100%;
   min-height: clamp(58px, 7vh, 78px);
-  padding: clamp(6px, 0.7vw, 10px);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  background: transparent;
-  border: none;
-  box-shadow: none;
+  padding: clamp(6px, 0.7vw, 10px);
   overflow: visible !important;
+  border: none;
+  background: transparent;
   text-align: center;
+  box-shadow: none;
 }
 
 .potion-ingredient-card + .potion-ingredient-card {
@@ -657,16 +649,20 @@ body {
   z-index: 1000;
 }
 
-.potion-ingredient-card label {
-  display: block;
-  margin-bottom: clamp(5px, 0.8vh, 8px);
-  padding-bottom: 4px;
+.potion-ingredient-card label,
+.potion-notes-card label {
   text-align: center;
   font-size: clamp(14px, 1vw, 17px);
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(90, 55, 24, 0.35);
+}
+
+.potion-ingredient-card label {
+  display: block;
+  margin-bottom: clamp(5px, 0.8vh, 8px);
+  padding-bottom: 4px;
 }
 
 .potion-ingredient-card .custom-dropdown {
@@ -691,63 +687,68 @@ body {
   z-index: 1002;
 }
 
-
-
 .potion-notes-card {
   width: 100%;
-  padding: clamp(6px, 0.7vw, 10px);
-  border-top: 1px solid rgba(90, 55, 24, 0.35);
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: clamp(6px, 0.7vw, 10px);
+  border-top: 1px solid rgba(90, 55, 24, 0.35);
 }
 
 .potion-notes-card label {
   margin-bottom: clamp(3px, 0.5vh, 6px);
   padding-bottom: 2px;
-  text-align: center;
-  font-size: clamp(14px, 1vw, 17px);
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(90, 55, 24, 0.35);
 }
 
 .potion-notes-input {
   width: clamp(220px, 70%, 340px);
   min-height: clamp(38px, 5vh, 58px);
   resize: vertical;
-
   padding: 0.55rem 0.75rem;
-  background: rgba(255, 248, 220, 0.85);
   border: 1px solid rgba(70, 45, 20, 0.5);
   border-radius: 10px;
-
+  background: rgba(255, 248, 220, 0.85);
+  color: #2a1b10;
   font-family: inherit;
   font-size: 0.95rem;
-  color: #2a1b10;
   text-align: center;
 }
 
 /* ===== Page 4 - Potion Database ===== */
 
-.potion-database-panel {
+#leftPageContent,
+#rightPageContent {
   height: 100%;
+}
+
+#rightPageContent {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  overflow: hidden;
+}
+
+.potion-database-panel {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow: hidden !important;
 }
 
 .potion-database-panel h2 {
-  text-align: left;
+  flex: 0 0 auto;
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 10px;
+  text-align: left;
 }
 
 .potion-database-controls {
+  flex: 0 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
@@ -763,15 +764,12 @@ body {
 .database-filter-select {
   height: 36px;
   padding: 0.45rem 0.75rem;
-
-  background: rgba(255, 248, 220, 0.85);
   border: 1px solid rgba(70, 45, 20, 0.5);
   border-radius: 8px;
-
+  background: rgba(255, 248, 220, 0.85);
+  color: #2a1b10;
   font-family: Georgia, serif;
   font-size: 0.95rem;
-  color: #2a1b10;
-
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -794,34 +792,17 @@ body {
   gap: 0.35rem;
 }
 
-.saved-potion-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.saved-potion-header h3 {
-  margin: 0;
-  flex: 1;
-}
-
-.potion-select-checkbox {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-
 .database-action-buttons button {
   height: 36px;
   padding: 0 0.7rem;
-  background: rgba(255, 248, 220, 0.85);
-  color: #2a1b10;
   border: 1px solid rgba(70, 45, 20, 0.5);
   border-radius: 8px;
+  background: rgba(255, 248, 220, 0.85);
+  color: #2a1b10;
   font-family: Georgia, serif;
   font-size: 0.9rem;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.15s ease;
 }
 
@@ -834,41 +815,42 @@ body {
 }
 
 .potion-database-list {
+  flex: 1 1 auto;
+  height: 0;
   min-height: 0;
-  padding: 0.75rem;
-  overflow-y: auto;
-  flex: 1;
+  padding: 0.75rem 0.5rem 0.75rem 0.75rem;
+  overflow-y: auto !important;
+  overflow-x: hidden;
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-top: none;
   border-radius: 0 0 10px 10px;
   background: rgba(255, 248, 220, 0.35);
-  padding-right: 6px;
 }
 
 .database-empty-state {
   height: 100%;
   min-height: 240px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   text-align: center;
   font-style: italic;
   opacity: 0.75;
 }
 
-.saved-potion-card {
-  padding: 0.65rem 0.75rem;
+.saved-potion-card,
+.potion-card {
+  position: relative;
+  padding: 0.75rem 2.5rem 0.75rem 2rem;
   margin-bottom: 0.65rem;
-
-  border: 1px solid rgba(70, 45, 20, 0.35);
+  border: 1px solid rgba(90, 63, 34, 0.45);
   border-left: 4px solid rgba(70, 90, 45, 0.75);
-  border-radius: 8px;
-
+  border-radius: 10px;
   background: rgba(255, 248, 220, 0.45);
-  box-shadow: inset 0 0 8px rgba(80, 48, 18, 0.12);
+  box-shadow:
+    inset 0 0 8px rgba(80, 48, 18, 0.12),
+    0 2px 6px rgba(30, 20, 12, 0.18);
 }
 
 .saved-potion-card h3 {
@@ -881,12 +863,59 @@ body {
   font-size: 0.9rem;
 }
 
-/* ===== Page 5 - Ingredient Lookup ===== */
-
-#leftPageContent,
-#rightPageContent {
-  height: 100%;
+.saved-potion-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+.saved-potion-header h3 {
+  flex: 1;
+  margin: 0;
+}
+
+.saved-potion-content h3 {
+  padding-right: 1.8rem;
+}
+
+.potion-select-checkbox {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.6rem;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.favorite-potion-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: rgba(90, 63, 34, 0.5);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease, text-shadow 0.15s ease;
+}
+
+.favorite-potion-btn:hover {
+  color: #b8860b;
+  transform: scale(1.15);
+}
+
+.saved-potion-card.favorited {
+  background: rgba(232, 205, 126, 0.25);
+  border-color: rgba(216, 162, 29, 0.65);
+  box-shadow:
+    0 2px 6px rgba(30, 20, 12, 0.15),
+    0 0 8px rgba(224, 184, 79, 0.25);
+}
+
+/* ===== Page 5 - Ingredient Lookup ===== */
 
 .ingredient-lookup-panel {
   align-content: start;
@@ -898,10 +927,10 @@ body {
 }
 
 .ingredient-lookup-panel h2 {
-  text-align: left;
   margin-top: 0;
   margin-bottom: 18px;
   padding-bottom: 10px;
+  text-align: left;
 }
 
 .ingredient-image-box {
@@ -909,51 +938,46 @@ body {
   height: 100%;
   min-height: 300px;
   margin-bottom: 0.75rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-radius: 12px;
-
   background:
     radial-gradient(circle at center, rgba(0, 0, 0, 0.06), transparent 70%),
     rgba(255, 248, 220, 0.35);
-
+  font-style: italic;
+  opacity: 0.9;
   box-shadow:
     inset 0 0 25px rgba(80, 48, 18, 0.2),
     0 4px 12px rgba(0, 0, 0, 0.15);
-
-  font-style: italic;
-  opacity: 0.9;
 }
 
 .ingredient-image-box img {
+  position: relative;
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
-  position: relative;
 }
 
 .ingredient-search-card {
   display: flex;
-  margin-top: 1.2rem;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: rgba(255, 248, 220, 0.55);
+  margin-top: 1.2rem;
+  padding: 0.6rem;
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-radius: 12px;
-  padding: 0.6rem;
+  background: rgba(255, 248, 220, 0.55);
   box-shadow: inset 0 0 12px rgba(80, 48, 18, 0.15);
 }
 
 .ingredient-search-label {
-  text-align: center;
+  margin-bottom: 0.4rem;
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 0.4rem;
+  text-align: center;
   opacity: 0.85;
 }
 
@@ -961,21 +985,21 @@ body {
   width: 80%;
   max-width: 420px;
   padding: 0.75rem;
+  overflow-y: auto;
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-top: none;
   border-radius: 0 0 10px 10px;
   background: rgba(255, 248, 220, 0.35);
-  overflow-y: auto;
   text-align: center;
 }
 
 .ingredient-selected-name,
 .ingredient-result h3 {
-  text-align: center;
+  margin: 0 0 0.75rem;
   font-size: clamp(1.25rem, 1.7vw, 1.75rem);
   font-weight: bold;
-  margin: 0 0 0.75rem;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .ingredient-stats-row,
@@ -992,18 +1016,16 @@ body {
 .info-box,
 .effect-box {
   min-height: 46px;
-  padding: 0.55rem;
-  border-radius: 8px;
-  background: rgba(90, 55, 25, 0.14);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.14);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  text-align: center;
+  padding: 0.55rem;
+  border-radius: 8px;
+  background: rgba(90, 55, 25, 0.14);
   font-size: clamp(0.95rem, 1vw, 1.15rem);
+  text-align: center;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.14);
 }
 
 .info-box strong {
@@ -1026,11 +1048,11 @@ body {
 
 .effect-search-row {
   display: flex;
-  margin: 0;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
   width: 100%;
+  margin: 0;
   padding: 0.6rem 0.65rem;
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-bottom: none;
@@ -1045,19 +1067,19 @@ body {
 
 .effect-sort-controls {
   display: flex;
+  flex-shrink: 0;
   margin-left: auto;
+  overflow: hidden;
   border: 1px solid rgba(70, 45, 20, 0.45);
   border-radius: 8px;
-  overflow: hidden;
-  flex-shrink: 0;
 }
 
 .effect-sort-btn {
   padding: 0.4rem 0.6rem;
-  font-size: 0.8rem;
-  background: rgba(255, 248, 220, 0.6);
   border: none;
   border-right: 1px solid rgba(70, 45, 20, 0.3);
+  background: rgba(255, 248, 220, 0.6);
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
@@ -1078,13 +1100,13 @@ body {
 .effect-result {
   width: 100%;
   min-height: 0;
-  padding-top: 0.5rem;
   margin-top: 0;
-  border: 1px solid rgba(70, 45, 20, 0.35);
-  border-radius: 0 0 10px 10px;
-  border-top: 1px solid rgba(70, 45, 20, 0.2);
-  background: rgba(255, 248, 220, 0.35);
+  padding-top: 0.5rem;
   overflow-y: auto;
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-top: 1px solid rgba(70, 45, 20, 0.2);
+  border-radius: 0 0 10px 10px;
+  background: rgba(255, 248, 220, 0.35);
 }
 
 .effect-result.empty {
@@ -1100,9 +1122,8 @@ body {
 .effect-result-row {
   display: grid;
   grid-template-columns: 1.5fr 0.8fr 0.8fr;
-  gap: 0.5rem;
   align-items: center;
-
+  gap: 0.5rem;
   padding: 0.45rem 0.55rem;
   border-radius: 8px;
   background: rgba(90, 55, 25, 0.12);
@@ -1114,162 +1135,16 @@ body {
 }
 
 .effect-result-row.header-row {
-  font-weight: bold;
-  background: rgba(90, 55, 25, 0.22);
   margin-bottom: 0.3rem;
   padding: 0.35rem 0.5rem;
+  background: rgba(90, 55, 25, 0.22);
+  font-weight: bold;
 }
 
 .effect-result-list p {
   text-align: center;
   font-style: italic;
   opacity: 0.75;
-}
-
-/* ===== Force Potion Database to Scroll Inside Page ===== */
-
-.right-page .page-inner {
-  overflow: hidden;
-}
-
-#rightPageContent {
-  height: 100%;
-  min-height: 0;
-}
-
-.potion-database-panel {
-  height: 100%;
-  min-height: 0;
-
-  display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
-  gap: 0.75rem;
-  overflow: hidden;
-}
-
-.potion-database-list {
-  min-height: 0;
-  max-height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  padding: 0.75rem;
-  padding-right: 0.5rem;
-}
-
-/* ===== HARD FIX: Potion Database Scroll Containment ===== */
-
-.right-page,
-.right-page .page-inner {
-  min-height: 0;
-  overflow: hidden !important;
-}
-
-.right-page .page-inner {
-  display: flex;
-  flex-direction: column;
-}
-
-#rightPageContent {
-  height: 100%;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.potion-database-panel {
-  flex: 1 1 auto;
-  min-height: 0;
-  height: 100%;
-
-  display: flex !important;
-  flex-direction: column;
-
-  overflow: hidden !important;
-}
-
-.potion-database-panel h2,
-.potion-database-controls {
-  flex: 0 0 auto;
-}
-
-.potion-database-list {
-  flex: 1 1 auto;
-  height: 0;
-  min-height: 0;
-
-  overflow-y: auto !important;
-  overflow-x: hidden;
-
-  padding: 0.75rem;
-  padding-right: 0.5rem;
-}
-
-.potion-card {
-  position: relative;
-  padding: 0.75rem 2.4rem 0.75rem 2rem;
-  border: 1px solid rgba(90, 63, 34, 0.45);
-  border-radius: 10px;
-  background: rgba(217, 196, 154, 0.55);
-  box-shadow: 0 2px 6px rgba(30, 20, 12, 0.18);
-}
-
-.potion-select-checkbox {
-  position: absolute;
-  top: 0.85rem;
-  left: 0.65rem;
-}
-
-.saved-potion-card {
-  position: relative;
-  padding: 0.75rem 2.5rem 0.75rem 2rem;
-}
-
-.potion-select-checkbox {
-  position: absolute;
-  top: 0.85rem;
-  left: 0.6rem;
-}
-
-.favorite-potion-btn {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.6rem;
-  border: none;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  font-size: 1.4rem;
-  line-height: 1;
-  cursor: pointer;
-  color: rgba(90, 63, 34, 0.5);
-  transition:
-    transform 0.15s ease,
-    color 0.15s ease,
-    text-shadow 0.15s ease;
-}
-
-.favorite-potion-btn:hover {
-  color: #b8860b;
-  transform: scale(1.15);
-}
-
-.saved-potion-content h3 {
-  padding-right: 1.8rem;
-}
-
-.saved-potion-card.favorited {
-  background: rgba(232, 205, 126, 0.22);
-  border-color: rgba(224, 184, 79, 0.6);
-  box-shadow:
-    0 2px 6px rgba(30, 20, 12, 0.15),
-    0 0 8px rgba(224, 184, 79, 0.25);
-}
-
-.saved-potion-card.favorited {
-  background: rgba(232, 205, 126, 0.25);
-  border-color: rgba(216, 162, 29, 0.65);
 }
 
 /* ===== RESPONSIVE ===== */
