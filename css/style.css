@@ -1,12 +1,9 @@
-/* 
-  LoreRim Alchemy Book - cleaned full stylesheet
-  Notes:
-  - Preserves your existing page/database/dropdown styling.
-  - Removes the frame-over-pages layering issue.
-  - Uses responsive scaling for shorter screens.
-  - Requires:
-      assets/cover.png
-      assets/book-frame.png
+/*
+  LoreRim Alchemy Book - Alpha CSS
+  Cleaned to remove duplicate overwritten declarations and consolidate repeated responsive blocks.
+  Requires:
+    assets/cover.png
+    assets/book-frame.png
 */
 
 * {
@@ -112,8 +109,7 @@ body {
   height: 100%;
   grid-template-columns: 1fr 1fr;
   gap: 0.4rem;
-  padding: 2.1% 7.2% 5.2% 5.5%;
-  padding-bottom: 2%;
+  padding: 2.1% 7.2% 2% 5.5%;
   border-radius: 18px;
   background: linear-gradient(90deg, #3a2415, #1c120c 50%, #3a2415);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
@@ -121,10 +117,6 @@ body {
   overflow: hidden;
 }
 
-.book-inside::before {
-  top: 6.6%;
-  bottom: 6.4%;
-}
 
 .book.open .book-cover {
   display: none;
@@ -1149,35 +1141,16 @@ body {
 
 /* ===== RESPONSIVE ===== */
 
-@media (max-width: 1100px) {
-  .potion-database-controls {
-    grid-template-columns: 1fr auto;
-  }
-
-  .database-action-buttons {
-    grid-column: 1 / -1;
-    justify-content: flex-end;
-  }
-}
-
-@media (max-width: 800px) {
-  body {
-    overflow: auto;
-  }
+@media (max-width: 800px), (max-height: 650px) {
 
   .book {
-    width: 98vw;
-    height: 92vh;
-  }
-
-  .book.closed {
-    width: 92vw;
+    width: 96vw;
     height: 88vh;
   }
 
   .book-inside {
     grid-template-columns: 1fr;
-    padding: clamp(10px, 2vw, 18px);
+    padding: 3% 8% 7% 8%;
   }
 
   .left-page {
@@ -1185,6 +1158,257 @@ body {
   }
 
   .right-page {
+    display: flex;
     border-radius: 14px;
+    transform: none;
+  }
+
+  .page-inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1rem;
+  }
+
+  .database-action-buttons {
+    justify-content: center;
+  }
+
+  .potion-ingredient-stack {
+    width: 100%;
+  }
+
+  .potion-ingredient-card .custom-dropdown,
+  .potion-notes-input {
+    width: 92%;
+  }
+}
+
+
+/* ===== RESPONSIVE BOOK CONTENT ===== */
+
+@media (max-width: 1100px), (max-height: 760px) {
+  .book-inside {
+    padding: 2.8% 5.2% 7% 5.2%;
+  }
+
+  .page-inner {
+    padding:
+      clamp(0.8rem, 1.8vh, 1.4rem)
+      clamp(0.65rem, 1.4vw, 1.1rem)
+      clamp(0.65rem, 1.4vh, 1rem);
+  }
+
+  .page h2 {
+    font-size: clamp(1.15rem, 2.1vw, 1.6rem);
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+  }
+
+  .page p,
+  .dropdown-option,
+  .book-input {
+    font-size: clamp(0.75rem, 1.35vw, 0.95rem);
+  }
+
+  .custom-dropdown {
+    width: 100%;
+    max-width: none;
+  }
+
+  .ingredient-lookup-panel {
+    grid-template-rows: auto minmax(180px, 42%) auto;
+    gap: 0.65rem;
+  }
+
+  .ingredient-image-box {
+    min-height: 180px;
+  }
+
+  .ingredient-search-card {
+    margin-top: 0.4rem;
+    padding: 0.45rem;
+  }
+
+  .ingredient-result {
+    width: 100%;
+    max-width: none;
+  }
+
+  .effect-search-row {
+    gap: 0.35rem;
+    padding: 0.45rem;
+  }
+
+  .effect-search-row .custom-dropdown {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .effect-sort-btn {
+    padding: 0.35rem 0.45rem;
+    font-size: 0.7rem;
+  }
+
+  .effect-result-row {
+    grid-template-columns: 1.2fr 0.75fr 0.75fr;
+    gap: 0.25rem;
+    padding: 0.35rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* ===== CRAMPED SCREEN: FIT CONTENT INSIDE PAGES ===== */
+
+@media (max-width: 1100px), (max-height: 750px) {
+  .page-inner {
+    overflow-x: hidden !important;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .potion-builder-panel,
+  .potion-database-panel,
+  .ingredient-lookup-panel,
+  .effect-lookup-panel {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .potion-result-box,
+  .potion-ingredient-stack,
+  .potion-database-controls,
+  .potion-database-list,
+  .ingredient-image-box,
+  .ingredient-search-card,
+  .ingredient-result,
+  .effect-search-row,
+  .effect-result {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .potion-ingredient-stack {
+    min-width: 0;
+  }
+
+  .potion-ingredient-card .custom-dropdown,
+  .potion-notes-input {
+    width: 88%;
+    max-width: 100%;
+  }
+
+  .database-action-buttons button,
+  .database-filter-select {
+    height: 30px;
+    font-size: 0.72rem;
+    padding: 0 0.45rem;
+  }
+
+  .saved-potion-card,
+  .potion-card {
+    padding: 0.55rem 1.8rem 0.55rem 1.7rem;
+  }
+
+  .saved-potion-card h3 {
+    font-size: 0.85rem;
+  }
+
+  .saved-potion-card p {
+    font-size: 0.72rem;
+  }
+
+  .potion-result-box {
+    padding: 0.65rem;
+  }
+
+  .save-potion-btn {
+    padding: 0.45rem 0;
+    font-size: 0.78rem;
+  }
+
+  .book-inside {
+    padding-bottom: 2%;
+    padding-top: 2%;
+  }
+
+  .page-inner {
+    height: 104%;
+  }
+
+  .potion-result-box {
+    height: auto;
+    min-height: 135px;
+    justify-content: flex-start;
+    gap: 0.45rem;
+  }
+
+  .potion-result-text {
+    flex: 0 0 auto;
+    min-height: 0;
+  }
+
+  .generated-potion-name {
+    font-size: clamp(1rem, 1.7vw, 1.25rem);
+    line-height: 1.05;
+    max-width: 95%;
+    overflow-wrap: break-word;
+  }
+
+  .shared-effects-box {
+    font-size: 0.72rem;
+    line-height: 1.15;
+    margin-bottom: 0.2rem;
+  }
+
+  .save-potion-btn {
+    position: relative;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+  }
+
+  .potion-database-controls {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .potion-database-controls input,
+  .potion-database-controls select {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .database-action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+    width: 100%;
+  }
+
+  .database-action-buttons button {
+    flex: 1 1 auto;
+    min-width: 70px;
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+
+  .effect-search-row {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .effect-search-row .custom-dropdown {
+    flex: 1 1 100%;
+  }
+
+  .effect-sort-btn {
+    flex: 1 1 auto;
+    font-size: 0.7rem;
+    padding: 4px 5px;
   }
 }
