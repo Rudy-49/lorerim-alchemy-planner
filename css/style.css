@@ -78,6 +78,7 @@ body {
   border-radius: 18px;
   background: linear-gradient(90deg, #3a2415, #1c120c 50%, #3a2415);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  perspective: 1800px;
 }
 
 .book.open .book-cover {
@@ -120,23 +121,30 @@ body {
   position: relative;
   min-width: 0;
   height: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .left-page {
   border-radius: 14px 4px 4px 14px;
+  transform: perspective(1400px) rotateY(0.6deg);
+  transform-origin: right center;
 }
 
 .right-page {
   border-radius: 4px 14px 14px 4px;
+  transform: perspective(1400px) rotateY(-0.6deg);
+  transform-origin: left center;
 }
 
 .page-inner {
+  position: relative;
   width: 100%;
   height: 100%;
-  padding: clamp(40px, 5vw, 70px)
-           clamp(16px, 2vw, 36px)
-           clamp(16px, 2vw, 36px);
+
+  padding:
+    clamp(2.5rem, 4vh, 4rem)
+    clamp(1rem, 2vw, 2rem)
+    clamp(1rem, 2vw, 2rem);
 
   overflow-y: auto;
   color: #2a1b10;
@@ -166,10 +174,6 @@ body {
 }
 
 /* ===== PAGE TURN OVERLAY ===== */
-
-.book-inside {
-  perspective: 1800px;
-}
 
 .page-flip-overlay {
   position: absolute;
@@ -350,16 +354,6 @@ body {
     );
 }
 
-.left-page {
-  transform: perspective(1400px) rotateY(0.6deg);
-  transform-origin: right center;
-}
-
-.right-page {
-  transform: perspective(1400px) rotateY(-0.6deg);
-  transform-origin: left center;
-}
-
 .book-inside::before {
   content: "";
   position: absolute;
@@ -374,12 +368,32 @@ body {
 }
 
 .left-page .page-inner {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.08),
+      transparent 8%,
+      transparent 92%,
+      rgba(0, 0, 0, 0.08)
+    ),
+    #ead6a6;
+
   box-shadow:
     inset -10px 0 18px rgba(35, 18, 8, 0.12),
     inset 0 0 24px rgba(80, 48, 18, 0.18);
 }
 
 .right-page .page-inner {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.08),
+      transparent 8%,
+      transparent 92%,
+      rgba(0, 0, 0, 0.08)
+    ),
+    #efe0b5;
+
   box-shadow:
     inset 10px 0 18px rgba(35, 18, 8, 0.12),
     inset 0 0 24px rgba(80, 48, 18, 0.18);
@@ -411,32 +425,6 @@ body {
     );
 }
 
-/* ===== SUBTLE PAGE COLOR VARIATION ===== */
-
-.left-page .page-inner {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.08),
-      transparent 8%,
-      transparent 92%,
-      rgba(0, 0, 0, 0.08)
-    ),
-    #ead6a6;
-}
-
-.right-page .page-inner {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.08),
-      transparent 8%,
-      transparent 92%,
-      rgba(0, 0, 0, 0.08)
-    ),
-    #efe0b5;
-}
-
 .book-cover {
   background:
     radial-gradient(circle at 20% 25%, rgba(255, 230, 170, 0.08), transparent 18%),
@@ -450,6 +438,447 @@ body {
     ),
     linear-gradient(90deg, rgba(0, 0, 0, 0.45), transparent 18%),
     linear-gradient(135deg, #2f1710, #65351f, #24110b);
+}
+
+/* ===== SHARED INPUTS / DROPDOWNS ===== */
+
+.custom-dropdown {
+  position: relative;
+  width: 80%;
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
+.book-input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  text-align: center;
+  border: 1px solid rgba(70, 45, 20, 0.5);
+  border-radius: 10px 10px 0 0;
+  background: rgba(255, 248, 220, 0.85);
+  font-family: inherit;
+  font-size: 1.05rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.book-input:hover,
+.book-input:focus {
+  background: rgba(255, 248, 220, 1);
+}
+
+.book-input:focus {
+  outline: none;
+  border-color: rgba(120, 75, 30, 0.7);
+  box-shadow:
+    0 0 6px rgba(95, 58, 26, 0.4),
+    0 0 12px rgba(73, 107, 53, 0.25);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 9999;
+
+  border: 1px solid rgba(70, 45, 20, 0.45);
+  border-radius: 8px;
+  background: #ead8aa;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-option {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-bottom: 1px solid rgba(70, 45, 20, 0.18);
+  background: transparent;
+  color: #2a1b10;
+  font-family: Georgia, serif;
+  text-align: left;
+  white-space: normal;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background: rgba(90, 55, 25, 0.16);
+}
+
+/* ===== Page 3 - Potion Builder ===== */
+
+.potion-builder-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+}
+
+.potion-builder-panel h2 {
+  margin-top: 0;
+  margin-bottom: clamp(10px, 1.5vh, 18px);
+  padding-bottom: 10px;
+  text-align: left;
+  letter-spacing: 0;
+  text-transform: none;
+  border-bottom: 2px solid rgba(80, 45, 15, 0.45);
+}
+
+.potion-result-box {
+  width: 100%;
+  height: clamp(150px, 24vh, 260px);
+  margin-bottom: clamp(0.45rem, 1vh, 0.75rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-radius: 12px;
+  padding: 1rem 1rem 0.75rem;
+
+  background:
+    radial-gradient(circle at center, rgba(0, 0, 0, 0.06), transparent 70%),
+    rgba(255, 248, 220, 0.35);
+
+  box-shadow:
+    inset 0 0 25px rgba(80, 48, 18, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
+}
+
+.potion-result-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.generated-potion-name {
+  font-size: clamp(22px, 1.8vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.shared-effects-box {
+  font-size: clamp(13px, 0.95vw, 15px);
+  min-height: clamp(20px, 3vh, 30px);
+  margin-bottom: 8px;
+}
+
+.save-potion-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 0.6rem 0;
+  background: #3a2415;
+  color: #ead8b3;
+  border: none;
+  border-top: 2px solid rgba(90, 55, 24, 0.4);
+  border-radius: 0 0 10px 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.save-potion-btn:hover {
+  background: #4b2f1b;
+  transform: translateY(-1px);
+}
+
+.potion-builder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.potion-ingredient-stack {
+  width: clamp(420px, 78%, 620px);
+  margin-top: 0;
+  margin-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  position: relative;
+  overflow: visible !important;
+  isolation: isolate;
+
+  background: rgba(255, 248, 220, 0.45);
+  border: 2px solid rgba(90, 55, 24, 0.5);
+  border-radius: 6px;
+
+  box-shadow:
+    inset 0 0 20px rgba(90, 55, 24, 0.15),
+    0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.potion-ingredient-card {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  min-height: clamp(58px, 7vh, 78px);
+  padding: clamp(6px, 0.7vw, 10px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible !important;
+  text-align: center;
+}
+
+.potion-ingredient-card + .potion-ingredient-card {
+  border-top: 1px solid rgba(90, 55, 24, 0.35);
+}
+
+.potion-ingredient-card:focus-within {
+  z-index: 1000;
+}
+
+.potion-ingredient-card label {
+  display: block;
+  margin-bottom: clamp(5px, 0.8vh, 8px);
+  padding-bottom: 4px;
+  text-align: center;
+  font-size: clamp(14px, 1vw, 17px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(90, 55, 24, 0.35);
+}
+
+.potion-ingredient-card .custom-dropdown {
+  width: clamp(220px, 70%, 340px);
+  max-width: 340px;
+  margin: 0 auto;
+  z-index: 2;
+  overflow: visible;
+}
+
+.potion-ingredient-card:focus-within .custom-dropdown {
+  z-index: 1001;
+}
+
+.potion-ingredient-card .book-input {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.potion-ingredient-card .dropdown-menu {
+  max-height: clamp(120px, 18vh, 180px);
+  z-index: 1002;
+}
+
+
+
+.potion-notes-card {
+  width: 100%;
+  padding: clamp(6px, 0.7vw, 10px);
+  border-top: 1px solid rgba(90, 55, 24, 0.35);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.potion-notes-card label {
+  margin-bottom: clamp(3px, 0.5vh, 6px);
+  padding-bottom: 2px;
+  text-align: center;
+  font-size: clamp(14px, 1vw, 17px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(90, 55, 24, 0.35);
+}
+
+.potion-notes-input {
+  width: clamp(220px, 70%, 340px);
+  min-height: clamp(38px, 5vh, 58px);
+  resize: vertical;
+
+  padding: 0.55rem 0.75rem;
+  background: rgba(255, 248, 220, 0.85);
+  border: 1px solid rgba(70, 45, 20, 0.5);
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #2a1b10;
+  text-align: center;
+}
+
+/* ===== Page 4 - Potion Database ===== */
+
+.potion-database-panel {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.potion-database-panel h2 {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.potion-database-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.6rem 0.65rem;
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-radius: 10px 10px 0 0;
+  background: rgba(255, 248, 220, 0.35);
+}
+
+.potion-database-controls .book-input,
+.database-filter-select {
+  height: 36px;
+  padding: 0.45rem 0.75rem;
+
+  background: rgba(255, 248, 220, 0.85);
+  border: 1px solid rgba(70, 45, 20, 0.5);
+  border-radius: 8px;
+
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #2a1b10;
+
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.database-filter-select {
+  min-width: 120px;
+  min-height: 38px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.database-filter-select:focus,
+.potion-database-controls .book-input:focus {
+  outline: none;
+  border-color: rgba(120, 75, 30, 0.7);
+  background: rgba(255, 248, 220, 1);
+}
+
+.database-action-buttons {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.saved-potion-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.saved-potion-header h3 {
+  margin: 0;
+  flex: 1;
+}
+
+.potion-select-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.database-action-buttons button {
+  height: 36px;
+  padding: 0 0.7rem;
+  background: rgba(255, 248, 220, 0.85);
+  color: #2a1b10;
+  border: 1px solid rgba(70, 45, 20, 0.5);
+  border-radius: 8px;
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.database-action-buttons button:hover {
+  background: rgba(255, 248, 220, 1);
+}
+
+.database-action-buttons button:active {
+  transform: translateY(1px);
+}
+
+.potion-database-list {
+  min-height: 0;
+  padding: 0.75rem;
+  overflow-y: auto;
+  flex: 1;
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  background: rgba(255, 248, 220, 0.35);
+  padding-right: 6px;
+}
+
+.database-empty-state {
+  height: 100%;
+  min-height: 240px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-style: italic;
+  opacity: 0.75;
+}
+
+.saved-potion-card {
+  padding: 0.65rem 0.75rem;
+  margin-bottom: 0.65rem;
+
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-left: 4px solid rgba(70, 90, 45, 0.75);
+  border-radius: 8px;
+
+  background: rgba(255, 248, 220, 0.45);
+  box-shadow: inset 0 0 8px rgba(80, 48, 18, 0.12);
+}
+
+.saved-potion-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.saved-potion-card p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
 }
 
 /* ===== Page 5 - Ingredient Lookup ===== */
@@ -469,10 +898,10 @@ body {
 }
 
 .ingredient-lookup-panel h2 {
-  text-align: left;      
+  text-align: left;
   margin-top: 0;
-  margin-bottom: 18px;     
-  padding-bottom: 10px;    
+  margin-bottom: 18px;
+  padding-bottom: 10px;
 }
 
 .ingredient-image-box {
@@ -480,17 +909,21 @@ body {
   height: 100%;
   min-height: 300px;
   margin-bottom: 0.75rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-radius: 12px;
+
   background:
-    radial-gradient(circle at center, rgba(0,0,0,0.06), transparent 70%),
+    radial-gradient(circle at center, rgba(0, 0, 0, 0.06), transparent 70%),
     rgba(255, 248, 220, 0.35);
+
   box-shadow:
     inset 0 0 25px rgba(80, 48, 18, 0.2),
-    0 4px 12px rgba(0,0,0,0.15);
+    0 4px 12px rgba(0, 0, 0, 0.15);
 
   font-style: italic;
   opacity: 0.9;
@@ -501,24 +934,6 @@ body {
   max-height: 90%;
   object-fit: contain;
   position: relative;
-}
-
-.ingredient-image-box::after {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-
-  background: linear-gradient(
-    to right,
-    rgba(90, 55, 24, 0.6),
-    rgba(90, 55, 24, 0.3),
-    rgba(90, 55, 24, 0.6)
-  );
-
-  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
 .ingredient-search-card {
@@ -542,82 +957,9 @@ body {
   opacity: 0.85;
 }
 
-.custom-dropdown {
-  position: relative;
-  width: 80%;
-  flex-shrink: 0;
-  max-width: 420px;
-}
-
-.book-input {
-  width: 100%;
-  padding: 0.6rem 0.75rem;
-  text-align: center;
-  border: 1px solid rgba(70, 45, 20, 0.5);
-  border-radius: 10px 10px 0 0;
-  background: rgba(255, 248, 220, 0.85);
-  font-family: inherit;
-  font-size: 1.05rem;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
-}
-
-.book-input:focus {
-  outline: none;
-  border-color: rgba(120, 75, 30, 0.7);
-  background: rgba(255, 248, 220, 1);
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  right: 0;
-  max-height: 180px;
-  overflow-y: auto;
-  z-index: 500;
-
-  border: 1px solid rgba(70, 45, 20, 0.45);
-  border-radius: 8px;
-  background: #ead8aa;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-}
-
-.dropdown-menu.show {
-  display: block;
-}
-
-.dropdown-option {
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  border: none;
-  border-bottom: 1px solid rgba(70, 45, 20, 0.18);
-  background: transparent;
-  color: #2a1b10;
-  font-family: Georgia, serif;
-  text-align: left;
-  cursor: pointer;
-}
-
-.dropdown-option:hover {
-  background: rgba(90, 55, 25, 0.16);
-}
-
-.ingredient-selected-name {
-  text-align: center;
-  font-size: clamp(1.25rem, 1.7vw, 1.75rem);
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.03em;
-}
-
-.custom-dropdown,
 .ingredient-result {
   width: 80%;
   max-width: 420px;
-}
-
-.ingredient-result {
   padding: 0.75rem;
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-top: none;
@@ -627,18 +969,23 @@ body {
   text-align: center;
 }
 
+.ingredient-selected-name,
 .ingredient-result h3 {
   text-align: center;
-  margin: 0 0 0.75rem;
   font-size: clamp(1.25rem, 1.7vw, 1.75rem);
   font-weight: bold;
+  margin: 0 0 0.75rem;
   letter-spacing: 0.03em;
 }
 
-.ingredient-stats-row {
+.ingredient-stats-row,
+.ingredient-effects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
+}
+
+.ingredient-stats-row {
   margin-bottom: 0.75rem;
 }
 
@@ -667,12 +1014,6 @@ body {
   font-size: 1rem;
 }
 
-.ingredient-effects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-}
-
 /* ===== Page 6 - Effect Lookup ===== */
 
 .effect-lookup-panel {
@@ -683,19 +1024,55 @@ body {
   gap: 0;
 }
 
-.effect-search-card {
+.effect-search-row {
   display: flex;
-  flex-direction: column;
+  margin: 0;
   align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   width: 100%;
+  padding: 0.6rem 0.65rem;
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: rgba(255, 248, 220, 0.35);
 }
 
-.effect-search-label {
-  text-align: center;
-  font-size: 1rem;
+.effect-search-row .custom-dropdown {
+  flex: 0 1 420px;
+  margin-right: auto;
+}
+
+.effect-sort-controls {
+  display: flex;
+  margin-left: auto;
+  border: 1px solid rgba(70, 45, 20, 0.45);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.effect-sort-btn {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+  background: rgba(255, 248, 220, 0.6);
+  border: none;
+  border-right: 1px solid rgba(70, 45, 20, 0.3);
+  cursor: pointer;
+}
+
+.effect-sort-btn:last-child {
+  border-right: none;
+}
+
+.effect-sort-btn:hover {
+  background: rgba(90, 55, 25, 0.18);
+}
+
+.effect-sort-btn.active {
+  background: rgba(90, 55, 25, 0.35);
+  color: #2a1b10;
   font-weight: bold;
-  margin-bottom: 0.4rem;
-  opacity: 0.85;
 }
 
 .effect-result {
@@ -749,64 +1126,164 @@ body {
   opacity: 0.75;
 }
 
-.effect-sort-controls {
-  display: flex;
-  border: 1px solid rgba(70, 45, 20, 0.45);
-  border-radius: 8px;
+/* ===== Force Potion Database to Scroll Inside Page ===== */
+
+.right-page .page-inner {
   overflow: hidden;
-  flex-shrink: 0;
 }
 
-.effect-sort-btn {
-  padding: 0.4rem 0.6rem;
-  font-size: 0.8rem;
-
-  background: rgba(255, 248, 220, 0.6);
-  border: none;
-  border-right: 1px solid rgba(70, 45, 20, 0.3);
-
-  cursor: pointer;
+#rightPageContent {
+  height: 100%;
+  min-height: 0;
 }
 
-.effect-sort-btn:last-child {
-  border-right: none;
-}
+.potion-database-panel {
+  height: 100%;
+  min-height: 0;
 
-.effect-sort-btn:hover {
-  background: rgba(90, 55, 25, 0.18);
-}
-
-.effect-sort-btn.active {
-  background: rgba(90, 55, 25, 0.35);
-  color: #2a1b10;
-  font-weight: bold;
-}
-
-.effect-search-row {
-  display: flex;
-  margin: 0;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
   gap: 0.75rem;
-  width: 100%;
-  padding: 0.6rem 0.65rem;
-  border: 1px solid rgba(70, 45, 20, 0.35);
-  border-bottom: none;
-  border-radius: 10px 10px 0 0;
-  background: rgba(255, 248, 220, 0.35);
+  overflow: hidden;
 }
 
-.effect-search-row .custom-dropdown {
-  flex: 0 1 420px;
-  margin-right: auto;
+.potion-database-list {
+  min-height: 0;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 0.75rem;
+  padding-right: 0.5rem;
 }
 
-.effect-sort-controls {
-  margin-left: auto;
+/* ===== HARD FIX: Potion Database Scroll Containment ===== */
+
+.right-page,
+.right-page .page-inner {
+  min-height: 0;
+  overflow: hidden !important;
 }
 
+.right-page .page-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+#rightPageContent {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.potion-database-panel {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+
+  display: flex !important;
+  flex-direction: column;
+
+  overflow: hidden !important;
+}
+
+.potion-database-panel h2,
+.potion-database-controls {
+  flex: 0 0 auto;
+}
+
+.potion-database-list {
+  flex: 1 1 auto;
+  height: 0;
+  min-height: 0;
+
+  overflow-y: auto !important;
+  overflow-x: hidden;
+
+  padding: 0.75rem;
+  padding-right: 0.5rem;
+}
+
+.potion-card {
+  position: relative;
+  padding: 0.75rem 2.4rem 0.75rem 2rem;
+  border: 1px solid rgba(90, 63, 34, 0.45);
+  border-radius: 10px;
+  background: rgba(217, 196, 154, 0.55);
+  box-shadow: 0 2px 6px rgba(30, 20, 12, 0.18);
+}
+
+.potion-select-checkbox {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.65rem;
+}
+
+.saved-potion-card {
+  position: relative;
+  padding: 0.75rem 2.5rem 0.75rem 2rem;
+}
+
+.potion-select-checkbox {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.6rem;
+}
+
+.favorite-potion-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  color: rgba(90, 63, 34, 0.5);
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease,
+    text-shadow 0.15s ease;
+}
+
+.favorite-potion-btn:hover {
+  color: #b8860b;
+  transform: scale(1.15);
+}
+
+.saved-potion-content h3 {
+  padding-right: 1.8rem;
+}
+
+.saved-potion-card.favorited {
+  background: rgba(232, 205, 126, 0.22);
+  border-color: rgba(224, 184, 79, 0.6);
+  box-shadow:
+    0 2px 6px rgba(30, 20, 12, 0.15),
+    0 0 8px rgba(224, 184, 79, 0.25);
+}
+
+.saved-potion-card.favorited {
+  background: rgba(232, 205, 126, 0.25);
+  border-color: rgba(216, 162, 29, 0.65);
+}
 
 /* ===== RESPONSIVE ===== */
+
+@media (max-width: 1100px) {
+  .potion-database-controls {
+    grid-template-columns: 1fr auto;
+  }
+
+  .database-action-buttons {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+}
 
 @media (max-width: 800px) {
   body {
