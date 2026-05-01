@@ -567,7 +567,6 @@ body {
   background: rgba(255, 248, 220, 1);
 }
 
-/* Dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -673,6 +672,139 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
 }
+
+/* ===== Page 6 - Effect Lookup ===== */
+
+.effect-lookup-panel {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 0;
+}
+
+.effect-search-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.effect-search-label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  opacity: 0.85;
+}
+
+.effect-result {
+  width: 100%;
+  min-height: 0;
+  padding-top: 0.5rem;
+  margin-top: 0;
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-radius: 0 0 10px 10px;
+  border-top: 1px solid rgba(70, 45, 20, 0.2);
+  background: rgba(255, 248, 220, 0.35);
+  overflow-y: auto;
+}
+
+.effect-result.empty {
+  opacity: 0.85;
+}
+
+.effect-result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.effect-result-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr;
+  gap: 0.5rem;
+  align-items: center;
+
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  background: rgba(90, 55, 25, 0.12);
+  text-align: center;
+}
+
+.effect-result-row span:first-child {
+  text-align: left;
+}
+
+.effect-result-row.header-row {
+  font-weight: bold;
+  background: rgba(90, 55, 25, 0.22);
+  margin-bottom: 0.3rem;
+  padding: 0.35rem 0.5rem;
+}
+
+.effect-result-list p {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.75;
+}
+
+.effect-sort-controls {
+  display: flex;
+  border: 1px solid rgba(70, 45, 20, 0.45);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.effect-sort-btn {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+
+  background: rgba(255, 248, 220, 0.6);
+  border: none;
+  border-right: 1px solid rgba(70, 45, 20, 0.3);
+
+  cursor: pointer;
+}
+
+.effect-sort-btn:last-child {
+  border-right: none;
+}
+
+.effect-sort-btn:hover {
+  background: rgba(90, 55, 25, 0.18);
+}
+
+.effect-sort-btn.active {
+  background: rgba(90, 55, 25, 0.35);
+  color: #2a1b10;
+  font-weight: bold;
+}
+
+.effect-search-row {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.6rem 0.65rem;
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: rgba(255, 248, 220, 0.35);
+}
+
+.effect-search-row .custom-dropdown {
+  flex: 0 1 420px;
+  margin-right: auto;
+}
+
+.effect-sort-controls {
+  margin-left: auto;
+}
+
 
 /* ===== RESPONSIVE ===== */
 
