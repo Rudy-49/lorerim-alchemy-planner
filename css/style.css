@@ -422,7 +422,7 @@ body {
       transparent 92%,
       rgba(0, 0, 0, 0.08)
     ),
-    #ead6a6; /* slightly warmer/darker */
+    #ead6a6;
 }
 
 .right-page .page-inner {
@@ -434,7 +434,7 @@ body {
       transparent 92%,
       rgba(0, 0, 0, 0.08)
     ),
-    #efe0b5; /* slightly lighter/aged */
+    #efe0b5;
 }
 
 .book-cover {
@@ -450,6 +450,228 @@ body {
     ),
     linear-gradient(90deg, rgba(0, 0, 0, 0.45), transparent 18%),
     linear-gradient(135deg, #2f1710, #65351f, #24110b);
+}
+
+/* ===== Page 5 - Ingredient Lookup ===== */
+
+#leftPageContent,
+#rightPageContent {
+  height: 100%;
+}
+
+.ingredient-lookup-panel {
+  align-content: start;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(300px, 46%) auto;
+  gap: 1.2rem;
+}
+
+.ingredient-lookup-panel h2 {
+  text-align: left;      
+  margin-top: 0;
+  margin-bottom: 18px;     
+  padding-bottom: 10px;    
+}
+
+.ingredient-image-box {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at center, rgba(0,0,0,0.06), transparent 70%),
+    rgba(255, 248, 220, 0.35);
+  box-shadow:
+    inset 0 0 25px rgba(80, 48, 18, 0.2),
+    0 4px 12px rgba(0,0,0,0.15);
+
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.ingredient-image-box img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  position: relative;
+}
+
+.ingredient-image-box::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+
+  background: linear-gradient(
+    to right,
+    rgba(90, 55, 24, 0.6),
+    rgba(90, 55, 24, 0.3),
+    rgba(90, 55, 24, 0.6)
+  );
+
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.ingredient-search-card {
+  display: flex;
+  margin-top: 1.2rem;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: rgba(255, 248, 220, 0.55);
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-radius: 12px;
+  padding: 0.6rem;
+  box-shadow: inset 0 0 12px rgba(80, 48, 18, 0.15);
+}
+
+.ingredient-search-label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  opacity: 0.85;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 80%;
+  flex-shrink: 0;
+  max-width: 420px;
+}
+
+.book-input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  text-align: center;
+  border: 1px solid rgba(70, 45, 20, 0.5);
+  border-radius: 10px 10px 0 0;
+  background: rgba(255, 248, 220, 0.85);
+  font-family: inherit;
+  font-size: 1.05rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.book-input:focus {
+  outline: none;
+  border-color: rgba(120, 75, 30, 0.7);
+  background: rgba(255, 248, 220, 1);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 500;
+
+  border: 1px solid rgba(70, 45, 20, 0.45);
+  border-radius: 8px;
+  background: #ead8aa;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-option {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-bottom: 1px solid rgba(70, 45, 20, 0.18);
+  background: transparent;
+  color: #2a1b10;
+  font-family: Georgia, serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background: rgba(90, 55, 25, 0.16);
+}
+
+.ingredient-selected-name {
+  text-align: center;
+  font-size: clamp(1.25rem, 1.7vw, 1.75rem);
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.custom-dropdown,
+.ingredient-result {
+  width: 80%;
+  max-width: 420px;
+}
+
+.ingredient-result {
+  padding: 0.75rem;
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  background: rgba(255, 248, 220, 0.35);
+  overflow-y: auto;
+  text-align: center;
+}
+
+.ingredient-result h3 {
+  text-align: center;
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.25rem, 1.7vw, 1.75rem);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.ingredient-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-box,
+.effect-box {
+  min-height: 46px;
+  padding: 0.55rem;
+  border-radius: 8px;
+  background: rgba(90, 55, 25, 0.14);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.14);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-size: clamp(0.95rem, 1vw, 1.15rem);
+}
+
+.info-box strong {
+  font-size: 0.85rem;
+}
+
+.info-box span {
+  font-size: 1rem;
+}
+
+.ingredient-effects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 
 /* ===== RESPONSIVE ===== */
