@@ -366,58 +366,75 @@ body {
   top: clamp(14px, 2vw, 34px);
   bottom: clamp(14px, 2vw, 34px);
   left: 50%;
-  width: clamp(2px, 0.2vw, 5px);
+  width: 1px;
   transform: translateX(-50%);
   z-index: 6;
   pointer-events: none;
-
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.12),
-    rgba(60, 35, 15, 0.18),
-    rgba(0, 0, 0, 0.12)
-  );
-
-  box-shadow:
-    inset 0 0 2px rgba(0, 0, 0, 0.25);
+  background: rgba(40, 22, 10, 0.12);
 }
 
 .left-page .page-inner {
   box-shadow:
-    inset -45px 0 55px rgba(35, 18, 8, 0.38),
-    inset 0 0 30px rgba(80, 48, 18, 0.22);
+    inset -10px 0 18px rgba(35, 18, 8, 0.12),
+    inset 0 0 24px rgba(80, 48, 18, 0.18);
 }
 
 .right-page .page-inner {
   box-shadow:
-    inset 45px 0 55px rgba(35, 18, 8, 0.38),
-    inset 0 0 30px rgba(80, 48, 18, 0.22);
+    inset 10px 0 18px rgba(35, 18, 8, 0.12),
+    inset 0 0 24px rgba(80, 48, 18, 0.18);
 }
 
 .left-page .page-inner::after {
   background:
-    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.18), transparent 22%),
-    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.20), transparent 24%),
+    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.12), transparent 22%),
+    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.12), transparent 24%),
     linear-gradient(
       to right,
-      rgba(70, 38, 14, 0.12),
+      rgba(70, 38, 14, 0.08),
       transparent 12%,
-      transparent 72%,
-      rgba(20, 10, 4, 0.36)
+      transparent 82%,
+      rgba(20, 10, 4, 0.10)
     );
 }
 
 .right-page .page-inner::after {
   background:
-    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.18), transparent 22%),
-    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.20), transparent 24%),
+    radial-gradient(ellipse at top, rgba(65, 35, 12, 0.12), transparent 22%),
+    radial-gradient(ellipse at bottom, rgba(65, 35, 12, 0.12), transparent 24%),
     linear-gradient(
       to right,
-      rgba(20, 10, 4, 0.36),
-      transparent 28%,
+      rgba(20, 10, 4, 0.10),
+      transparent 18%,
       transparent 88%,
-      rgba(70, 38, 14, 0.12)
+      rgba(70, 38, 14, 0.08)
     );
+}
+
+/* ===== SUBTLE PAGE COLOR VARIATION ===== */
+
+.left-page .page-inner {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.08),
+      transparent 8%,
+      transparent 92%,
+      rgba(0, 0, 0, 0.08)
+    ),
+    #ead6a6; /* slightly warmer/darker */
+}
+
+.right-page .page-inner {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.08),
+      transparent 8%,
+      transparent 92%,
+      rgba(0, 0, 0, 0.08)
+    ),
+    #efe0b5; /* slightly lighter/aged */
 }
 
 .book-cover {
