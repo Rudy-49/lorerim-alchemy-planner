@@ -19,6 +19,17 @@ function parse(line) {
     .map(p => p.replace(/^"|"$/g, "").trim());
 }
 
+// ====== IMAGE KEY HELPER ======
+function createImageKey(name) {
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/['"]/g, "")
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
 // ====== GROUP BY INGREDIENT ======
 const ingredientsMap = {};
 
@@ -57,7 +68,7 @@ lines.forEach(line => {
       editorId: ingredient_editor_id,
       plugin: ingredient_origin_plugin,
       fixedFormId: ingredient_fixed_form_id,
-      imageKey: ingredient_name.toLowerCase().replace(/ /g, "_"),
+      imageKey: createImageKey(ingredient_name),
       weight,
       value,
       effects: []
