@@ -143,4 +143,243 @@ function getEffectType(effectName) {
 
   return "positive";
 }
+
+function getPotionLabel(sharedEffects) {
+  let positiveCount = 0;
+  let negativeCount = 0;
+
+  sharedEffects.forEach(effectName => {
+    const type = getEffectType(effectName);
+
+    if (type === "negative") {
+      negativeCount++;
+    } else {
+      positiveCount++;
+    }
+  });
+
+  return negativeCount > positiveCount ? "Poison" : "Potion";
+}
+
+function generatePotionName(sharedEffects) {
+  if (sharedEffects.length === 0) {
+    return "No valid potion created";
+  }
+
+  const label = getPotionLabel(sharedEffects);
+
+  if (sharedEffects.length === 1) {
+    return `${label} of ${sharedEffects[0]}`;
+  }
+
+  if (sharedEffects.length === 2) {
+    return `${label} of ${sharedEffects[0]} and ${sharedEffects[1]}`;
+  }
+
+  const lastEffect = sharedEffects[sharedEffects.length - 1];
+  const firstEffects = sharedEffects.slice(0, -1);
+
+  return `${label} of ${firstEffects.join(", ")}, and ${lastEffect}`;
+}
+
+  function updatePotionPreview() {
+    const sharedEffects = getSharedEffects([
+      selectedIngredient1,
+      selectedIngredient2,
+      selectedIngredient3
+    ]);
+
+    nameBox.textContent = generatePotionName(sharedEffects);
+
+    effectsBox.textContent = sharedEffects.length
+      ? `Shared Effects: ${sharedEffects.join(", ")}`
+      : "Select at least 2 ingredients with a shared effect";
+  }
+
+  function getCurrentPotionData() {
+    const selectedIngredients = [
+      selectedIngredient1,
+      selectedIngredient2,
+      selectedIngredient3
+    ].filter(Boolean);
+
+    const sharedEffects = getSharedEffects(selectedIngredients);
+
+    if (selectedIngredients.length < 2 || sharedEffects.length === 0) {
+      return null;
+    }
+
+    return {
+      id: Date.now(),
+      name: generatePotionName(sharedEffects),
+      type: getPotionLabel(sharedEffects),
+      ingredients: selectedIngredients.map(ingredient => ingredient.name),
+      notes: notesInput ? notesInput.value.trim() : "",
+      favorite: false
+    };
+  }
+
+  function saveCurrentPotion() {
+    const potion = getCurrentPotionData();
+
+    if (!potion) {
+      alert("Select at least 2 ingredients with shared effects before saving.");
+      return;
+    }
+
+    const potions = getSavedPotions();
+    const newPotionKey = getPotionIngredientKey(potion);
+
+    const duplicatePotion = potions.find(savedPotion =>
+      getPotionIngredientKey(savedPotion) === newPotionKey
+    );
+
+    if (duplicatePotion) {
+      alert("A potion with this same ingredient combination is already saved.");
+      return;
+    }
+
+    potions.unshift(potion);
+    savePotionsToStorage(potions);
+
+    input1.value = "";
+    input2.value = "";
+    input3.value = "";
+
+    if (notesInput) notesInput.value = "";
+
+    selectedIngredient1 = null;
+    selectedIngredient2 = null;
+    selectedIngredient3 = null;
+
+    input2.disabled = true;
+    input3.disabled = true;
+    input2.placeholder = "Choose Ingredient 1 first...";
+    input3.placeholder = "Choose Ingredient 2 first...";
+
+    updatePotionPreview();
+    renderPotionDatabasePage();
+  }
+
+  function getMatchingIngredientsForIngredient2() {
+    if (!selectedIngredient1) return [];
+
+    return sortedIngredients.filter(ingredient =>
+      ingredient !== selectedIngredient1 &&
+      sharesEffect(ingredient, selectedIngredient1)
+    );
+  }
+
+  function getMatchingIngredientsForIngredient3() {
+    if (!selectedIngredient1 || !selectedIngredient2) return [];
+
+    return sortedIngredients.filter(ingredient =>
+      ingredient !== selectedIngredient1 &&
+      ingredient !== selectedIngredient2 &&
+      (
+        sharesEffect(ingredient, selectedIngredient1) ||
+        sharesEffect(ingredient, selectedIngredient2)
+      )
+    );
+  }
+
+  function renderDropdown(dropdown, list, filterText = "") {
+    const filtered = list.filter(ingredient =>
+      ingredient.name.toLowerCase().includes(filterText.toLowerCase())
+    );
+
+    dropdown.currentList = filtered;
+
+    dropdown.innerHTML = filtered.map((ingredient, index) => `
+      <button class="dropdown-option" type="button" data-index="${index}">
+        ${ingredient.name}
+      </button>
+    `).join("");
+
+    dropdown.classList.add("show");
+  }
+
+  function closeDropdowns() {
+    dropdown1.classList.remove("show");
+    dropdown2.classList.remove("show");
+    dropdown3.classList.remove("show");
+  }
+
+  function setupDropdown(input, dropdown, getList, onSelect) {
+    input.addEventListener("focus", () => {
+      if (input.disabled) return;
+
+      input.select();
+      renderDropdown(dropdown, getList(), "");
+    });
+
+    input.addEventListener("click", () => {
+      if (input.disabled) return;
+
+      input.select();
+      renderDropdown(dropdown, getList(), "");
+    });
+
+    input.addEventListener("input", () => {
+      if (input.disabled) return;
+
+      renderDropdown(dropdown, getList(), input.value);
+    });
+
+    dropdown.addEventListener("pointerdown", event => {
+      const option = event.target.closest(".dropdown-option");
+      if (!option) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      const ingredient = dropdown.currentList[Number(option.dataset.index)];
+      if (!ingredient) return;
+
+      input.value = ingredient.name;
+      dropdown.classList.remove("show");
+
+      onSelect(ingredient);
+      updatePotionPreview();
+    });
+  }
+
+  setupDropdown(input1, dropdown1, () => sortedIngredients, ingredient => {
+    selectedIngredient1 = ingredient;
+    selectedIngredient2 = null;
+    selectedIngredient3 = null;
+
+    input2.disabled = false;
+    input3.disabled = true;
+
+    input2.value = "";
+    input3.value = "";
+
+    input2.placeholder = "Select matching ingredient...";
+    input3.placeholder = "Choose Ingredient 2 first...";
+  });
+
+  setupDropdown(input2, dropdown2, getMatchingIngredientsForIngredient2, ingredient => {
+    selectedIngredient2 = ingredient;
+    selectedIngredient3 = null;
+
+    input3.disabled = false;
+    input3.value = "";
+    input3.placeholder = "Optional third ingredient...";
+  });
+
+  setupDropdown(input3, dropdown3, getMatchingIngredientsForIngredient3, ingredient => {
+    selectedIngredient3 = ingredient;
+  });
+
+  savePotionBtn.addEventListener("click", saveCurrentPotion);
+
+  document.addEventListener("click", event => {
+    if (!event.target.closest(".custom-dropdown")) {
+      closeDropdowns();
+    }
+  });
+
+  updatePotionPreview();
+
 }
