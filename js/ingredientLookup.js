@@ -136,15 +136,15 @@ function initIngredientLookup(ingredients) {
 
 function renderIngredientDetails(ingredient, imageBox, result) {
   const imageKey = ingredient.imageKey || ingredient.id;
-  const imagePath = imageKey ? `assets/ingredients/${imageKey}.png` : "";
+  const imagePath = `assets/ingredients/${ingredient.imageKey}.webp`;
 
   imageBox.innerHTML = imagePath
     ? `
       <img
         src="${imagePath}"
         alt="${escapeHTML(ingredient.name)}"
-        onerror="this.style.display='none'; this.parentElement.innerHTML='<span>No image found</span>';"
-      >
+        onerror="this.src='assets/ingredients/placeholder.webp';"
+      />
     `
     : `<span>No image found</span>`;
 

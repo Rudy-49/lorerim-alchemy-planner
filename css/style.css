@@ -926,35 +926,66 @@ body {
 }
 
 .ingredient-image-box {
+  flex: 1 1 45%;
+  min-height: 140px;
+  max-height: 46%;
+
   width: 100%;
-  height: 100%;
-  min-height: 300px;
   margin-bottom: 0.75rem;
+  overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: 1px solid rgba(70, 45, 20, 0.35);
   border-radius: 12px;
   background:
     radial-gradient(circle at center, rgba(0, 0, 0, 0.06), transparent 70%),
     rgba(255, 248, 220, 0.35);
+
   font-style: italic;
   opacity: 0.9;
   box-shadow:
     inset 0 0 25px rgba(80, 48, 18, 0.2),
     0 4px 12px rgba(0, 0, 0, 0.15);
+
+  padding: clamp(8px, 1.2vw, 16px);
 }
 
 .ingredient-image-box img {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
+  display: block;
+}
+
+@media (min-height: 850px) {
+  .ingredient-image-box {
+    max-height: 34vh;
+    min-height: 220px;
+  }
+}
+
+@media (max-height: 750px) {
+  .ingredient-image-box {
+    min-height: clamp(130px, 22vh, 190px);
+    padding: 6px;
+    margin-bottom: 0.4rem;
+  }
+
+  .ingredient-image-box img {
+    height: clamp(100px, 18vh, 160px);
+    max-width: 90%;
+  }
 }
 
 .ingredient-search-card {
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
   align-items: center;
   width: 100%;
   margin-top: 1.2rem;
@@ -976,6 +1007,7 @@ body {
 .ingredient-result {
   width: 80%;
   max-width: 420px;
+  min-height: 150px;
   padding: 0.75rem;
   overflow-y: auto;
   border: 1px solid rgba(70, 45, 20, 0.35);
@@ -1218,13 +1250,39 @@ body {
   }
 
   .ingredient-lookup-panel {
-    grid-template-rows: auto minmax(180px, 42%) auto;
-    gap: 0.65rem;
-  }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
 
   .ingredient-image-box {
-    min-height: 180px;
-  }
+  flex: 1 1 45%;
+  min-height: 140px;
+  max-height: 46%;
+
+  width: 100%;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(70, 45, 20, 0.35);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at center, rgba(0, 0, 0, 0.06), transparent 70%),
+    rgba(255, 248, 220, 0.35);
+
+  font-style: italic;
+  opacity: 0.9;
+  box-shadow:
+    inset 0 0 25px rgba(80, 48, 18, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+
+  padding: clamp(8px, 1.2vw, 16px);
+}
 
   .ingredient-search-card {
     margin-top: 0.4rem;
