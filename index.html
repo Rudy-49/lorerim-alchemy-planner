@@ -1,238 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Alchemy Planner</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LoreRim Alchemy Book</title>
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <main class="app">
+    <section id="book" class="book closed" aria-label="LoreRim Alchemy Book">
+      <button id="coverButton" class="book-cover" type="button" aria-label="Open LoreRim Alchemy Book">
+        <span class="cover-click-text">Click to Open</span>
+      </button>
 
-<div id="bookCover" class="book-cover-screen">
-  <div class="closed-book-cover" id="openBookBtn"></div>
-</div>
+      <div class="book-inside">
+        <div class="book-frame-overlay"></div>
+        <div id="pageFlipOverlay" class="page-flip-overlay"></div>
+            <button id="prevPage" class="nav-btn left" type="button" aria-label="Previous page">
+                <span>‹</span>
+            </button>
 
-<div id="appShell" class="app-shell hidden">
-
-  <main class="book-page book-spread">
-
-    <div id="pageFlipOverlay" class="page-flip-overlay"></div>
-
-    <div id="spread1" class="book-spread-pages active-spread">
-
-      <section class="inner-page left-page">
-
-        <div class="page-nav-group left-page-nav">
-          <button class="page-nav prev-page" data-nav="prev">←</button>
-        </div>
-
-        <header class="ledger-title">
-          <h1>The Brewing Station</h1>
-          <p>Experiment with tinctures, tonics, and toxins</p>
-        </header>
-
-        <div class="left-page-content">
-
-          <div class="result-card">
-            <h3 id="potionNameDisplay">No Potion Discovered</h3>
-            <div id="results"></div>
-            <button id="savePotionBtn">Save Experiment</button>
-          </div>
-
-          <div class="stacked-ingredients">
-
-            <div class="ingredient-card">
-              <label>Ingredient 1</label>
-              <div class="custom-dropdown">
-                <input id="ingredient1" placeholder="Ingredient 1" autocomplete="off">
-                <div id="ingredient1Dropdown" class="dropdown-list"></div>
-              </div>
+        <section class="page left-page">
+            <div class="page-inner" id="leftPageInner">
+                <div id="leftPageContent"></div>
             </div>
+        </section>
 
-            <div class="ingredient-card">
-              <label>Ingredient 2</label>
-              <div class="custom-dropdown">
-                <input id="ingredient2" placeholder="Ingredient 2" autocomplete="off">
-                <div id="ingredient2Dropdown" class="dropdown-list"></div>
-              </div>
+        <section class="page right-page">
+            <div class="page-inner" id="rightPageInner">
+                 <div id="rightPageContent"></div>
             </div>
+        </section>
 
-            <div class="ingredient-card">
-              <label>Ingredient 3</label>
-              <div class="custom-dropdown">
-                <input id="ingredient3" placeholder="Ingredient 3" autocomplete="off">
-                <div id="ingredient3Dropdown" class="dropdown-list"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="notes-section">
-            <label>Alchemist Notes</label>
-            <textarea id="potionNotes"></textarea>
-          </div>
-
-          <p class="muted book-note">
-            Select ingredients to reveal shared effects.
-          </p>
-
-        </div>
-      </section>
-
-      <section class="inner-page right-page">
-
-        <div class="page-nav-group right-page-nav">
-          <button class="page-nav next-page" data-nav="next">→</button>
-        </div>
-
-        <header class="ledger-title database-title">
-          <h1>Alchemical Records</h1>
-
-          <div class="database-controls">
-            <input id="potionDatabaseSearch" placeholder="Search...">
-
-            <select id="potionDatabaseFilter">
-              <option value="all">All</option>
-              <option value="favorites">Favorites</option>
-              <option value="Potion">Potions</option>
-              <option value="Poison">Poisons</option>
-            </select>
-
-            <select id="potionDatabaseSort">
-              <option value="newest">Newest</option>
-              <option value="oldest">Oldest</option>
-              <option value="az">A–Z</option>
-              <option value="favorites">Favorites First</option>
-            </select>
-
-            <button id="selectAllExportBtn">Select All</button>
-            <button id="bulkDeleteBtn">Delete</button>
-            <button id="exportPotionsBtn">Export</button>
-
-            <label class="import-json-btn">
-              Import
-              <input id="importPotionsInput" type="file" hidden>
-            </label>
-          </div>
-
-          <p id="databaseStatus" class="database-status"></p>
-        </header>
-
-        <div id="potionDatabaseList" class="potion-database-list"></div>
-
-      </section>
-    </div>
-
-    <div id="spread2" class="book-spread-pages">
-
-      <section class="inner-page left-page lookup-page">
-
-        <div class="page-nav-group left-page-nav">
-          <button class="page-nav prev-page" data-nav="prev">←</button>
-        </div>
-
-        <header class="ledger-title">
-          <h1>Ingredient Lookup</h1>
-        </header>
-
-        <div class="lookup-content ingredient-lookup-content">
-
-          <div id="ingredientImagePreview" class="ingredient-image-preview">
-            <span>Select an ingredient to view its image.</span>
-          </div>
-
-          <div class="custom-dropdown">
-            <input id="ingredientLookup" placeholder="Search ingredients..." autocomplete="off">
-            <div id="ingredientLookupDropdown" class="dropdown-list"></div>
-          </div>
-
-          <div id="ingredientLookupResults"></div>
-
-        </div>
-
-      </section>
-
-      <section class="inner-page right-page lookup-page">
-
-        <div class="page-nav-group right-page-nav">
-          <button class="page-nav next-page" data-nav="next">→</button>
-        </div>
-
-        <header class="ledger-title">
-          <h1>Effect Lookup</h1>
-        </header>
-
-        <div class="lookup-content effect-lookup-content">
-
-          <div class="custom-dropdown">
-            <input id="effectSearch" placeholder="Search effects..." autocomplete="off">
-            <div id="effectDropdown" class="dropdown-list"></div>
-          </div>
-
-          <div id="effectResults"></div>
-
-        </div>
-
-      </section>
-
-    </div>
-
-    <div id="spread3" class="book-spread-pages">
-
-      <section class="inner-page left-page lookup-page">
-
-        <div class="page-nav-group left-page-nav">
-          <button class="page-nav prev-page" data-nav="prev">←</button>
-        </div>
-
-        <header class="ledger-title">
-          <h1>Tips & Tricks</h1>
-          <p>Useful notes for better brewing</p>
-        </header>
-
-        <div class="lookup-content">
-          <div class="parchment-panel">
-            <h2>Blank Page</h2>
-            <p>This page is ready for alchemy tips, tricks, reminders, or brewing notes.</p>
-          </div>
-        </div>
-
-      </section>
-
-      <section class="inner-page right-page lookup-page">
-
-        <div class="page-nav-group right-page-nav">
-          <button class="page-nav next-page" data-nav="next">→</button>
-        </div>
-
-        <header class="ledger-title">
-          <h1>Gear to Find</h1>
-          <p>Track useful equipment and upgrades</p>
-        </header>
-
-        <div class="lookup-content">
-          <div class="parchment-panel">
-            <h2>Blank Page</h2>
-            <p>This page is ready for gear notes, enchanted items, vendors, or future upgrades.</p>
-          </div>
-        </div>
-
-      </section>
-
-    </div>
-
+        <button id="nextPage" class="nav-btn right" type="button" aria-label="Next page">
+          <span>›</span>
+        </button>
+      </div>
+    </section>
   </main>
 
-</div>
-
-<div id="undoToast" class="undo-toast hidden">
-  <span id="undoToastText"></span>
-  <button id="undoDeleteBtn">Undo</button>
-</div>
-
-<script src="data/effects.js"></script>
-<script src="data/ingredients.js"></script>
-<script src="js/alchemyLogic.js"></script>
-<script src="js/ui.js"></script>
-
+  <script src="data/ingredients.js"></script>
+  <script src="data/effects.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
